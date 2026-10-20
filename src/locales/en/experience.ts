@@ -2,10 +2,10 @@ import { ExperienceSectionTranslations } from '../types';
 import { experienceData } from '@/data/experience.data';
 
 export const experienceEn: ExperienceSectionTranslations = {
-  badge: 'Background & Milestones',
-  title: 'Experience, Research & Education',
+  badge: 'Academic & Professional Milestones',
+  title: 'Experience & Milestones',
   subtitle:
-    'Software engineering deliverables, academic research publication, and computer science foundation.',
+    'Computer Science academic foundation, regional competition championships, work readiness, and extracurricular leadership roles.',
   evidenceLabel: 'Supporting Evidence / Official Certificates',
   items: experienceData,
 };

@@ -5,10 +5,10 @@ import projectsThJson from '@/data/json/th/projects.json';
 export const projectsDataTh: ProjectItem[] = projectsThJson as ProjectItem[];
 
 export const projectsTh: ProjectsSectionTranslations = {
-  badge: 'กรณีศึกษาเชิงวิศวกรรมซอฟต์แวร์',
-  title: 'ผลงานระบบระดับ Production ที่โดดเด่น',
+  badge: 'กรณีศึกษาเชิงวิศวกรรม',
+  title: 'ผลงานพัฒนาระบบและกรณีศึกษา (Featured Projects & Case Studies)',
   subtitle:
-    'ระบบงานจริงที่พัฒนาด้วยหลักการแยกส่วนหน้าที่อย่างเป็นระเบียบ ความถูกต้องของข้อมูลในฐานข้อมูล และการนำขึ้นใช้งานจริงบนเซิร์ฟเวอร์',
+    'การวิเคราะห์โจทย์ทางธุรกิจ การออกแบบสถาปัตยกรรมระบบ และการวัดผลลัพธ์เชิงวิศวกรรมจากระบบงานจริงระดับ Production',
   viewAllBtn: 'ดูผลงานทั้งหมด',
   catalogBadge: 'รวมผลงานทั้งหมด',
   catalogTitle: 'ผลงานและกรณีศึกษาเชิงวิศวกรรมทั้งหมด',

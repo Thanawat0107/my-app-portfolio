@@ -1,61 +1,65 @@
 [
   {
     "id": "backend",
-    "categoryName": "การพัฒนาส่วนหลังบ้าน (Backend Development)",
-    "description": "การสร้าง API ที่ขยายขนาดได้, สถาปัตยกรรมแบบแยกเลเยอร์, ลอจิกทางธุรกิจ และระบบยืนยันตัวตน",
+    "categoryName": "การพัฒนาส่วนหลังบ้าน (Backend)",
+    "description": "การสร้าง API ที่รองรับการขยายตัว, สถาปัตยกรรม Clean Architecture, Business Logic และระบบจัดการข้อมูลธุรกรรม",
     "skills": [
       "C#",
       "ASP.NET Core Web API",
       "ASP.NET MVC",
-      "Blazor (Server/WASM)",
+      "Blazor",
       "Entity Framework Core",
       "Clean Architecture",
-      "JWT Authentication",
       "SignalR"
     ]
   },
   {
     "id": "frontend",
     "categoryName": "การพัฒนาส่วนหน้าบ้านและโมบายล์ (Frontend & Mobile)",
-    "description": "การสร้างเว็บแอปพลิเคชันและโมบายล์แอปพลิเคชันที่ตอบสนองทุกอุปกรณ์ ปลอดภัยด้วย Type-Safe และจัดการ State แบบ Reactive",
+    "description": "การพัฒนาเว็บแอปพลิเคชันและโมบายล์แอปที่ทันสมัย ตอบสนองทุกอุปกรณ์ จัดการ State อย่างเป็นระบบ และ Type-Safe",
     "skills": [
       "React",
       "Next.js",
-      "React Native",
-      "Expo",
       "TypeScript",
-      "JavaScript",
       "Redux Toolkit",
-      "RTK Query",
       "Tailwind CSS",
-      "Formik + Yup"
+      "React Native"
     ]
   },
   {
     "id": "database",
-    "categoryName": "ฐานข้อมูลและการจำลองข้อมูล (Database & Data Modeling)",
-    "description": "การออกแบบสกีมาเชิงสัมพันธ์, ความถูกต้องสมบูรณ์ของข้อมูลตามหลัก ACID และการจูนประสิทธิภาพคิวรี",
+    "categoryName": "ระบบฐานข้อมูล (Database)",
+    "description": "การออกแบบสกีมาเชิงสัมพันธ์, เครื่องมือจัดการฐานข้อมูล และการควบคุมความถูกต้องสมบูรณ์ของธุรกรรม (ACID)",
     "skills": [
-      "Microsoft SQL Server",
-      "Entity Framework Core (Code First)",
-      "Eager Loading / .AsNoTracking()",
-      "ACID Transactions",
-      "Filtered Unique Index",
-      "Database Normalization"
+      "SQL Server",
+      "PostgreSQL",
+      "DBeaver",
+      "ACID Transactions"
     ]
   },
   {
-    "id": "devops-tools",
-    "categoryName": "เซิร์ฟเวอร์ เครือข่าย และเครื่องมือพัฒนา (Systems & DevOps)",
-    "description": "การดูแลและตั้งค่าเซิร์ฟเวอร์, การบริหารจัดการเครือข่ายคอมพิวเตอร์, คอนเทนเนอร์ และเครื่องมือการทำงานวิศวกรรม",
+    "id": "tools-env",
+    "categoryName": "เครื่องมือและสภาพแวดล้อม (Tools & Environment)",
+    "description": "คอนเทนเนอร์, ระบบปฏิบัติการเซิร์ฟเวอร์, การทดสอบ API และการประยุกต์ใช้ AI ในการเร่งประสิทธิภาพการพัฒนา",
     "skills": [
-      "IIS Server",
-      "Ubuntu / Linux",
-      "Docker",
-      "การบริหารจัดการระบบเครือข่ายคอมพิวเตอร์",
-      "Git / GitHub",
       "Postman",
-      "Visual Studio / VS Code"
+      "IIS",
+      "Ubuntu",
+      "Docker",
+      "Linux",
+      "AI Coding Assistant (Copilot, Claude, ChatGPT)"
+    ]
+  },
+  {
+    "id": "workflow-qa",
+    "categoryName": "กระบวนการทำงานและคุณภาพซอฟต์แวร์ (Workflow & QA)",
+    "description": "ระบบควบคุมเวอร์ชัน, ระบบอัตโนมัติ CI/CD, การเขียน Unit Test และการตรวจวัดคุณภาพโค้ดตามมาตรฐานองค์กร",
+    "skills": [
+      "Git",
+      "GitHub Actions (CI/CD Workflow)",
+      "Unit Testing (xUnit)",
+      "SonarQube Analysis",
+      "Code Review Process"
     ]
   }
 ]

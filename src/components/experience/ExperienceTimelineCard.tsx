@@ -2,7 +2,15 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Briefcase, GraduationCap, Trophy, Users, Maximize2, X, Image as ImageIcon } from 'lucide-react';
+import {
+  Briefcase,
+  GraduationCap,
+  Swords,
+  Users,
+  Maximize2,
+  X,
+  Image as ImageIcon,
+} from 'lucide-react';
 import { ExperienceItem, ExperienceMedia } from '@/types/portfolio.types';
 import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
@@ -18,29 +26,34 @@ export const ExperienceTimelineCard: React.FC<ExperienceTimelineCardProps> = ({ 
 
   const getIconAndStyle = () => {
     switch (item.type) {
-      case 'award':
-        return {
-          icon: <Trophy className="w-5 h-5 text-amber-400" />,
-          container: 'bg-amber-500/10 border-amber-500/25',
-          periodBadge: 'text-amber-300 bg-amber-500/10 border-amber-500/20',
-        };
-      case 'leadership':
-        return {
-          icon: <Users className="w-5 h-5 text-cyan-400" />,
-          container: 'bg-cyan-500/10 border-cyan-500/25',
-          periodBadge: 'text-cyan-300 bg-cyan-500/10 border-cyan-500/20',
-        };
-      case 'education':
-        return {
-          icon: <GraduationCap className="w-5 h-5 text-emerald-400" />,
-          container: 'bg-emerald-500/10 border-emerald-500/25',
-          periodBadge: 'text-emerald-300 bg-emerald-500/10 border-emerald-500/20',
-        };
-      default:
+      case 'work':
         return {
           icon: <Briefcase className="w-5 h-5 text-emerald-400" />,
           container: 'bg-emerald-500/10 border-emerald-500/25',
           periodBadge: 'text-emerald-300 bg-emerald-500/10 border-emerald-500/20',
+          accentDot: 'bg-emerald-400',
+        };
+      case 'award':
+        return {
+          icon: <Swords className="w-5 h-5 text-amber-400" />,
+          container: 'bg-amber-500/10 border-amber-500/25',
+          periodBadge: 'text-amber-300 bg-amber-500/10 border-amber-500/20',
+          accentDot: 'bg-amber-400',
+        };
+      case 'education':
+        return {
+          icon: <GraduationCap className="w-5 h-5 text-cyan-400" />,
+          container: 'bg-cyan-500/10 border-cyan-500/25',
+          periodBadge: 'text-cyan-300 bg-cyan-500/10 border-cyan-500/20',
+          accentDot: 'bg-cyan-400',
+        };
+      case 'leadership':
+      default:
+        return {
+          icon: <Users className="w-5 h-5 text-violet-400" />,
+          container: 'bg-violet-500/10 border-violet-500/25',
+          periodBadge: 'text-violet-300 bg-violet-500/10 border-violet-500/20',
+          accentDot: 'bg-violet-400',
         };
     }
   };
@@ -49,37 +62,63 @@ export const ExperienceTimelineCard: React.FC<ExperienceTimelineCardProps> = ({ 
 
   return (
     <>
-      <Card className="p-6 sm:p-8">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-800/80">
+      <Card className="p-6 sm:p-8 transition-all hover:border-slate-700/80">
+        <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 pb-4 border-b border-slate-800/80">
           <div className="flex items-start gap-3.5">
-            <div className={`p-2.5 rounded-lg border mt-0.5 ${style.container}`}>
+            <div className={`p-2.5 rounded-xl border mt-0.5 shrink-0 ${style.container}`}>
               {style.icon}
             </div>
             <div>
+              {item.categoryGroup && (
+                <div className="flex items-center gap-1.5 mb-1">
+                  <span className={`w-1.5 h-1.5 rounded-full ${style.accentDot}`} />
+                  <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-slate-400">
+                    {item.categoryGroup}
+                  </span>
+                </div>
+              )}
               <div className="flex flex-wrap items-center gap-2">
-                <h3 className="text-lg font-bold text-white">{item.role}</h3>
+                <h3 className="text-lg font-bold text-white tracking-tight">{item.role}</h3>
                 {item.badge && (
-                  <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-mono font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
-                    {item.type === 'award' && <Trophy className="w-3 h-3 text-amber-400 shrink-0" />}
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+                    {item.type === 'award' && <Swords className="w-3 h-3 text-amber-400 shrink-0" />}
                     {item.badge}
                   </span>
                 )}
               </div>
-              <p className="text-sm text-slate-400 mt-0.5">{item.organization}</p>
+              <p className="text-sm text-slate-400 mt-1">{item.organization}</p>
             </div>
           </div>
-          <span className={`text-xs font-mono px-3 py-1 rounded-full border self-start sm:self-center shrink-0 ${style.periodBadge}`}>
+          <span className={`text-xs font-mono px-3 py-1 rounded-full border self-start sm:self-auto shrink-0 ${style.periodBadge}`}>
             {item.period}
           </span>
         </div>
 
-        <ul className="mt-4 space-y-2 text-sm text-slate-300 list-disc list-inside">
-          {item.highlights.map((bullet, idx) => (
-            <li key={idx} className="leading-relaxed">
-              {bullet}
-            </li>
-          ))}
-        </ul>
+        {item.type === 'education' ? (
+          item.highlights && item.highlights.length > 0 && (
+            <div className="mt-4 flex flex-wrap items-center gap-2.5">
+              {item.highlights.map((fact, idx) => (
+                <div
+                  key={idx}
+                  className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-slate-900/90 border border-cyan-500/20 text-xs font-mono text-cyan-200/90 shadow-sm"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+                  <span>{fact}</span>
+                </div>
+              ))}
+            </div>
+          )
+        ) : (
+          item.highlights && item.highlights.length > 0 && (
+            <ul className="mt-4 space-y-2 text-sm text-slate-300 list-disc list-inside">
+              {item.highlights.map((bullet, idx) => (
+                <li key={idx} className="leading-relaxed">
+                  {bullet}
+                </li>
+              ))}
+            </ul>
+          )
+        )}
 
         {/* Media & Certificates Showcase Grid */}
         {item.media && item.media.length > 0 && (
@@ -87,7 +126,7 @@ export const ExperienceTimelineCard: React.FC<ExperienceTimelineCardProps> = ({ 
             <div className="flex items-center gap-2 text-xs font-mono text-slate-400 mb-3">
               <ImageIcon className="w-3.5 h-3.5 text-emerald-400" />
               <span>
-                {t.experience.evidenceLabel || (language === 'en' ? 'Supporting Evidence / Certificates' : 'ภาพประกอบหลักฐาน / เกียรติบัตร / เอกสาร')} ({item.media.length} {language === 'en' ? (item.media.length > 1 ? 'items' : 'item') : 'รายการ'}):
+                {t.experience.evidenceLabel || (language === 'en' ? 'Supporting Evidence / Documents' : 'ภาพประกอบหลักฐาน / เกียรติบัตร / เอกสาร')} ({item.media.length} {language === 'en' ? (item.media.length > 1 ? 'items' : 'item') : 'รายการ'}):
               </span>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
@@ -129,13 +168,15 @@ export const ExperienceTimelineCard: React.FC<ExperienceTimelineCardProps> = ({ 
           </div>
         )}
 
-        <div className="mt-5 flex flex-wrap gap-2">
-          {item.technologies.map((tech) => (
-            <Badge key={tech} variant="outline" showTechIcon={true}>
-              {tech}
-            </Badge>
-          ))}
-        </div>
+        {item.technologies && item.technologies.length > 0 && (
+          <div className="mt-5 flex flex-wrap gap-2">
+            {item.technologies.map((tech) => (
+              <Badge key={tech} variant="outline" showTechIcon={true}>
+                {tech}
+              </Badge>
+            ))}
+          </div>
+        )}
       </Card>
 
       {/* Lightbox Modal Viewer */}

@@ -1,21 +1,55 @@
 [
   {
+    "id": "work-supalai-software-engineer",
+    "period": "มิถุนายน 2569 – กันยายน 2569",
+    "role": "Software Engineer Intern (SUPALAI Tech Talent Program 2026)",
+    "organization": "บริษัท ศุภาลัย จำกัด (มหาชน) - สำนักงานใหญ่ (กรุงเทพมหานคร)",
+    "type": "work",
+    "categoryGroup": "ประสบการณ์ทำงาน",
+    "badge": "SUPALAI Tech Talent 2026",
+    "highlights": [
+      "พัฒนาระบบติดตามผลกระทบสิ่งแวดล้อม (EIA Phase 2) รองรับผู้ใช้งาน 4 ระดับ รวมถึง Public Dashboard สำหรับชุมชน เพื่อยกระดับความโปร่งใสและลดความเสี่ยงในการดำเนินโครงการอสังหาริมทรัพย์",
+      "พัฒนา API เชื่อมโยงและจัดเก็บข้อมูล Real-time จาก Micro Station ของผู้ให้บริการภายนอก พร้อมสร้างระบบประมวลผลกติกา (Rule-based) เพื่อส่ง SMS แจ้งเตือนผู้เกี่ยวข้องทันทีเมื่อค่าเกินมาตรฐาน",
+      "ปฏิบัติงานร่วมกับทีมพัฒนาภายใต้มาตรฐาน Enterprise Environment โดยมีประสบการณ์ในการเขียน Unit Testing (xUnit), การแก้ไขโค้ดตามรีพอร์ตของ SonarQube, และคุ้นเคยกับกระบวนการ Code Review รวมถึง CI/CD Workflow"
+    ],
+    "technologies": [
+      "C#",
+      ".NET Core",
+      "Next.js",
+      "PostgreSQL",
+      "xUnit",
+      "SonarQube",
+      "GitHub Actions",
+      "Micro Station IoT"
+    ],
+    "media": [
+      {
+        "thumbnailUrl": "/images/work/supalai-tech-talent.svg",
+        "caption": "ระบบติดตามผลกระทบสิ่งแวดล้อม (EIA Phase 2) & IoT Telemetry Dashboard",
+        "category": "ผลงานพัฒนาระดับองค์กร"
+      }
+    ]
+  },
+  {
     "id": "award-network-competition",
     "period": "ธันวาคม 2568",
     "role": "รางวัลชนะเลิศ การแข่งขันทักษะวิชาการด้านการบริหารจัดการระบบเครือข่ายคอมพิวเตอร์",
     "organization": "งาน พ.จ.น.ก.สัมพันธ์ “ราชพฤกษ์เกมส์ ครั้งที่ 46” ณ มหาวิทยาลัยราชภัฏหมู่บ้านจอมบึง",
     "type": "award",
-    "badge": "รางวัลชนะเลิศอันดับ 1",
+    "categoryGroup": "การแข่งขัน",
+    "badge": "รางวัลชนะเลิศอันดับ 1 (เหรียญทอง)",
     "highlights": [
-      "ได้รับรางวัลชนะเลิศอันดับ 1 ในการแข่งขันทักษะวิชาการระดับภูมิภาคตะวันตก ด้านการออกแบบ ตั้งค่า และบริหารจัดการระบบเครือข่ายคอมพิวเตอร์",
-      "แสดงทักษะการวางระบบเครือข่าย การกำหนดค่า Routing & Switching การตั้งค่า Server Services และการแก้ไขปัญหาภายใต้สถานการณ์และเวลาที่กำหนด"
+      "ได้รับรางวัลชนะเลิศอันดับ 1 ในการแข่งขันทักษะวิชาการระดับภูมิภาคตะวันตก ด้านการออกแบบ คอนฟิก และบริหารจัดการระบบเครือข่ายคอมพิวเตอร์ระดับองค์กร",
+      "ออกแบบและคอนฟิก Enterprise Wi-Fi ผ่าน Cloud Controller (Fast Roaming, Load Balancing) พร้อมวางระบบจัดการแบนด์วิดท์ (QoS) เพื่อแก้ปัญหาความหนาแน่นของเครือข่ายได้อย่างสมบูรณ์แบบภายใต้เวลาที่กำหนด"
     ],
     "technologies": [
-      "การบริหารจัดการเครือข่าย",
-      "Network Administration",
-      "Linux / Ubuntu",
-      "Network Security",
-      "การแก้ไขปัญหาระบบ"
+      "Enterprise Wi-Fi",
+      "Cloud Controller",
+      "Fast Roaming",
+      "Load Balancing",
+      "QoS Bandwidth Management",
+      "Routing & Switching",
+      "Ubuntu / Linux"
     ],
     "media": [
       {
@@ -25,30 +59,29 @@
       },
       {
         "thumbnailUrl": "/images/certificates/award-podium.svg",
-        "caption": "ภาพพิธีมอบเหรียญรางวัลชนะเลิศ & เกียรติบัตรบนเวที",
+        "caption": "ภาพถ่ายพิธีมอบรางวัลชนะเลิศ & เหรียญทองบนเวที",
         "category": "ภาพถ่ายพิธีมอบรางวัล"
+      },
+      {
+        "thumbnailUrl": "/images/certificates/competition-action.svg",
+        "caption": "ภาพบรรยากาศการแข่งขัน & การคอนฟิกหน้างาน",
+        "category": "บรรยากาศการแข่งขัน"
       }
     ]
   },
   {
     "id": "edu-bachelor-cs",
-    "period": "2566 – 2569 (กำลังศึกษา)",
-    "role": "วิทยาศาสตรบัณฑิต สาขาวิชาวิทยาการคอมพิวเตอร์",
+    "period": "2566 – 2569",
+    "role": "ระดับปริญญาตรี (วท.บ. วิทยาการคอมพิวเตอร์) - สำเร็จการศึกษาแล้ว",
     "organization": "มหาวิทยาลัยราชภัฏกาญจนบุรี",
     "type": "education",
-    "badge": "GPAX 2.60",
+    "categoryGroup": "การศึกษา & ผลการเรียน",
+    "badge": "เกรดเฉลี่ยสะสม : 2.60",
     "highlights": [
-      "ศึกษาครอบคลุมด้านวิศวกรรมซอฟต์แวร์, การวิเคราะห์และออกแบบระบบ, สถาปัตยกรรมฐานข้อมูลเชิงสัมพันธ์ และการพัฒนา Full-Stack Application",
-      "เกรดเฉลี่ยสะสม (GPAX): 2.60 พร้อมผลการเรียนระดับยอดเยี่ยมในวิชาแกนคอมพิวเตอร์ (Software Engineering, OOP, Web Programming, Database)",
-      "เปิดรับโอกาสฝึกงานในตำแหน่ง Backend Developer / Full-Stack Developer: 4 มิถุนายน – 30 กันยายน 2569"
+      "เกรดเฉลี่ยสะสม : 2.60",
+      "สำเร็จปีการศึกษา : 2569 (พร้อมเริ่มงานประจำทันที)"
     ],
-    "technologies": [
-      "C# .NET",
-      "React / Next.js",
-      "SQL Server",
-      "Software Engineering",
-      "System Analysis & Design"
-    ],
+    "technologies": [],
     "media": [
       {
         "thumbnailUrl": "/images/education/transcript-kru.svg",
@@ -60,54 +93,124 @@
   {
     "id": "edu-vocational-cert",
     "period": "2563 – 2565",
-    "role": "ระดับประกาศนียบัตรวิชาชีพ (ปวช.)",
+    "role": "ระดับ ปวช.",
     "organization": "วิทยาลัยการอาชีพแม่น้ำแคว",
     "type": "education",
-    "badge": "GPAX 3.45",
+    "categoryGroup": "การศึกษา & ผลการเรียน",
+    "badge": "เกรดเฉลี่ยสะสม : 3.45",
     "highlights": [
-      "สำเร็จการศึกษาระดับ ปวช. ด้วยผลการเรียนดีเยี่ยม เกรดเฉลี่ยสะสม (GPAX): 3.45",
-      "ปูพื้นฐานความรู้ด้านฮาร์ดแวร์คอมพิวเตอร์, ตรรกะการเขียนโปรแกรม, ระบบปฏิบัติการ และการดูแลรักษาระบบคอมพิวเตอร์เบื้องต้น"
+      "เกรดเฉลี่ยสะสม : 3.45",
+      "สำเร็จปีการศึกษา : 2565"
     ],
-    "technologies": [
-      "พื้นฐานระบบคอมพิวเตอร์",
-      "ตรรกะการเขียนโปรแกรม",
-      "ระบบปฏิบัติการ",
-      "ระบบเครือข่ายเบื้องต้น"
-    ]
+    "technologies": []
   },
   {
-    "id": "act-leadership-community",
-    "period": "2567 – 2568",
-    "role": "กรรมการสโมสรนักศึกษา และพี่เลี้ยงฝ่าย IT",
-    "organization": "มหาวิทยาลัยราชภัฏกาญจนบุรี และ สถาบันพลังจิตตานุภาพ",
-    "type": "leadership",
-    "badge": "สโมสรนักศึกษา & พี่เลี้ยง IT",
+    "id": "edu-junior-high",
+    "period": "2560 – 2563",
+    "role": "ระดับมัธยมต้น",
+    "organization": "โรงเรียนบ้านหนองกระทุ่ม",
+    "type": "education",
+    "categoryGroup": "การศึกษา & ผลการเรียน",
+    "badge": "สำเร็จปีการศึกษา : 2563",
     "highlights": [
-      "กรรมการสโมสรนักศึกษา ประจำปีการศึกษา 2567: ประสานงานและจัดกิจกรรมส่งเสริมวิชาการและกิจกรรมนักศึกษาภายในมหาวิทยาลัย",
-      "พี่เลี้ยงฝ่าย IT: จบหลักสูตรครูสมาธิระยะเวลา 6 เดือน (รุ่นที่ 52) สถาบันพลังจิตตานุภาพ และได้รับมอบหมายปฏิบัติหน้าที่พี่เลี้ยงประจำรุ่นที่ 53 ฝ่าย IT",
-      "แกนนำจัดกิจกรรมการแข่งขัน RoV E-Sports: จัดโดยสาขาวิทยาการคอมพิวเตอร์ เพื่อส่งเสริมความร่วมมือและการทำงานเป็นทีม"
+      "สำเร็จปีการศึกษา : 2563"
     ],
-    "technologies": [
-      "ภาวะผู้นำและการทำงานเป็นทีม",
-      "การดูแลระบบไอที",
-      "การบริหารจัดการกิจกรรม",
-      "การสื่อสารองค์กร"
+    "technologies": []
+  },
+  {
+    "id": "edu-primary-school",
+    "period": "2553 – 2560",
+    "role": "ระดับประถมศึกษา",
+    "organization": "โรงเรียนบ้านพุพรหม",
+    "type": "education",
+    "categoryGroup": "การศึกษา & ผลการเรียน",
+    "badge": "สำเร็จปีการศึกษา : 2560",
+    "highlights": [
+      "สำเร็จปีการศึกษา : 2560"
     ],
+    "technologies": []
+  },
+  {
+    "id": "act-student-council",
+    "period": "ปีการศึกษา 2567",
+    "role": "กรรมการสโมสรนักศึกษา คณะวิทยาศาสตร์และเทคโนโลยี",
+    "organization": "มหาวิทยาลัยราชภัฏกาญจนบุรี",
+    "type": "leadership",
+    "categoryGroup": "กิจกรรม อื่นๆ",
+    "badge": "กรรมการสโมสรนักศึกษา",
+    "highlights": [
+      "ได้รับเลือกตั้งให้ดำรงตำแหน่งกรรมการสโมสรนักศึกษา คณะวิทยาศาสตร์และเทคโนโลยี ประจำปีการศึกษา 2567",
+      "วางแผนและดำเนินกิจกรรมเสริมสร้างทักษะวิชาการ กิจกรรมสานสัมพันธ์ และประสานงานระหว่างคณาจารย์และนักศึกษาทุกสาขาวิชาในคณะ"
+    ],
+    "technologies": [],
     "media": [
       {
-        "thumbnailUrl": "/images/activities/activity-meditation.svg",
-        "caption": "หลักสูตรครูสมาธิ รุ่น 52 & พี่เลี้ยงฝ่าย IT รุ่น 53 (สถาบันพลังจิตตานุภาพ)",
-        "category": "การฝึกจิตใจและวินัย"
-      },
-      {
-        "thumbnailUrl": "/images/activities/activity-student-council.svg",
-        "caption": "สโมสรนักศึกษา คณะวิทยาศาสตร์และเทคโนโลยี ปีการศึกษา 2567",
+        "thumbnailUrl": "/images/activities/activity-student-council-1.svg",
+        "caption": "คณะกรรมการสโมสรนักศึกษา คณะวิทยาศาสตร์และเทคโนโลยี ปีการศึกษา 2567",
         "category": "กิจกรรมนักศึกษา"
       },
       {
-        "thumbnailUrl": "/images/activities/activity-rov-esports.svg",
-        "caption": "ฝ่ายจัดการแข่งขัน RoV E-Sports Tournament สาขาวิชาฯ",
+        "thumbnailUrl": "/images/activities/activity-student-council-2.svg",
+        "caption": "ภาพการประชุมและดำเนินโครงการกิจกรรมนักศึกษา",
+        "category": "การดำเนินงานสโมสร"
+      }
+    ]
+  },
+  {
+    "id": "act-rov-esports",
+    "period": "ปีการศึกษา 2567",
+    "role": "ฝ่ายจัดการแข่งขัน RoV E-Sports Tournament",
+    "organization": "สาขาวิชาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยราชภัฏกาญจนบุรี",
+    "type": "leadership",
+    "categoryGroup": "กิจกรรม อื่นๆ",
+    "badge": "ฝ่ายจัดการแข่งขัน",
+    "highlights": [
+      "ร่วมบริหารและจัดการแข่งขันกีฬาอีสปอร์ต RoV E-Sports Tournament ของสาขาวิชาวิทยาการคอมพิวเตอร์",
+      "ดูแลระบบการแข่งขัน ประสานงานทีมผู้เข้าแข่งขัน และการถ่ายทอดสดตลอดกิจกรรม"
+    ],
+    "technologies": [],
+    "media": [
+      {
+        "thumbnailUrl": "/images/activities/activity-rov-esports-1.svg",
+        "caption": "ทีมงานฝ่ายจัดการแข่งขัน RoV E-Sports Tournament สาขาวิชาฯ",
         "category": "การจัดกิจกรรม"
+      },
+      {
+        "thumbnailUrl": "/images/activities/activity-rov-esports-2.svg",
+        "caption": "บรรยากาศการแข่งขันและการควบคุมระบบถ่ายทอดสดบนเวที",
+        "category": "บรรยากาศการแข่งขัน"
+      }
+    ]
+  },
+  {
+    "id": "act-it-mentor-meditation",
+    "period": "2567 – 2568",
+    "role": "พี่เลี้ยงฝ่าย IT ประจำรุ่นที่ 53 และผู้สำเร็จหลักสูตรครูสมาธิ รุ่นที่ 52",
+    "organization": "สถาบันพลังจิตตานุภาพ หลวงพ่อวิริยังค์ สิรินธโร",
+    "type": "leadership",
+    "categoryGroup": "กิจกรรม อื่นๆ",
+    "badge": "พี่เลี้ยงฝ่าย IT (รุ่น 53)",
+    "highlights": [
+      "สำเร็จการศึกษาหลักสูตรครูสมาธิระยะเวลา 6 เดือน (รุ่นที่ 52) เสริมสร้างวินัย ความมุ่งมั่น อดทน และสมาธิในการทำงานร่วมกับผู้อื่น",
+      "ได้รับความไว้วางใจให้ปฏิบัติหน้าที่เป็นพี่เลี้ยงประจำรุ่นที่ 53 ฝ่าย IT ดูแลระบบโสตทัศนูปกรณ์ คอมพิวเตอร์ และระบบถ่ายทอดสดในการบรรยาย",
+      "สนับสนุนและแก้ไขปัญหาหน้างานด้านไอทีและระบบเสียง/ภาพให้กับผู้เข้าร่วมอบรมตลอดหลักสูตร"
+    ],
+    "technologies": [],
+    "media": [
+      {
+        "thumbnailUrl": "/images/activities/activity-meditation-cert.svg",
+        "caption": "ใบประกาศนียบัตรสำเร็จหลักสูตรครูสมาธิ รุ่นที่ 52",
+        "category": "ใบประกาศนียบัตร"
+      },
+      {
+        "thumbnailUrl": "/images/activities/activity-meditation-ceremony.svg",
+        "caption": "ภาพถ่ายพิธีมอบประกาศนียบัตรและปัจฉิมนิเทศ รุ่น 52",
+        "category": "พิธีมอบประกาศนียบัตร"
+      },
+      {
+        "thumbnailUrl": "/images/activities/activity-it-mentor-av.svg",
+        "caption": "การปฏิบัติหน้าที่พี่เลี้ยงฝ่าย IT ควบคุมระบบโสตทัศนูปกรณ์และถ่ายทอดสด รุ่น 53",
+        "category": "พี่เลี้ยงฝ่าย IT"
       }
     ]
   }

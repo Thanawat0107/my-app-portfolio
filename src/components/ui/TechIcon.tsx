@@ -19,6 +19,11 @@ import {
   SiExpo,
   SiDotnet,
   SiGooglemaps,
+  SiPostgresql,
+  SiDbeaver,
+  SiSonar,
+  SiGithubactions,
+  SiGithubcopilot,
 } from 'react-icons/si';
 import { TbBrandCSharp } from 'react-icons/tb';
 import { DiMsqlServer } from 'react-icons/di';
@@ -35,6 +40,9 @@ import {
   Lock,
   Workflow,
   Sparkles,
+  FlaskConical,
+  GitPullRequest,
+  CheckCircle2,
 } from 'lucide-react';
 
 interface TechIconProps {
@@ -75,12 +83,12 @@ export const TechIcon: React.FC<TechIconProps> = ({ name, className = 'w-3.5 h-3
   }
 
   // TypeScript
-  if (normalized.includes('typescript')) {
+  if (normalized.includes('typescript') || normalized === 'ts') {
     return <SiTypescript className={`${className} text-blue-400`} />;
   }
 
   // JavaScript
-  if (normalized.includes('javascript')) {
+  if (normalized.includes('javascript') || normalized === 'js') {
     return <SiJavascript className={`${className} text-amber-400`} />;
   }
 
@@ -89,9 +97,19 @@ export const TechIcon: React.FC<TechIconProps> = ({ name, className = 'w-3.5 h-3
     return <SiTailwindcss className={`${className} text-cyan-400`} />;
   }
 
-  // Redux
+  // Redux Toolkit
   if (normalized.includes('redux') || normalized.includes('rtk')) {
     return <SiRedux className={`${className} text-purple-400`} />;
+  }
+
+  // PostgreSQL
+  if (normalized.includes('postgres')) {
+    return <SiPostgresql className={`${className} text-sky-400`} />;
+  }
+
+  // DBeaver
+  if (normalized.includes('dbeaver')) {
+    return <SiDbeaver className={`${className} text-amber-500`} />;
   }
 
   // SQL Server / Database
@@ -118,6 +136,11 @@ export const TechIcon: React.FC<TechIconProps> = ({ name, className = 'w-3.5 h-3
     return <SiLinux className={`${className} text-amber-300`} />;
   }
 
+  // CI/CD & GitHub Actions
+  if (normalized.includes('github actions') || normalized.includes('ci/cd') || normalized.includes('cicd')) {
+    return <SiGithubactions className={`${className} text-blue-400`} />;
+  }
+
   // Git / GitHub
   if (normalized.includes('github')) {
     return <SiGithub className={`${className} text-slate-200`} />;
@@ -129,6 +152,31 @@ export const TechIcon: React.FC<TechIconProps> = ({ name, className = 'w-3.5 h-3
   // Postman
   if (normalized.includes('postman')) {
     return <SiPostman className={`${className} text-orange-400`} />;
+  }
+
+  // AI Coding Assistants (Copilot, Claude, ChatGPT)
+  if (
+    normalized.includes('ai') ||
+    normalized.includes('copilot') ||
+    normalized.includes('claude') ||
+    normalized.includes('chatgpt')
+  ) {
+    return <SiGithubcopilot className={`${className} text-purple-400`} />;
+  }
+
+  // SonarQube
+  if (normalized.includes('sonar')) {
+    return <SiSonar className={`${className} text-sky-400`} />;
+  }
+
+  // Unit Testing / xUnit
+  if (normalized.includes('unit test') || normalized.includes('xunit') || normalized.includes('test')) {
+    return <FlaskConical className={`${className} text-emerald-400`} />;
+  }
+
+  // Code Review Process
+  if (normalized.includes('code review') || normalized.includes('review')) {
+    return <GitPullRequest className={`${className} text-violet-400`} />;
   }
 
   // Vite
@@ -171,12 +219,11 @@ export const TechIcon: React.FC<TechIconProps> = ({ name, className = 'w-3.5 h-3
     return <Layers className={`${className} text-teal-400`} />;
   }
 
-  // Security / Auth / JWT / Lock
+  // Security / Auth / JWT / Lock / ACID
   if (
     normalized.includes('jwt') ||
     normalized.includes('auth') ||
     normalized.includes('security') ||
-    normalized.includes('rbac') ||
     normalized.includes('acid') ||
     normalized.includes('transaction')
   ) {
@@ -199,7 +246,13 @@ export const TechIcon: React.FC<TechIconProps> = ({ name, className = 'w-3.5 h-3
   }
 
   // Reporting / ClosedXML / iText7
-  if (normalized.includes('closedxml') || normalized.includes('itext') || normalized.includes('report') || normalized.includes('excel') || normalized.includes('pdf')) {
+  if (
+    normalized.includes('closedxml') ||
+    normalized.includes('itext') ||
+    normalized.includes('report') ||
+    normalized.includes('excel') ||
+    normalized.includes('pdf')
+  ) {
     return <FileText className={`${className} text-emerald-400`} />;
   }
 

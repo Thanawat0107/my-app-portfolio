@@ -4,11 +4,11 @@
     "title": "Restaurant POS & Management Web Application (ร้านก๋วยเตี๋ยวแชมป์)",
     "category": "Production Full-Stack System",
     "featured": true,
-    "thumbnailUrl": "/images/projects/champ-noodle-pos-system/screen-1-customer.svg",
+    "thumbnailUrl": "/images/projects/champ-noodle-pos-system/main1.png",
     "screenshots": [
-      "/images/projects/champ-noodle-pos-system/screen-1-customer.svg",
-      "/images/projects/champ-noodle-pos-system/screen-2-kitchen.svg",
-      "/images/projects/champ-noodle-pos-system/screen-3-dashboard.svg"
+      "/images/projects/champ-noodle-pos-system/main1.png",
+      "/images/projects/champ-noodle-pos-system/left1.png",
+      "/images/projects/champ-noodle-pos-system/right1.png"
     ],
     "specs": {
       "systemType": "Web App (Vite + ASP.NET Core 9)",
@@ -214,7 +214,7 @@
         "Executed with Entity Framework Core 9 using Eager Loading and .AsSplitQuery() on multiple joins."
       ],
       "securityPractices": [
-        "JWT-based Authentication and Role-Based Access Control (RBAC) separating Manager and Cashier roles.",
+        "JWT-based Authentication and secure token validation protecting API endpoints.",
         "Strict input validation using DTOs and AutoMapper to prevent mass-assignment vulnerabilities.",
         "Parameterized SQL queries generated via EF Core preventing SQL Injection exploits."
       ]
@@ -225,11 +225,11 @@
     "title": "Used Car Community Management Platform (ระบบรถยนต์มือสองตำบลหนองกุ่ม)",
     "category": "Production Full-Stack Web App",
     "featured": true,
-    "thumbnailUrl": "/images/projects/used-car-management-system/screen-1-catalog.svg",
+    "thumbnailUrl": "/images/projects/used-car-management-system/main2.png",
     "screenshots": [
-      "/images/projects/used-car-management-system/screen-1-catalog.svg",
-      "/images/projects/used-car-management-system/screen-2-booking.svg",
-      "/images/projects/used-car-management-system/screen-3-admin.svg"
+      "/images/projects/used-car-management-system/main2.png",
+      "/images/projects/used-car-management-system/left2.png",
+      "/images/projects/used-car-management-system/right2.png"
     ],
     "specs": {
       "systemType": "Web App (Next.js 15 + ASP.NET Core 9)",
@@ -317,9 +317,9 @@
             "id": "gateway",
             "tier": "gateway",
             "title": "ASP.NET Core 9 Web API",
-            "tech": "C# / JWT RBAC / Polly",
+            "tech": "C# / JWT Auth / Polly",
             "role": "API Layer",
-            "description": "Role-Based Access Control protecting Admin, Seller, and Buyer endpoints with DTO validation."
+            "description": "API Gateway managing car listings and reservations with JWT Authentication and DTO validation."
           },
           {
             "id": "service",
@@ -392,8 +392,8 @@
           "description": "Atomic status update ensuring reserved vehicles are safely reverted if payments expire."
         },
         {
-          "title": "Role-Based Access Control",
-          "description": "Granular RBAC protecting Admin, Seller, and Buyer actions with JWT token expiry validation."
+          "title": "JWT Authentication",
+          "description": "Secure JWT token authentication with token expiry validation protecting API endpoints."
         },
         {
           "title": "Database Filtered Unique Index",
@@ -421,11 +421,11 @@
     "title": "SBFblazor: E-Commerce & Inventory Management Platform",
     "category": "Enterprise Web Application (Blazor)",
     "featured": true,
-    "thumbnailUrl": "/images/projects/sbf-blazor-ecommerce/screen-1-store.svg",
+    "thumbnailUrl": "/images/projects/sbf-blazor-ecommerce/main3.png",
     "screenshots": [
-      "/images/projects/sbf-blazor-ecommerce/screen-1-store.svg",
-      "/images/projects/sbf-blazor-ecommerce/screen-2-checkout.svg",
-      "/images/projects/sbf-blazor-ecommerce/screen-3-reports.svg"
+      "/images/projects/sbf-blazor-ecommerce/main3.png",
+      "/images/projects/sbf-blazor-ecommerce/left3.png",
+      "/images/projects/sbf-blazor-ecommerce/right3.png"
     ],
     "specs": {
       "systemType": "Web App (Hybrid Blazor WASM & Server)",

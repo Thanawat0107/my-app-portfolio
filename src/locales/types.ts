@@ -32,7 +32,6 @@ export interface HeroTranslations {
   role: string;
   location: string;
   tagline: string;
-  summary: string;
   terminalTitle: string;
   mindset: string;
   framework: string;

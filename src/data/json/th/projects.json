@@ -4,11 +4,11 @@
     "title": "ระบบบริหารจัดการร้านก๋วยเตี๋ยวแชมป์ POS & Online Order",
     "category": "ระบบงาน Full-Stack ระดับ Production",
     "featured": true,
-    "thumbnailUrl": "/images/projects/champ-noodle-pos-system/screen-1-customer.svg",
+    "thumbnailUrl": "/images/projects/champ-noodle-pos-system/main1.png",
     "screenshots": [
-      "/images/projects/champ-noodle-pos-system/screen-1-customer.svg",
-      "/images/projects/champ-noodle-pos-system/screen-2-kitchen.svg",
-      "/images/projects/champ-noodle-pos-system/screen-3-dashboard.svg"
+      "/images/projects/champ-noodle-pos-system/main1.png",
+      "/images/projects/champ-noodle-pos-system/left1.png",
+      "/images/projects/champ-noodle-pos-system/right1.png"
     ],
     "specs": {
       "systemType": "เว็บแอปพลิเคชัน (Web App)",
@@ -45,25 +45,25 @@
     "problemStatement": "ร้านอาหารประสบปัญหาความล่าช้าและเกิดข้อผิดพลาดบ่อยครั้งจากการจดรับออเดอร์ด้วยกระดาษ รวมถึงขาดระบบจัดเก็บข้อมูลส่วนกลาง ทำให้เจ้าของร้านไม่สามารถดูสถิติยอดขายย้อนหลังเพื่อนำมาวิเคราะห์ต้นทุนและจัดการกำไรได้อย่างมีประสิทธิภาพ",
     "coreFeatures": [
       "ระบบหน้าจอห้องครัว: ออเดอร์ถูกส่งตรงเข้าห้องครัวและแสดงผลสถานะแบบทันที (Real-time) ผ่านเทคโนโลยี SignalR",
-      "ปรับแต่งเมนูได้อย่างอิสระ: รองรับการสั่งอาหารที่มีเงื่อนไขซับซ้อน เช่น เลือกเส้น ระดับความเผ็ด และเพิ่มท็อปปิ้ง",
+      "ปรับแต่งเมนูได้อิสระ: รองรับการสั่งอาหารที่มีเงื่อนไขซับซ้อน เช่น เลือกเส้น ระดับความเผ็ด และเพิ่มท็อปปิ้ง",
       "ชำระเงินอัตโนมัติ: ระบบชำระเงินผ่าน PromptPay QR พร้อมฟังก์ชันแนบและช่วยตรวจสอบสลิปอัตโนมัติ",
-      "กระดานวิเคราะห์ข้อมูล (Dashboard): สรุปยอดขายและเมนูยอดฮิตรายวัน/เดือน ผ่านกราฟเชิงโต้ตอบที่ดูเข้าใจง่าย"
+      "กระดานวิเคราะห์ข้อมูล: สรุปยอดขายและเมนูยอดฮิตรายวัน/เดือน ผ่านกราฟเชิงโต้ตอบที่ดูเข้าใจง่าย"
     ],
     "architectureHighlights": [
       "โครงสร้างแบบ 4 เลเยอร์ (Clean Architecture): แยกชั้น Controller, Service, Repository และ Models ออกจากกันอย่างเด็ดขาด",
-      "การจัดการ DTO & AutoMapper: รับส่งข้อมูลผ่าน 18 DTO Objects เพื่อป้องกันข้อมูลส่วนตัวรั่วไหลและลดความซ้ำซ้อนของการเขียนโค้ด",
-      "การเพิ่มประสิทธิภาพฐานข้อมูล (EF Core): แก้ปัญหา N+1 Query ด้วย Eager Loading และใช้ .AsSplitQuery() เพื่อลดภาระ Join ตาราง",
-      "การซิงค์ข้อมูลแบบเรียลไทม์ (SignalR): ส่งข้อมูลออเดอร์เข้าห้องครัวทันทีโดยไม่ต้อง Refresh หน้าเว็บ"
+      "การจัดการ DTO & AutoMapper: รับส่งข้อมูลผ่าน 18 DTO Objects เพื่อป้องกันข้อมูลส่วนตัวรั่วไหล และใช้ AutoMapper ช่วยลดความซ้ำซ้อนของการเขียนโค้ด",
+      "การเพิ่มประสิทธิภาพฐานข้อมูล (EF Core): แก้ปัญหา N+1 Query ด้วยการโหลดข้อมูลล่วงหน้า (Eager Loading) และใช้ .AsSplitQuery() เพื่อลดภาระการ Join ตาราง",
+      "การลดการใช้หน่วยความจำ: ใช้คำสั่ง .AsNoTracking() ในการดึงข้อมูลแบบอ่านอย่างเดียว ช่วยประหยัดหน่วยความจำเซิร์ฟเวอร์ได้อย่างมหาศาล"
     ],
-    "businessImpact": "ระบบช่วยลดภาระงานของพนักงานหน้าร้าน สร้างขั้นตอนการทำงานที่แม่นยำระหว่างลูกค้าและห้องครัว ลดข้อผิดพลาดของออเดอร์ได้อย่างเห็นได้ชัด นอกจากนี้ระบบแดชบอร์ดจัดการข้อมูลยังช่วยให้เจ้าของร้านเห็นข้อมูลเชิงลึก (Insight) ของยอดขายแบบเรียลไทม์ นำไปสู่การตัดสินใจทางธุรกิจที่ดีขึ้น",
+    "businessImpact": "ระบบช่วยลดภาระงานของพนักงานหน้าร้าน สร้างขั้นตอนการทำงานที่แม่นยำระหว่างลูกค้าและห้องครัว ลดข้อผิดพลาดของออเดอร์ลงอย่างเห็นได้ชัด นอกจากนี้ระบบแดชบอร์ดจัดการข้อมูลยังช่วยให้เจ้าของร้านเห็นข้อมูลเชิงลึก (Insight) ของยอดขายแบบเรียลไทม์ นำไปสู่การตัดสินใจทางธุรกิจที่ดีขึ้น",
     "techStack": [
       "ASP.NET Core 9",
+      "EF Core",
+      "SQL Server",
+      "SignalR",
       "React 19",
       "TypeScript",
       "Redux Toolkit",
-      "SignalR",
-      "SQL Server",
-      "EF Core",
       "Tailwind CSS",
       "Vite"
     ],
@@ -81,8 +81,8 @@
       "flowTitle": "ลำดับการส่งข้อมูลแบบ Real-time (SignalR)",
       "flowSteps": [
         "React App (ลูกค้าส่งออเดอร์)",
-        "OrderHub (ตรวจสิทธิ์ JWT)",
-        "Kitchen POS (แสดงผลหน้าจอครัวทันที)"
+        "OrderHub (ตรวจสอบสิทธิ์ JWT)",
+        "Kitchen POS (แสดงผลหน้าครัวทันที)"
       ],
       "systemDiagram": {
         "title": "สถาปัตยกรรมการส่งข้อมูลแบบ Real-time และความปลอดภัยของธุรกรรม",
@@ -181,14 +181,14 @@
         ]
       },
       "codeSnippet": {
-        "filename": "OrderService.cs - C# / ASP.NET Core 9.0",
+        "filename": "OrderService.cs — C# / ASP.NET Core 9.0",
         "language": "C#",
-        "code": "// 1. สร้าง Transaction ป้องกันข้อมูลการเงินผิดพลาด (All-or-Nothing Integrity)\nusing var transaction = await _db.Database.BeginTransactionAsync();\ntry {\n    var order = new OrderHeader { Total = cart.Items.Sum(i => i.TotalPrice) };\n    \n    // 2. ยืนยันความถูกต้องของสลิปผ่าน API ภายนอก ก่อนบันทึกลงฐานข้อมูล\n    if (await _paymentService.VerifySlipAsync(dto.SlipFile)) {\n        _db.OrderHeaders.Add(order);\n    }\n    await _db.SaveChangesAsync();\n    await transaction.CommitAsync();\n\n    // 3. ยิงแจ้งเตือนออเดอร์ใหม่ไปที่หน้าจอห้องครัวทันที โดยไม่ต้อง Refresh หน้าเว็บ\n    await _hubContext.Clients.Group(\"Kitchen\").SendAsync(\"NewOrderReceived\", order);\n}\ncatch {\n    await transaction.RollbackAsync(); // ยกเลิกคำสั่งทั้งหมดหากมีกระบวนการใดล้มเหลว\n}"
+        "code": "// 1. สร้าง Transaction ป้องกันข้อมูลการเงินผิดพลาด (All-or-Nothing Integrity)\nusing var transaction = await _db.Database.BeginTransactionAsync();\ntry {\n    var order = new OrderHeader { Total = cart.Items.Sum(i => i.TotalPrice) };\n\n    // 2. ยืนยันความถูกต้องของสลิปผ่าน API ภายนอก ก่อนบันทึกลงฐานข้อมูล\n    if (await _paymentService.VerifySlipAsync(dto.SlipFile)) {\n        _db.OrderHeaders.Add(order);\n    }\n\n    await _db.SaveChangesAsync();\n    await transaction.CommitAsync();\n\n    // 3. ยิงแจ้งเตือนออเดอร์ใหม่ไปที่หน้าจอห้องครัวทันที โดยไม่ต้อง Refresh หน้าเว็บ\n    await _hubContext.Clients.Group(\"Kitchen\").SendAsync(\"NewOrderReceived\", order);\n}\ncatch {\n    await transaction.RollbackAsync(); // ยกเลิกคำสั่งทั้งหมดหากมีกระบวนการใดล้มเหลว\n}"
       },
       "engineeringPillars": [
         {
           "title": "การรับประกันความถูกต้อง (Transactional Integrity)",
-          "description": "ใช้ Database Transaction ครอบคลุมธุรกรรมการเงินเสมอ ป้องกันปัญหาการตัดยอดผิดพลาดระหว่างบันทึกข้อมูล"
+          "description": "ใช้ Database Transaction ครอบลอจิกการเงินเสมอ ป้องกันปัญหาระบบล่มระหว่างบันทึกข้อมูล"
         },
         {
           "title": "ระบบรักษาความปลอดภัย (Security)",
@@ -199,19 +199,19 @@
           "description": "รองรับการคำนวณราคาสินค้าที่มีการปรับแต่งหลายระดับ (Nested Options) และระบบตรวจสอบวันหมดอายุคูปอง"
         },
         {
-          "title": "โครงสร้างโปรเจกต์สะอาด",
+          "title": "โครงสร้างโปรเจกต์ที่สะอาด",
           "description": "แยกโฟลเดอร์ฝั่ง Backend และ Frontend ออกจากกันอย่างชัดเจนตามมาตรฐานวิศวกรรมซอฟต์แวร์สากล"
         }
       ],
       "databaseDesign": [
-        "ออกแบบโครงสร้างฐานข้อมูลเชิงสัมพันธ์ SQL Server แยกชัดเจนระหว่าง Orders, OrderDetails, MenuItems, Categories และ Inventory",
-        "สร้าง Composite Index บนคอลัมน์ OrderDate และ Status เพื่อเร่งความเร็วการสรุปยอดรายได้ประจำวันและประจำเดือน",
-        "แก้ปัญหา N+1 Query ด้วย Eager Loading และใช้ .AsSplitQuery() เมื่อต้อง Join หลายตาราง"
+        "โครงสร้างแบบ 4 เลเยอร์ (Clean Architecture): แยกชั้น Controller, Service, Repository และ Models ออกจากกันอย่างเด็ดขาด เพื่อให้ง่ายต่อการดูแลและทำ Unit Test",
+        "การจัดการ DTO & AutoMapper: รับส่งข้อมูลผ่าน 18 DTO Objects เพื่อป้องกันข้อมูลส่วนตัวรั่วไหล และใช้ AutoMapper ช่วยลดความซ้ำซ้อนของการเขียนโค้ด",
+        "การเพิ่มประสิทธิภาพฐานข้อมูล (EF Core): แก้ปัญหา N+1 Query ด้วยการโหลดข้อมูลล่วงหน้า (Eager Loading) และใช้ .AsSplitQuery() เพื่อลดภาระการ Join ตาราง",
+        "การลดการใช้หน่วยความจำ: ใช้คำสั่ง .AsNoTracking() ในการดึงข้อมูลแบบอ่านอย่างเดียว ช่วยประหยัดหน่วยความจำเซิร์ฟเวอร์ได้อย่างมหาศาล"
       ],
       "securityPractices": [
-        "ระบบตรวจสอบสิทธิ์ด้วย JWT Token พร้อมการแยกบทบาท (RBAC) ระหว่างผู้ดูแลระบบและพนักงาน",
-        "ควบคุมความถูกต้องของพารามิเตอร์ Query ทั้งหมดผ่าน Entity Framework Core ป้องกัน SQL Injection 100%",
-        "แยก Connection String และ Secrets ออกจากซอร์สโค้ด โดยจัดการผ่าน Server Environment Variables"
+        "ระบบตรวจสอบการชำระเงินที่รัดกุม: ตรวจสอบสลิปโอนเงินอัตโนมัติผ่าน API ภายนอก โดยเช็ก BankRef จำนวนเงิน และบัญชีผู้รับ ป้องกันการแนบสลิปซ้ำหรือสลิปปลอม",
+        "การจัดการสถานะออเดอร์ (State Machine): ควบคุมสถานะการสั่งซื้อ 11 ขั้นตอน (เช่น รอดำเนินการ → กำลังทำ → พร้อมเสิร์ฟ) ด้วยตรรกะที่รัดกุม ป้องกันการข้ามขั้นตอน"
       ]
     }
   },
@@ -220,11 +220,11 @@
     "title": "ระบบบริหารจัดการรถยนต์มือสอง ชุมชนตำบลหนองกุ่ม",
     "category": "ระบบงาน Full-Stack ระดับ Production",
     "featured": true,
-    "thumbnailUrl": "/images/projects/used-car-management-system/screen-1-catalog.svg",
+    "thumbnailUrl": "/images/projects/used-car-management-system/main2.png",
     "screenshots": [
-      "/images/projects/used-car-management-system/screen-1-catalog.svg",
-      "/images/projects/used-car-management-system/screen-2-booking.svg",
-      "/images/projects/used-car-management-system/screen-3-admin.svg"
+      "/images/projects/used-car-management-system/main2.png",
+      "/images/projects/used-car-management-system/left2.png",
+      "/images/projects/used-car-management-system/right2.png"
     ],
     "specs": {
       "systemType": "เว็บแอปพลิเคชัน (Web App)",
@@ -258,20 +258,20 @@
         "accent": "emerald"
       }
     ],
-    "problemStatement": "การซื้อขายรถยนต์มือสองในชุมชนมักอาศัยการบอกต่อ ทำให้ข้อมูลกระจัดกระจายและตรวจสอบยาก ผู้ซื้อไม่มีเครื่องมือช่วยประเมินราคาหรือประวัติรถ โปรเจกต์นี้จึงมุ่งสร้างศูนย์กลางข้อมูลที่ปลอดภัยและมีมาตรฐานเพื่อแก้ปัญหาเหล่านี้",
+    "problemStatement": "การซื้อขายรถยนต์มือสองในชุมชนมักอาศัยการบอกต่อ ทำให้ข้อมูลกระจัดกระจายและตรวจสอบยาก ผู้ซื้อไม่มีเครื่องมือช่วยประเมินราคาหรือดูประวัติรถ โปรเจกต์นี้จึงมุ่งสร้างศูนย์กลางข้อมูลที่ปลอดภัยและมีมาตรฐานเพื่อแก้ปัญหาเหล่านี้",
     "coreFeatures": [
-      "ระบบค้นหาอัจฉริยะ: กรองและเปรียบเทียบรถตามประเภท รุ่น และราคา พร้อมระบบแบ่งหน้า (Server-side Pagination)",
-      "เครื่องมือช่วยตัดสินใจ: มีระบบคำนวณค่างวดผ่อนชำระอัตโนมัติ และแสดงประวัติการซ่อมบำรุงอย่างละเอียด",
+      "ระบบค้นหาอัจฉริยะ: กรองและเปรียบเทียบรถตามประเภท รุ่น และราคา พร้อมระบบแบ่งหน้า (Pagination)",
+      "เครื่องมือช่วยตัดสินใจ: มีระบบคำนวณค่างวดผ่อนชำระอัตโนมัติ และแสดงประวัติซ่อมบำรุงอย่างละเอียด",
       "การจัดการการจอง: เชื่อมต่อ Stripe Payment เพื่อชำระเงินมัดจำจองรถ พร้อมระบบยกเลิกคิวอัตโนมัติเมื่อหมดเวลา",
-      "กลไกความน่าเชื่อถือ: มีระบบยืนยันตัวตนผู้ขาย (KYC) และขั้นตอนให้แอดมินอนุมัติข้อมูลรถก่อนแสดงผล"
+      "กลไกความน่าเชื่อถือ: มีระบบยืนยันตัวตนผู้ขาย และขั้นตอนให้แอดมินอนุมัติข้อมูลรถก่อนแสดงผล"
     ],
     "architectureHighlights": [
-      "โครงสร้างแบบ 3 เลเยอร์ (Clean Architecture) และ Generic Repository Pattern เพื่อลดความซ้ำซ้อนของการเขียนโค้ด",
-      "ระบบตรวจสอบคิวอัตโนมัติ (Background Service) ทำงานเบื้องหลังเพื่อคืนสถานะรถอัตโนมัติเมื่อหมดเวลาจอง พร้อมใช้ Polly Retry Policy",
-      "ระบบชำระเงิน Stripe Webhook ร่วมกับ Idempotency Check เพื่อยืนยันการชำระเงิน ป้องกันการตัดเงินและประมวลผลซ้ำซ้อน",
-      "ดัชนีฐานข้อมูลเฉพาะ (Filtered Unique Index) ออกแบบ Schema ด้วยเงื่อนไขพิเศษ ป้องกันการจองรถคันเดียวกันซ้ำซ้อนในระดับ DB"
+      "โครงสร้างแบบ 3 เลเยอร์ (Clean Architecture): แยกชั้น Controller, Service และ Repository ออกจากกันอย่างเด็ดขาด เพื่อความง่ายในการดูแลและรองรับการทำ Unit Test",
+      "การจัดการ DTO & AutoMapper: รับส่งข้อมูลผ่าน DTO ร่วมกับ AutoMapper เพื่อควบคุมการเข้าถึงข้อมูล Entity และป้องกันข้อมูลส่วนบุคคลรั่วไหล",
+      "ลดภาระฐานข้อมูล (Query Optimization): ป้องกันปัญหา N+1 Query ด้วย Eager Loading และใช้ .AsNoTracking() เพื่อลดการใช้ Memory ได้ถึง 70%",
+      "Generic Repository Pattern: ลดความซ้ำซ้อนของการเขียนโค้ด (DRY Principle) ช่วยให้ขยายระบบฐานข้อมูลในอนาคตได้รวดเร็ว"
     ],
-    "businessImpact": "สร้างพื้นที่ซื้อขายที่โปร่งใส ลดเวลาในการค้นหาและติดต่อระหว่างผู้ซื้อกับผู้ขายอย่างมาก สร้างความเชื่อมั่นด้วยระบบยืนยันตัวตน (KYC) และช่วยส่งเสริมมูลค่าทางเศรษฐกิจดิจิทัลภายในชุมชนได้อย่างยั่งยืน",
+    "businessImpact": "สร้างพื้นที่ซื้อขายที่โปร่งใส ลดเวลาในการค้นหาและติดต่อระหว่างผู้ซื้อกับผู้ขายลงอย่างมาก สร้างความเชื่อมั่นด้วยระบบยืนยันตัวตน (KYC) และช่วยส่งเสริมมูลค่าทางเศรษฐกิจดิจิทัลภายในชุมชนได้อย่างยั่งยืน",
     "techStack": [
       "ASP.NET Core 9",
       "Next.js 15",
@@ -289,12 +289,12 @@
     "githubBackendUrl": "https://github.com/Thanawat0107/CarMS_API.git",
     "githubUrl": "https://github.com/Thanawat0107/car_client.git",
     "deepDive": {
-      "overview": "แพลตฟอร์มดิจิทัลสำหรับการซื้อขาย จองรถ ทดลองขับ และบริหารจัดการข้อมูลรถยนต์มือสอง สร้างมาตรฐานใหม่เพื่อความน่าเชื่อถือให้กับชุมชน ครอบคลุมตั้งแต่ระบบค้นหา การคำนวณค่างวด ไปจนถึงการชำระเงินมัดจำออนไลน์",
+      "overview": "ระบบรถยนต์มือสอง: อธิบายการออกแบบโครงสร้าง (Architecture) การทำงานของระบบอัตโนมัติ (Background Service) และตัวอย่างโค้ดระดับ Production",
       "flowTitle": "ขั้นตอนการชำระเงินผ่าน Stripe & Webhook",
       "flowSteps": [
         "Client App (ชำระเงินมัดจำ)",
         "Stripe API (ตรวจสอบสิทธิ์)",
-        "Webhook Handler (อัปเดตสถานะจอง)"
+        "Webhook (อัปเดตสถานะจอง)"
       ],
       "systemDiagram": {
         "title": "สถาปัตยกรรมการจองมัดจำรถยนต์และระบบงานเบื้องหลัง",
@@ -312,9 +312,9 @@
             "id": "gateway",
             "tier": "gateway",
             "title": "ASP.NET Core 9 Web API",
-            "tech": "C# / JWT RBAC / Polly",
+            "tech": "C# / JWT Auth / Polly",
             "role": "API Layer",
-            "description": "ควบคุมสิทธิ์แอดมิน ผู้ขาย และผู้ซื้อ พร้อมระบบ DTO ป้องกันข้อมูลรั่วไหล"
+            "description": "ระบบ API จัดการข้อมูลรถและการจอง พร้อมระบบ DTO ป้องกันข้อมูลรั่วไหล"
           },
           {
             "id": "service",
@@ -377,37 +377,37 @@
         ]
       },
       "codeSnippet": {
-        "filename": "ReservationExpiryWorker.cs - C# / .NET 9.0 (Background Task)",
+        "filename": "ReservationExpiryWorker.cs — C# / .NET 9.0 (Background Task)",
         "language": "C#",
-        "code": "// ระบบตรวจสอบการหมดอายุการจองอัตโนมัติ พร้อมจัดการข้อผิดพลาดด้วย Polly Retry Policy\nvar expiredCount = await Policy.Handle<Exception>()\n    .WaitAndRetryAsync(3, attempt => TimeSpan.FromSeconds(10))\n    .ExecuteAsync(async () => {\n        // 1. ค้นหารายการจองที่เกินเวลา ExpiryAt โดยใช้ Eager Loading ดึงข้อมูลรถที่เกี่ยวข้อง\n        var expiredReservations = _db.Reservations.Include(r => r.Car)\n            .Where(r => r.Status == \"Pending\" && r.ExpiryAt < DateTime.UtcNow)\n            .ToList();\n\n        // 2. เปลี่ยนสถานะการจองเป็น \"หมดอายุ\" และคืนสถานะรถกลับเป็น \"พร้อมขาย\" (Atomic Update)\n        foreach (var res in expiredReservations) {\n            res.Status = \"Expired\";\n            res.Car.Status = \"Available\";\n        }\n        return await _db.SaveChangesAsync();\n    });"
+        "code": "// ระบบตรวจสอบหมดอายุการจองอัตโนมัติ พร้อมจัดการข้อผิดพลาดด้วย Polly Retry Policy\nvar expiredCount = await Policy.Handle<Exception>()\n    .WaitAndRetryAsync(3, attempt => TimeSpan.FromSeconds(10))\n    .ExecuteAsync(async () => {\n        \n        // 1. ค้นหาการจองที่เกินเวลา ExpiryAt โดยใช้ Eager Loading ดึงข้อมูลรถที่เกี่ยวข้อง\n        var expiredReservations = _db.Reservations.Include(r => r.Car)\n            .Where(r => r.Status == \"Pending\" && r.ExpiryAt < DateTime.UtcNow)\n            .ToList();\n\n        // 2. เปลี่ยนสถานะการจองเป็น \"หมดอายุ\" และคืนสถานะรถกลับเป็น \"พร้อมขาย\" (Atomic Update)\n        foreach (var res in expiredReservations) {\n            res.Status = \"Expired\"; \n            res.Car.Status = \"Available\";\n        }\n        \n        return await _db.SaveChangesAsync();\n});"
       },
       "engineeringPillars": [
         {
           "title": "การรับประกันความถูกต้อง (Transactional Integrity)",
-          "description": "ใช้ Database Transaction ควบคุมการอัปเดตสถานะ ป้องกันข้อขัดแย้งเมื่อเกิดข้อผิดพลาดในการจอง"
+          "description": "ใช้ Database Transaction ควบคุมการอัปเดตสถานะ ป้องกันข้อมูลขัดแย้งเมื่อเกิดข้อผิดพลาด"
         },
         {
-          "title": "ระบบรักษาความปลอดภัย (JWT & RBAC)",
-          "description": "ควบคุมการเข้าถึงแบบ Role-based (แอดมิน/ผู้ขาย/ผู้ซื้อ) พร้อมระบบตรวจสอบ Token Expiry"
+          "title": "ระบบรักษาความปลอดภัย (JWT Authentication)",
+          "description": "ควบคุมการเข้าถึงระบบด้วย JWT Authentication พร้อมระบบตรวจสอบ Token Expiry"
         },
         {
           "title": "ดัชนีฐานข้อมูลเฉพาะ (Filtered Unique Index)",
-          "description": "ออกแบบ Schema ด้วยเงื่อนไขพิเศษ ป้องกันการจองรถคันเดียวกันซ้ำซ้อนในระดับฐานข้อมูล"
+          "description": "ออกแบบ Schema ด้วยเงื่อนไขพิเศษ ป้องกันการจองรถคันเดียวกันซ้ำซ้อนในระดับ Database"
         },
         {
           "title": "การจัดการข้อมูลขนาดใหญ่ (Pagination)",
-          "description": "ใช้ Server-side Pagination เพื่อจำกัดขนาดข้อมูลที่ส่งกลับ ช่วยประหยัด Network Bandwidth"
+          "description": "ใช้ Server-side Pagination เพื่อจำกัดขนาดข้อมูลรถที่ส่งกลับ ช่วยประหยัด Network Bandwidth"
         }
       ],
       "databaseDesign": [
-        "ออกแบบสกีมาเชิงสัมพันธ์แยก Cars, Reservations, MaintenanceRecords, Sellers และ Users",
-        "ประยุกต์ใช้ Filtered Unique Index ป้องกันปัญหา Race Condition ในการจองรถคันเดียวกัน",
-        "ใช้ .AsNoTracking() ในคิวรีอ่านข้อมูลทั่วไป ช่วยลดภาระ Memory ของเซิร์ฟเวอร์ได้ถึง 70%"
+        "โครงสร้างแบบ 3 เลเยอร์ (Clean Architecture): แยกชั้น Controller, Service และ Repository ออกจากกันอย่างเด็ดขาด เพื่อความง่ายในการดูแลและรองรับการทำ Unit Test",
+        "การจัดการ DTO & AutoMapper: รับส่งข้อมูลผ่าน DTO ร่วมกับ AutoMapper เพื่อควบคุมการเข้าถึงข้อมูล Entity และป้องกันข้อมูลส่วนบุคคลรั่วไหล",
+        "ลดภาระฐานข้อมูล (Query Optimization): ป้องกันปัญหา N+1 Query ด้วย Eager Loading และใช้ .AsNoTracking() เพื่อลดการใช้ Memory ได้ถึง 70%",
+        "Generic Repository Pattern: ลดความซ้ำซ้อนของการเขียนโค้ด (DRY Principle) ช่วยให้ขยายระบบฐานข้อมูลในอนาคตได้รวดเร็ว"
       ],
       "securityPractices": [
-        "การควบคุมสิทธิ์อย่างเข้มงวดด้วย JWT Role-Based Access Control",
-        "การตรวจสอบลายเซ็น Stripe Webhook Signature ร่วมกับระบบ Idempotency เพื่อป้องกันการตัดเงินซ้ำ",
-        "ระบบตรวจสอบตัวตนผู้ขาย (KYC) ก่อนอนุญาตให้เผยแพร่ข้อมูลรถสู่สาธารณะ"
+        "ระบบตรวจสอบคิวอัตโนมัติ (Background Service): ทำงานเบื้องหลังเพื่อคืนสถานะรถอัตโนมัติเมื่อหมดเวลาจอง พร้อมใช้ Polly Retry Policy เพื่อความทนทานของระบบ",
+        "ระบบชำระเงิน (Stripe Webhook): ใช้ Webhook ร่วมกับ Idempotency Check เพื่อยืนยันการชำระเงิน ป้องกันการตัดเงินและประมวลผลซ้ำซ้อน"
       ]
     }
   },
@@ -416,11 +416,11 @@
     "title": "SBFblazor: แพลตฟอร์มร้านค้าออนไลน์และระบบจัดการสต็อก",
     "category": "เว็บแอปพลิเคชันระดับองค์กร (Blazor)",
     "featured": true,
-    "thumbnailUrl": "/images/projects/sbf-blazor-ecommerce/screen-1-store.svg",
+    "thumbnailUrl": "/images/projects/sbf-blazor-ecommerce/main3.png",
     "screenshots": [
-      "/images/projects/sbf-blazor-ecommerce/screen-1-store.svg",
-      "/images/projects/sbf-blazor-ecommerce/screen-2-checkout.svg",
-      "/images/projects/sbf-blazor-ecommerce/screen-3-reports.svg"
+      "/images/projects/sbf-blazor-ecommerce/main3.png",
+      "/images/projects/sbf-blazor-ecommerce/left3.png",
+      "/images/projects/sbf-blazor-ecommerce/right3.png"
     ],
     "specs": {
       "systemType": "เว็บแอปพลิเคชัน (Blazor)",
@@ -457,17 +457,17 @@
     "problemStatement": "การขายสินค้าออนไลน์มักเกิดปัญหาการตัดสต็อกที่ไม่แม่นยำ ทำให้ลูกค้าระบุสั่งซื้อสินค้าที่หมดไปแล้ว รวมถึงความยุ่งยากในการตรวจสอบยอดโอนและสรุปยอดขายรายวัน โปรเจกต์นี้จึงถูกพัฒนาขึ้นเพื่อรวบรวมทุกกระบวนการไว้ในระบบเดียว",
     "coreFeatures": [
       "ระบบจัดการสต็อกสินค้า: อัปเดตจำนวนสินค้าคงคลังแบบ Real-time ทันทีที่มีออเดอร์ ป้องกันปัญหาสินค้าไม่ตรงกับหน้าเว็บไซต์",
-      "ตะกร้าสินค้าและการสั่งซื้อ: ลูกค้าสามารถเลือกซื้อ จัดการตะกร้าสินค้า และติดตามสถานะออเดอร์ของตนเองได้ในหน้าเดียว",
-      "ระบบชำระเงินออนไลน์: รองรับ Stripe API สำหรับตัดบัตรเครดิต ให้ลูกค้าทำรายการได้อย่างปลอดภัย",
-      "แดชบอร์ดและรายงาน: สรุปยอดขายรายวัน/เดือน สามารถออกรายงานเป็นไฟล์ PDF และ Excel ได้อัตโนมัติ"
+      "ตะกร้าสินค้าและการสั่งซื้อ: ลูกค้าสามารถเลือกซื้อ จัดการตะกร้าสินค้า และติดตามสถานะออเดอร์ของตนเองได้",
+      "ระบบชำระเงินออนไลน์: รองรับ Stripe API สำหรับตัดบัตรเครดิต ให้ลูกค้าทำรายการจบในหน้าเดียวอย่างปลอดภัย",
+      "แดชบอร์ดและรายงาน: สรุปยอดขายรายวัน/เดือน สามารถส่งออกรายงานเป็นไฟล์ PDF และ Excel ได้อัตโนมัติ"
     ],
     "architectureHighlights": [
-      "Hybrid Blazor (WASM & Server): ใช้ Blazor WebAssembly ฝั่งลูกค้าเพื่อความรวดเร็วบนเบราว์เซอร์ และใช้ Blazor Server ฝั่งแอดมินเพื่อความเสถียร",
-      "Pessimistic Concurrency Row Lock เพื่อควบคุมการสร้างออเดอร์และการตัดสต็อกแบบ Real-time Deduction ป้องกันการซื้อเกินสต็อก",
-      "ระบบการรับมือข้อผิดพลาด (Polly Resilience): ติดตั้ง Retry Policy เพื่อจัดการปัญหา Timeout ชั่วคราวเมื่อเชื่อมต่อ Stripe",
-      "ความปลอดภัยในการรับส่งข้อมูล: ไม่ส่ง Entity หลักที่มีข้อมูลสำคัญออกไปสู่ Client โดยส่งผ่าน DTO ที่คัดกรองแล้วเท่านั้น"
+      "สถาปัตยกรรมแบบ 3 เลเยอร์: แยกระบบ API, Business Logic และ Data Access ออกจากกันโดยใช้ Repository Pattern เพื่อให้ง่ายต่อการขยายและบำรุงรักษาระบบ",
+      "Hybrid Blazor (WASM & Server): ใช้ Blazor WebAssembly ฝั่งลูกค้าเพื่อความรวดเร็วบนเบราว์เซอร์ และใช้ Blazor Server ฝั่งแอดมินเพื่อความเสถียรในการจัดการหลังบ้าน",
+      "ระบบจัดการสต็อกแบบรวมศูนย์: โครงสร้างฐานข้อมูลออกแบบมาให้รองรับการอัปเดตจำนวนสินค้าคงคลังแบบ Real-time ทันทีที่มีการสั่งซื้อหรือชำระเงินสำเร็จ",
+      "การดึงรายงานประสิทธิภาพสูง: ใช้คำสั่ง .AsNoTracking() เพื่อความรวดเร็วในการ Query ข้อมูลสรุปยอดขาย และรองรับการ Export เป็น PDF และ Excel"
     ],
-    "businessImpact": "สร้างประสบการณ์การซื้อสินค้าที่ราบรื่นให้กับลูกค้าตั้งแต่เลือกสินค้าจนถึงชำระเงิน ด้านผู้ดูแลและระบบสามารถจัดการสต็อกได้อย่างแม่นยำแบบ Real-time ลดข้อผิดพลาดในการขาย และสามารถนำข้อมูลสถิติไปวิเคราะห์ยอดขายได้ทันที",
+    "businessImpact": "สร้างประสบการณ์การซื้อสินค้าที่ราบรื่นให้กับลูกค้าตั้งแต่เลือกสินค้าจนถึงชำระเงิน ด้านผู้ดูแลระบบสามารถจัดการสต็อกได้อย่างแม่นยำแบบ Real-time ลดข้อผิดพลาดในการขาย และสามารถนำข้อมูลสถิติไปวิเคราะห์ยอดขายได้ทันที",
     "techStack": [
       "ASP.NET Core 7",
       "Blazor (Server/WASM)",
@@ -476,18 +476,18 @@
       "Stripe API",
       "MudBlazor",
       "Syncfusion",
-      "iText7",
+      "iText7 (PDF)",
       "ClosedXML"
     ],
     "liveDemoUrl": "http://10.103.0.17/cs66/blazor/s07/WebSBF_ServerV2",
     "githubUrl": "https://github.com/Thanawat0107/SBFblazor.git",
     "deepDive": {
-      "overview": "แพลตฟอร์มอีคอมเมิร์ซแบบครบวงจร รองรับการสั่งซื้อและชำระเงินอัตโนมัติ พร้อมระบบจัดการสต็อกสินค้าและออกรายงานสำหรับผู้ดูแลระบบ อธิบายการออกแบบสถาปัตยกรรม 3 เลเยอร์ และตัวอย่างการจัดการ Database เพื่อให้รองรับการสั่งซื้อและตัดสต็อกอย่างแม่นยำ",
+      "overview": "อธิบายการออกแบบสถาปัตยกรรมแบบ 3 เลเยอร์, การเชื่อมต่อระบบชำระเงินออนไลน์, และตัวอย่างการจัดการ Database เพื่อให้รองรับการสั่งซื้อและตัดสต็อกอย่างแม่นยำ",
       "flowTitle": "Flow การชำระเงินและตัดสต็อก (Stripe Webhook)",
       "flowSteps": [
         "WASM Portal (ชำระเงิน Checkout)",
         "Stripe API (ตรวจสอบการตัดบัตร)",
-        "Webhook Handler (ปรับสถานะ & ตัดสต็อก)"
+        "Webhook Handler (ปรับสถานะ/ตัดสต็อก)"
       ],
       "systemDiagram": {
         "title": "สถาปัตยกรรม Hybrid Blazor และระบบป้องกันสต็อกติดลบ",
@@ -570,9 +570,9 @@
         ]
       },
       "codeSnippet": {
-        "filename": "OrderCheckoutRepository.cs - C# / .NET 7.0 (Transactional Flow)",
+        "filename": "OrderCheckoutRepository.cs — C# / .NET 7.0 (Transactional Flow)",
         "language": "C#",
-        "code": "// ควบคุมการสร้างออเดอร์และการตัดสต็อกแบบ Atomic ป้องกันข้อมูลขาดหายกรณีเซิร์ฟเวอร์ขัดข้อง\nusing var transaction = await _dbContext.Database.BeginTransactionAsync();\ntry {\n    // 1. ดึงข้อมูลสินค้าที่ลูกค้าต้องการสั่งซื้อ พร้อมล็อค Row ไว้ไม่ให้คนอื่นแก้ไข (Pessimistic Concurrency)\n    var productStock = await _dbContext.Products.FirstOrDefaultAsync(p => p.Id == productId);\n\n    // 2. ตรวจสอบและตัดจำนวนสต็อกแบบทันที (Real-time Deduction)\n    if (productStock.Quantity >= orderQuantity) {\n        productStock.Quantity -= orderQuantity;\n    }\n\n    // 3. บันทึกข้อมูลใบสั่งซื้อและรายละเอียดลงหลายตารางพร้อมกันใน Transaction เดียว\n    await _dbContext.SaveChangesAsync();\n    await transaction.CommitAsync();\n}\ncatch {\n    await transaction.RollbackAsync(); // คืนค่าสต็อกและยกเลิกออเดอร์ทั้งหมดหากมีข้อผิดพลาด\n}"
+        "code": "// ควบคุมการสร้างออเดอร์และการตัดสต็อกแบบ Atomic ป้องกันข้อมูลขาดหายกรณีเซิร์ฟเวอร์ขัดข้อง\nusing var transaction = await _dbContext.Database.BeginTransactionAsync();\ntry {\n    // 1. ดึงข้อมูลสินค้าที่ลูกค้าต้องการสั่งซื้อ พร้อมลอค Row ไว้ไม่ให้คนอื่นแก้ไข (Pessimistic Concurrency)\n    var productStock = await _dbContext.Products.FirstOrDefaultAsync(p => p.Id == productId);\n\n    // 2. ตรวจสอบและตัดจำนวนสต็อกแบบทันที (Real-time Deduction)\n    if (productStock.Quantity >= orderQuantity) {\n        productStock.Quantity -= orderQuantity;\n    }\n\n    // 3. บันทึกข้อมูลใบสั่งซื้อและรายละเอียดลงหลายตารางพร้อมกันใน Transaction เดียว\n    await _dbContext.SaveChangesAsync();\n    await transaction.CommitAsync();\n}\ncatch {\n    await transaction.RollbackAsync(); // คืนค่าสต็อกและยกเลิกออเดอร์ทั้งหมดหากมีข้อผิดพลาด\n}"
       },
       "engineeringPillars": [
         {
@@ -585,7 +585,7 @@
         },
         {
           "title": "โครงสร้างโฟลเดอร์ที่เป็นระเบียบ (Clean Folder)",
-          "description": "จัดระเบียบโปรเจกต์แยกส่วน Client, Server และ Shared Model ชัดเจนตามมาตรฐานการทำงานเป็นทีม"
+          "description": "จัดระเบียบโปรเจกต์แยกส่วน Client, Server และ Shared Model ชัดเจนตามมาตรฐานเพื่อการทำงานเป็นทีม"
         },
         {
           "title": "ความปลอดภัยในการรับส่งข้อมูล (Data Transfer)",
@@ -593,12 +593,14 @@
         }
       ],
       "databaseDesign": [
-        "ระบบจัดการสต็อกแบบรวมศูนย์ โครงสร้างฐานข้อมูลออกแบบมารองรับการอัปเดตจำนวนสินค้าคงคลังแบบ Real-time ทันทีที่มีการสั่งซื้อหรือชำระเงินสำเร็จ",
+        "สถาปัตยกรรมแบบ 3 เลเยอร์: แยกระบบ API, Business Logic และ Data Access ออกจากกันโดยใช้ Repository Pattern เพื่อให้ง่ายต่อการขยายและบำรุงรักษาระบบ",
+        "Hybrid Blazor (WASM & Server): ใช้ Blazor WebAssembly ฝั่งลูกค้าเพื่อความรวดเร็วบนเบราว์เซอร์ และใช้ Blazor Server ฝั่งแอดมินเพื่อความเสถียรในการจัดการหลังบ้าน",
+        "ระบบจัดการสต็อกแบบรวมศูนย์: โครงสร้างฐานข้อมูลออกแบบมาให้รองรับการอัปเดตจำนวนสินค้าคงคลังแบบ Real-time ทันทีที่มีการสั่งซื้อหรือชำระเงินสำเร็จ",
         "การดึงรายงานประสิทธิภาพสูง: ใช้คำสั่ง .AsNoTracking() เพื่อความรวดเร็วในการ Query ข้อมูลสรุปยอดขาย และรองรับการ Export เป็น PDF และ Excel"
       ],
       "securityPractices": [
-        "ระบบตรวจสอบสิทธิ์และกรองข้อมูล: ควบคุมการเข้าถึงด้วย JWT Authentication ควบคู่กับการใช้ DTO ป้องกันข้อมูลสำคัญรั่วไหลสู่ Client",
-        "ป้องกันการตัดเงินและตัดสต็อกซ้ำซ้อน: ออกแบบกลไกรับ Webhook จาก Stripe อย่างรัดกุม (Idempotency) ป้องกันปัญหาการประมวลผลซ้ำกรณีเน็ตสะดุด"
+        "ระบบตรวจสอบสิทธิ์และกรองข้อมูล: ควบคุมการเข้าถึงด้วย JWT Authentication ควบคู่กับการใช้ DTO (Data Transfer Object) เพื่อป้องกันข้อมูลสำคัญรั่วไหลไปสู่ Client",
+        "ป้องกันการตัดเงินและสต็อกซ้ำซ้อน: ออกแบบกลไกรับ Webhook จาก Stripe อย่างรัดกุม (Idempotency) ป้องกันปัญหาการประมวลผลซ้ำกรณีที่อินเทอร์เน็ตสะดุด"
       ]
     }
   }

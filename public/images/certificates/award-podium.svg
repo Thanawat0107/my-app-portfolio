@@ -1,23 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="podiumGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0f172a" />
-      <stop offset="100%" stop-color="#172554" />
+      <stop offset="100%" stop-color="#1e293b" />
     </linearGradient>
-    <linearGradient id="goldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="amberBorderPodium" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.8" />
       <stop offset="50%" stop-color="#ffffff" stop-opacity="0.3" />
       <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.8" />
     </linearGradient>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <pattern id="gridPodium" width="40" height="40" patternUnits="userSpaceOnUse">
       <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.05" />
     </pattern>
   </defs>
 
   <!-- Background -->
-  <rect width="800" height="500" rx="16" fill="url(#bgGrad)" />
-  <rect width="800" height="500" rx="16" fill="url(#grid)" />
-  <rect x="12" y="12" width="776" height="476" rx="12" fill="none" stroke="url(#goldBorder)" stroke-width="2" stroke-dasharray="6,4" />
+  <rect width="800" height="500" rx="16" fill="url(#podiumGrad)" />
+  <rect width="800" height="500" rx="16" fill="url(#gridPodium)" />
+  <rect x="12" y="12" width="776" height="476" rx="12" fill="none" stroke="url(#amberBorderPodium)" stroke-width="2" stroke-dasharray="6,4" />
 
   <!-- Badge / Category -->
   <g transform="translate(40, 50)">
@@ -32,8 +32,8 @@
     <path d="M -16 -8 L 0 -24 L 16 -8 L 10 16 L -10 16 Z" fill="#f59e0b" />
   </g>
 
-  <!-- Content text -->
-  <text x="400" y="300" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">ภาพถ่ายพิธีมอบรางวัลชนะเลิศ & เหรียญทอง</text>
+  <!-- Content text with valid XML entities -->
+  <text x="400" y="300" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">ภาพถ่ายพิธีมอบรางวัลชนะเลิศ &amp; เหรียญทอง</text>
   <text x="400" y="335" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="15" text-anchor="middle">ณ มหาวิทยาลัยราชภัฏหมู่บ้านจอมบึง (22 ธ.ค. 2568)</text>
 
   <!-- Bottom notice -->

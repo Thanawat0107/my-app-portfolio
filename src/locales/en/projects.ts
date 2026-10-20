@@ -3,9 +3,9 @@ import { projectsData } from '@/data/projects.data';
 
 export const projectsEn: ProjectsSectionTranslations = {
   badge: 'Engineering Case Studies',
-  title: 'Featured Production Projects',
+  title: 'Featured Projects & Case Studies',
   subtitle:
-    'Real-world systems built with clean separation of concerns, relational database integrity, and production deployment.',
+    'Real-world production systems demonstrating business problem analysis, architectural decisions, and measurable outcomes.',
   viewAllBtn: 'View All Projects',
   catalogBadge: 'Portfolio Catalog',
   catalogTitle: 'All Engineering Projects & Case Studies',

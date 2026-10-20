@@ -2,60 +2,64 @@
   {
     "id": "backend",
     "categoryName": "Backend Development",
-    "description": "Scalable APIs, layered architecture, business logic, and authentication workflows.",
+    "description": "Scalable APIs, Clean Architecture, business logic, and transactional data pipelines.",
     "skills": [
       "C#",
       "ASP.NET Core Web API",
       "ASP.NET MVC",
-      "Blazor (Server/WASM)",
+      "Blazor",
       "Entity Framework Core",
       "Clean Architecture",
-      "JWT Authentication",
       "SignalR"
     ]
   },
   {
     "id": "frontend",
-    "categoryName": "Frontend & Mobile Development",
-    "description": "Responsive web applications, cross-platform mobile apps, and reactive state management.",
+    "categoryName": "Frontend & Mobile",
+    "description": "Modern responsive web applications, cross-platform mobile apps, reactive state management, and type safety.",
     "skills": [
       "React",
       "Next.js",
-      "React Native",
-      "Expo",
       "TypeScript",
-      "JavaScript",
       "Redux Toolkit",
-      "RTK Query",
       "Tailwind CSS",
-      "Formik + Yup"
+      "React Native"
     ]
   },
   {
     "id": "database",
-    "categoryName": "Database & Data Modeling",
-    "description": "Relational schema design, ACID transactions, and query performance optimization.",
+    "categoryName": "Database Systems",
+    "description": "Relational database schema design, management tools, and ACID transactional integrity.",
     "skills": [
-      "Microsoft SQL Server",
-      "Entity Framework Core (Code First)",
-      "Eager Loading / .AsNoTracking()",
-      "ACID Transactions",
-      "Filtered Unique Index",
-      "Database Normalization"
+      "SQL Server",
+      "PostgreSQL",
+      "DBeaver",
+      "ACID Transactions"
     ]
   },
   {
-    "id": "devops-tools",
-    "categoryName": "Servers, Networks & DevOps",
-    "description": "Server provisioning, computer network management, containerization, and developer tooling.",
+    "id": "tools-env",
+    "categoryName": "Tools & Environment",
+    "description": "Containerization, server operating systems, API testing suites, and AI-accelerated development.",
     "skills": [
-      "IIS Server",
-      "Ubuntu / Linux",
-      "Docker",
-      "Computer Network Management",
-      "Git / GitHub",
       "Postman",
-      "Visual Studio / VS Code"
+      "IIS",
+      "Ubuntu",
+      "Docker",
+      "Linux",
+      "AI Coding Assistant (Copilot, Claude, ChatGPT)"
+    ]
+  },
+  {
+    "id": "workflow-qa",
+    "categoryName": "Workflow & Quality Assurance",
+    "description": "Version control, automated CI/CD pipelines, automated testing, static code analysis, and code reviews.",
+    "skills": [
+      "Git",
+      "GitHub Actions (CI/CD Workflow)",
+      "Unit Testing (xUnit)",
+      "SonarQube Analysis",
+      "Code Review Process"
     ]
   }
 ]

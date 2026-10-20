@@ -121,6 +121,8 @@ export interface ArchitecturePillar {
   title: string;
   subtitle: string;
   description: string;
+  implementedIn?: string;
+  accent?: 'emerald' | 'cyan' | 'amber' | 'indigo' | 'purple';
   tools: string[];
   codeSnippet?: CodeSnippet;
 }
@@ -143,7 +145,8 @@ export interface ExperienceItem {
   period: string;
   role: string;
   organization: string;
-  type: 'work' | 'education' | 'award' | 'leadership';
+  type: 'work' | 'education' | 'award' | 'leadership' | 'academic' | 'mentor';
+  categoryGroup?: string;
   badge?: string;
   highlights: string[];
   technologies: string[];

@@ -5,8 +5,9 @@ import skillsThJson from '@/data/json/th/skills.json';
 export const skillsDataTh: SkillCategory[] = skillsThJson as SkillCategory[];
 
 export const skillsTh: SkillsSectionTranslations = {
-  badge: 'ความสามารถทางเทคนิค',
-  title: 'ชุดเทคโนโลยีและเครื่องมือทางวิศวกรรม',
-  subtitle: 'จัดกลุ่มตามหมวดหมู่การใช้งาน — เครื่องมือและภาษาโปรแกรมที่ประยุกต์ใช้จริงในโปรเจกต์',
+  badge: 'ความเชี่ยวชาญทางเทคนิค',
+  title: 'ทักษะทางเทคนิคและเครื่องมือพัฒนา (Technical Skills & Tools)',
+  subtitle:
+    'จำแนกตามโครงสร้างสายงานวิศวกรรมซอฟต์แวร์ ทั้งสถาปัตยกรรมหลังบ้าน, เทคโนโลยีหน้าบ้าน, ระบบจัดการฐานข้อมูล และเครื่องมือควบคุมคุณภาพโค้ด',
   items: skillsDataTh,
 };

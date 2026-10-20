@@ -1,113 +1,216 @@
 [
   {
-    "id": "award-network-competition",
-    "period": "Dec 2025 (2568)",
-    "role": "1st Place Winner - Academic Computer Network Management Competition",
-    "organization": "46th Ratchaphruek Games (P.J.N.K. Relations), Muban Chombueng Rajabhat University",
-    "type": "award",
-    "badge": "1st Place Winner",
+    "id": "work-supalai-software-engineer",
+    "period": "June – September 2026",
+    "role": "Software Engineer Intern (SUPALAI Tech Talent Program 2026)",
+    "organization": "Supalai Public Company Limited - Head Office (Bangkok)",
+    "type": "work",
+    "categoryGroup": "Work",
+    "badge": "SUPALAI Tech Talent 2026",
     "highlights": [
-      "Awarded First Place in Computer Network System Management and Administration skills competition across Western Thailand Rajabhat universities.",
-      "Demonstrated expertise in network topology configuration, network services administration, and server management under timed competitive conditions."
+      "Developed the Environmental Impact Assessment (EIA Phase 2) monitoring system supporting 4 user access tiers, including a Public Dashboard for local communities to enhance transparency and mitigate project risks.",
+      "Engineered backend APIs to ingest and store real-time telemetry from external Micro Station IoT stations, integrating a rule-based engine to trigger automated SMS notifications whenever thresholds are exceeded.",
+      "Collaborated within an enterprise software engineering environment, implementing Unit Testing (xUnit), remediating code quality based on SonarQube reports, and adhering to strict Code Reviews and CI/CD workflows."
     ],
     "technologies": [
-      "Computer Networks",
-      "Network Administration",
-      "Linux / Ubuntu",
-      "Network Security",
-      "Troubleshooting"
+      "C#",
+      ".NET Core",
+      "Next.js",
+      "PostgreSQL",
+      "xUnit",
+      "SonarQube",
+      "GitHub Actions",
+      "Micro Station IoT"
+    ],
+    "media": [
+      {
+        "thumbnailUrl": "/images/work/supalai-tech-talent.svg",
+        "caption": "EIA Phase 2 Environmental Monitoring & IoT Telemetry Dashboard",
+        "category": "Enterprise Deliverable"
+      }
+    ]
+  },
+  {
+    "id": "award-network-competition",
+    "period": "December 2025",
+    "role": "1st Place Winner, Computer Network Administration Competition",
+    "organization": "46th P.J.N.K. Academic Games at Muban Chombueng Rajabhat University",
+    "type": "award",
+    "categoryGroup": "Competitions",
+    "badge": "1st Place Gold Medal",
+    "highlights": [
+      "Secured 1st Place in the Western Regional Academic Competition for enterprise network design, configuration, and management.",
+      "Configured Enterprise Wi-Fi via Cloud Controller (implementing Fast Roaming and Load Balancing) alongside QoS bandwidth management to resolve high-density traffic congestion under strict competition time constraints."
+    ],
+    "technologies": [
+      "Enterprise Wi-Fi",
+      "Cloud Controller",
+      "Fast Roaming",
+      "Load Balancing",
+      "QoS Bandwidth Management",
+      "Routing & Switching",
+      "Ubuntu / Linux"
     ],
     "media": [
       {
         "thumbnailUrl": "/images/certificates/certificate-network.svg",
-        "caption": "First Place Certificate - Computer Network Administration",
-        "category": "Official Award"
+        "caption": "1st Place Certificate in Network Administration (46th P.J.N.K.)",
+        "category": "Official Certificate"
       },
       {
         "thumbnailUrl": "/images/certificates/award-podium.svg",
-        "caption": "Gold Medal Award Ceremony & Podium Photo",
-        "category": "Award Ceremony"
+        "caption": "Gold Medal & Certificate Award Ceremony on Stage",
+        "category": "Award Ceremony Photo"
+      },
+      {
+        "thumbnailUrl": "/images/certificates/competition-action.svg",
+        "caption": "Live Competition & Network Configuration Setup",
+        "category": "Competition Arena"
       }
     ]
   },
   {
     "id": "edu-bachelor-cs",
-    "period": "2023 - 2026 (2566 - 2569)",
-    "role": "B.Sc. in Computer Science (Undergraduate Candidate)",
+    "period": "2023 – 2026",
+    "role": "Bachelor of Science (B.Sc. in Computer Science) - Graduated",
     "organization": "Kanchanaburi Rajabhat University",
     "type": "education",
-    "badge": "GPAX 2.60",
+    "categoryGroup": "Education & Academics",
+    "badge": "GPAX : 2.60",
     "highlights": [
-      "Comprehensive study in Software Engineering, Relational Database Management Systems, Object-Oriented Programming, and Full-Stack Development.",
-      "Cumulative GPAX: 2.60. Completed senior academic production systems with ASP.NET Core, React, and SQL Server.",
-      "Open for Full-Stack / Backend Developer Internship: June 4 – September 30, 2026."
+      "Cumulative GPAX : 2.60",
+      "Graduation Year : 2026 (Graduated & Ready for Full-Time Roles)"
     ],
-    "technologies": [
-      "C# .NET",
-      "React / Next.js",
-      "SQL Server",
-      "Software Engineering",
-      "System Analysis & Design"
-    ],
+    "technologies": [],
     "media": [
       {
         "thumbnailUrl": "/images/education/transcript-kru.svg",
-        "caption": "Academic Transcript - B.Sc. Computer Science (108 Credits, GPAX 2.60)",
-        "category": "Official Transcript"
+        "caption": "Official Academic Transcript B.Sc. Computer Science (108 Credits, GPAX 2.60)",
+        "category": "Academic Transcript"
       }
     ]
   },
   {
     "id": "edu-vocational-cert",
-    "period": "2020 - 2022 (2563 - 2565)",
+    "period": "2020 – 2022",
     "role": "Vocational Certificate (ปวช.)",
-    "organization": "Mae Nam Khwae Vocational College",
+    "organization": "River Khwae Vocational College",
     "type": "education",
-    "badge": "GPAX 3.45 (High Honors)",
+    "categoryGroup": "Education & Academics",
+    "badge": "GPAX : 3.45",
     "highlights": [
-      "Completed vocational diploma with High Academic Standing and a cumulative GPAX of 3.45.",
-      "Built a solid practical foundation in computer systems, basic programming logic, operating systems, and hardware diagnostics."
+      "Cumulative GPAX : 3.45",
+      "Graduation Year : 2022"
     ],
-    "technologies": [
-      "Computer Systems",
-      "Programming Fundamentals",
-      "Operating Systems",
-      "Networking Basics"
+    "technologies": []
+  },
+  {
+    "id": "edu-junior-high",
+    "period": "2017 – 2020",
+    "role": "Junior High School Education",
+    "organization": "Ban Nong Krathum School",
+    "type": "education",
+    "categoryGroup": "Education & Academics",
+    "badge": "Graduation Year : 2020",
+    "highlights": [
+      "Graduation Year : 2020"
+    ],
+    "technologies": []
+  },
+  {
+    "id": "edu-primary-school",
+    "period": "2010 – 2017",
+    "role": "Primary School Education",
+    "organization": "Ban Phu Phrom School",
+    "type": "education",
+    "categoryGroup": "Education & Academics",
+    "badge": "Graduation Year : 2017",
+    "highlights": [
+      "Graduation Year : 2017"
+    ],
+    "technologies": []
+  },
+  {
+    "id": "act-student-council",
+    "period": "Academic Year 2024",
+    "role": "Student Council Committee Member",
+    "organization": "Faculty of Science & Technology, Kanchanaburi Rajabhat University",
+    "type": "leadership",
+    "categoryGroup": "Other Activities",
+    "badge": "Student Council Committee",
+    "highlights": [
+      "Elected Student Council Committee Member representing the Faculty of Science & Technology for Academic Year 2024.",
+      "Planned and coordinated faculty-wide academic workshops, student activities, and cross-departmental collaboration."
+    ],
+    "technologies": [],
+    "media": [
+      {
+        "thumbnailUrl": "/images/activities/activity-student-council-1.svg",
+        "caption": "Student Council Committee, Faculty of Science & Technology",
+        "category": "Student Activities"
+      },
+      {
+        "thumbnailUrl": "/images/activities/activity-student-council-2.svg",
+        "caption": "Student Affairs Planning & Operations Meeting",
+        "category": "Project Planning"
+      }
     ]
   },
   {
-    "id": "act-leadership-community",
-    "period": "2024 - 2025 (2567 - 2568)",
-    "role": "Student Council Officer & IT Leadership Activities",
-    "organization": "Kanchanaburi Rajabhat University & Willpower Institute",
+    "id": "act-rov-esports",
+    "period": "Academic Year 2024",
+    "role": "Tournament Organizer, RoV E-Sports Tournament",
+    "organization": "Department of Computer Science, Kanchanaburi Rajabhat University",
     "type": "leadership",
-    "badge": "Student Council & IT Lead",
+    "categoryGroup": "Other Activities",
+    "badge": "Tournament Organizer",
     "highlights": [
-      "Student Council Member (Academic Year 2024): Coordinated student activities and cross-department collaboration events.",
-      "IT Staff Mentor: Completed the 6-month Meditation Instructor Course (Class 52) at Willpower Institute, appointed as IT Mentor for Class 53.",
-      "Lead Tournament Organizer: Hosted and managed the RoV E-Sports Tournament organized by the Computer Science Department."
+      "Organized and managed the annual Computer Science Department RoV E-Sports Tournament.",
+      "Coordinated participant registrations, bracket administration, and live match broadcasts."
     ],
-    "technologies": [
-      "Team Leadership",
-      "IT Support & Operations",
-      "Event Management",
-      "Public Speaking"
-    ],
+    "technologies": [],
     "media": [
       {
-        "thumbnailUrl": "/images/activities/activity-meditation.svg",
-        "caption": "Meditation Instructor Class 52 & IT Mentor Class 53",
-        "category": "Leadership & Discipline"
+        "thumbnailUrl": "/images/activities/activity-rov-esports-1.svg",
+        "caption": "Tournament Management Team, RoV E-Sports Tournament",
+        "category": "Event Management"
       },
       {
-        "thumbnailUrl": "/images/activities/activity-student-council.svg",
-        "caption": "Faculty of Science & Technology Student Council 2024",
-        "category": "Student Council"
+        "thumbnailUrl": "/images/activities/activity-rov-esports-2.svg",
+        "caption": "Live Match Broadcast & Stage Competition Atmosphere",
+        "category": "Live Tournament"
+      }
+    ]
+  },
+  {
+    "id": "act-it-mentor-meditation",
+    "period": "2024 – 2025",
+    "role": "IT Mentor (Class 53) & Meditation Course Graduate (Class 52)",
+    "organization": "Willpower Institute (Luang Phor Viriyang Sirintharo)",
+    "type": "leadership",
+    "categoryGroup": "Other Activities",
+    "badge": "IT Mentor (Class 53)",
+    "highlights": [
+      "Successfully graduated from the rigorous 6-month Meditation Teacher Course (Class 52), developing mental discipline, endurance, and mindfulness.",
+      "Entrusted to serve as official IT Mentor for Class 53, managing audio-visual equipment, computer setups, and live broadcast streaming.",
+      "Provided on-site technical support and hardware troubleshooting for lecturers and attendees throughout the course duration."
+    ],
+    "technologies": [],
+    "media": [
+      {
+        "thumbnailUrl": "/images/activities/activity-meditation-cert.svg",
+        "caption": "Meditation Teacher Course Graduation Certificate (Class 52)",
+        "category": "Official Certificate"
       },
       {
-        "thumbnailUrl": "/images/activities/activity-rov-esports.svg",
-        "caption": "Departmental RoV E-Sports Tournament Coordinator",
-        "category": "Event Organizer"
+        "thumbnailUrl": "/images/activities/activity-meditation-ceremony.svg",
+        "caption": "Graduation Ceremony & Completion Assembly (Class 52)",
+        "category": "Ceremony Photo"
+      },
+      {
+        "thumbnailUrl": "/images/activities/activity-it-mentor-av.svg",
+        "caption": "IT Mentor Role: Audio-Visual & Live Streaming Control (Class 53)",
+        "category": "IT Operations"
       }
     ]
   }

@@ -78,7 +78,7 @@ const screens = [
       screenType: 'CUSTOMER MENU',
       title: 'หน้าจอสั่งอาหาร & ปรับแต่งเมนูของลูกค้า',
       subtitle: 'เลือกเมนู ปรับแต่งระดับความเผ็ด และสั่งอาหารผ่านมือถือ/แท็บเล็ต',
-      badge: '📸 [วางภาพหน้าจอลูกค้าสั่งอาหารแทนที่ไฟล์นี้]',
+      badge: '[วางภาพหน้าจอลูกค้าสั่งอาหารแทนที่ไฟล์นี้]',
       accentColor: '#10b981',
       bgColor1: '#064e3b',
       bgColor2: '#022c22'
@@ -90,7 +90,7 @@ const screens = [
       screenType: 'KITCHEN POS REALTIME',
       title: 'หน้าจอห้องครัวแสดงผลออเดอร์ทันที (SignalR)',
       subtitle: 'ออเดอร์เด้งเข้าครัวแบบ Real-time พร้อมปุ่มอัปเดตสถานะปรุงเสร็จ',
-      badge: '📸 [วางภาพหน้าจอห้องครัวแทนที่ไฟล์นี้]',
+      badge: '[วางภาพหน้าจอห้องครัวแทนที่ไฟล์นี้]',
       accentColor: '#f59e0b',
       bgColor1: '#451a03',
       bgColor2: '#1e1b4b'
@@ -102,7 +102,7 @@ const screens = [
       screenType: 'ADMIN DASHBOARD',
       title: 'กระดานวิเคราะห์ข้อมูลยอดขายและสถิติสินค้า',
       subtitle: 'กราฟสรุปยอดขายรายวัน/เดือน และรายการเมนูยอดนิยมสำหรับเจ้าของร้าน',
-      badge: '📸 [วางภาพหน้าจอแดชบอร์ดสรุปยอดขายแทนที่ไฟล์นี้]',
+      badge: '[วางภาพหน้าจอแดชบอร์ดสรุปยอดขายแทนที่ไฟล์นี้]',
       accentColor: '#06b6d4',
       bgColor1: '#083344',
       bgColor2: '#0f172a'
@@ -116,7 +116,7 @@ const screens = [
       screenType: 'SMART SEARCH & CATALOG',
       title: 'ระบบค้นหาและเปรียบเทียบรถยนต์มือสอง',
       subtitle: 'กรองตามประเภท รุ่น ราคา และคำนวณค่างวดผ่อนชำระอัตโนมัติ',
-      badge: '📸 [วางภาพหน้ารายการค้นหารถยนต์แทนที่ไฟล์นี้]',
+      badge: '[วางภาพหน้ารายการค้นหารถยนต์แทนที่ไฟล์นี้]',
       accentColor: '#3b82f6',
       bgColor1: '#172554',
       bgColor2: '#0f172a'
@@ -128,7 +128,7 @@ const screens = [
       screenType: 'STRIPE BOOKING & DEPOSIT',
       title: 'ระบบการจองรถยนต์และมัดจำผ่าน Stripe',
       subtitle: 'เชื่อมต่อ Payment Gateway มัดจำ พร้อมระบบนับถอยหลังยกเลิกอัตโนมัติ',
-      badge: '📸 [วางภาพหน้าจอการจองและตัดเงินแทนที่ไฟล์นี้]',
+      badge: '[วางภาพหน้าจอการจองและตัดเงินแทนที่ไฟล์นี้]',
       accentColor: '#8b5cf6',
       bgColor1: '#2e1065',
       bgColor2: '#0f172a'
@@ -140,7 +140,7 @@ const screens = [
       screenType: 'ADMIN KYC & INVENTORY',
       title: 'ระบบแดชบอร์ดแอดมิน ยืนยันตัวตนผู้ขาย (KYC)',
       subtitle: 'อนุมัติข้อมูลรถ ตรวจประวัติการซ่อมบำรุง และจัดการสต็อกรถในชุมชน',
-      badge: '📸 [วางภาพหน้าจอแอดมินอนุมัติรถแทนที่ไฟล์นี้]',
+      badge: '[วางภาพหน้าจอแอดมินอนุมัติรถแทนที่ไฟล์นี้]',
       accentColor: '#10b981',
       bgColor1: '#064e3b',
       bgColor2: '#0f172a'
@@ -154,7 +154,7 @@ const screens = [
       screenType: 'BLAZOR WASM STOREFRONT',
       title: 'หน้าร้านค้าออนไลน์และตะกร้าสินค้า (Blazor WASM)',
       subtitle: 'เลือกซื้อสินค้า ตะกร้าสินค้าในหน้าเดียว รวดเร็วและตอบสนองทันที',
-      badge: '📸 [วางภาพหน้าร้านค้า Blazor แทนที่ไฟล์นี้]',
+      badge: '[วางภาพหน้าร้านค้า Blazor แทนที่ไฟล์นี้]',
       accentColor: '#ec4899',
       bgColor1: '#500724',
       bgColor2: '#0f172a'
@@ -166,7 +166,7 @@ const screens = [
       screenType: 'CHECKOUT & STOCK LOCK',
       title: 'ระบบชำระเงิน Stripe & ล็อกสต็อกสินค้า Real-time',
       subtitle: 'ป้องกันการซื้อเกินสต็อกด้วย Pessimistic Concurrency และ Transaction',
-      badge: '📸 [วางภาพหน้าชำระเงินและตัดสต็อกแทนที่ไฟล์นี้]',
+      badge: '[วางภาพหน้าชำระเงินและตัดสต็อกแทนที่ไฟล์นี้]',
       accentColor: '#f59e0b',
       bgColor1: '#451a03',
       bgColor2: '#0f172a'
@@ -178,7 +178,7 @@ const screens = [
       screenType: 'REPORTS & EXCEL/PDF EXPORT',
       title: 'รายงานการขาย & ส่งออกไฟล์ PDF และ Excel อัตโนมัติ',
       subtitle: 'แดชบอร์ดแอดมิน Blazor Server เชื่อมต่อ ClosedXML และ iText7',
-      badge: '📸 [วางภาพหน้าจอรายงานการขายแทนที่ไฟล์นี้]',
+      badge: '[วางภาพหน้าจอรายงานการขายแทนที่ไฟล์นี้]',
       accentColor: '#38bdf8',
       bgColor1: '#082f49',
       bgColor2: '#0f172a'
