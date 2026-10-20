@@ -1,0 +1,61 @@
+[
+  {
+    "id": "backend",
+    "categoryName": "การพัฒนาส่วนหลังบ้าน (Backend Development)",
+    "description": "การสร้าง API ที่ขยายขนาดได้, สถาปัตยกรรมแบบแยกเลเยอร์, ลอจิกทางธุรกิจ และระบบยืนยันตัวตน",
+    "skills": [
+      "C#",
+      "ASP.NET Core Web API",
+      "ASP.NET MVC",
+      "Blazor (Server/WASM)",
+      "Entity Framework Core",
+      "Clean Architecture",
+      "JWT Authentication",
+      "SignalR"
+    ]
+  },
+  {
+    "id": "frontend",
+    "categoryName": "การพัฒนาส่วนหน้าบ้านและโมบายล์ (Frontend & Mobile)",
+    "description": "การสร้างเว็บแอปพลิเคชันและโมบายล์แอปพลิเคชันที่ตอบสนองทุกอุปกรณ์ ปลอดภัยด้วย Type-Safe และจัดการ State แบบ Reactive",
+    "skills": [
+      "React",
+      "Next.js",
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "JavaScript",
+      "Redux Toolkit",
+      "RTK Query",
+      "Tailwind CSS",
+      "Formik + Yup"
+    ]
+  },
+  {
+    "id": "database",
+    "categoryName": "ฐานข้อมูลและการจำลองข้อมูล (Database & Data Modeling)",
+    "description": "การออกแบบสกีมาเชิงสัมพันธ์, ความถูกต้องสมบูรณ์ของข้อมูลตามหลัก ACID และการจูนประสิทธิภาพคิวรี",
+    "skills": [
+      "Microsoft SQL Server",
+      "Entity Framework Core (Code First)",
+      "Eager Loading / .AsNoTracking()",
+      "ACID Transactions",
+      "Filtered Unique Index",
+      "Database Normalization"
+    ]
+  },
+  {
+    "id": "devops-tools",
+    "categoryName": "เซิร์ฟเวอร์ เครือข่าย และเครื่องมือพัฒนา (Systems & DevOps)",
+    "description": "การดูแลและตั้งค่าเซิร์ฟเวอร์, การบริหารจัดการเครือข่ายคอมพิวเตอร์, คอนเทนเนอร์ และเครื่องมือการทำงานวิศวกรรม",
+    "skills": [
+      "IIS Server",
+      "Ubuntu / Linux",
+      "Docker",
+      "การบริหารจัดการระบบเครือข่ายคอมพิวเตอร์",
+      "Git / GitHub",
+      "Postman",
+      "Visual Studio / VS Code"
+    ]
+  }
+]

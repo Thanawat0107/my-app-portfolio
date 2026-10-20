@@ -7,6 +7,7 @@ import { ProjectItem } from '@/types/portfolio.types';
 import { useLanguage } from '@/context/LanguageContext';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
+import { ProjectMetricGrid } from './ProjectMetricGrid';
 
 interface ProjectDetailHeaderProps {
   project: ProjectItem;
@@ -34,7 +35,7 @@ export const ProjectDetailHeader: React.FC<ProjectDetailHeaderProps> = ({ projec
         </h1>
         <div className="flex flex-wrap gap-2 pt-1">
           {project.techStack.map((tech) => (
-            <Badge key={tech} variant="default">
+            <Badge key={tech} variant="default" showTechIcon={true}>
               {tech}
             </Badge>
           ))}
@@ -53,6 +54,15 @@ export const ProjectDetailHeader: React.FC<ProjectDetailHeaderProps> = ({ projec
           {t.common.viewGitHubRepo}
         </Button>
       </div>
+
+      {project.metrics && (
+        <div className="pt-2">
+          <ProjectMetricGrid
+            metrics={project.metrics}
+            label={t.projects.metricsLabel}
+          />
+        </div>
+      )}
     </div>
   );
 };

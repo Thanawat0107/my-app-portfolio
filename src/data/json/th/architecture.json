@@ -1,0 +1,70 @@
+[
+  {
+    "id": "clean-backend",
+    "title": "สถาปัตยกรรม Clean Architecture & แยก DTO",
+    "subtitle": "การแยกเลเยอร์เพื่อความสะดวกในการบำรุงรักษา",
+    "description": "แยกโครงสร้าง Controller, Service, Repository และ Models ชัดเจน พร้อมนำ DTO กว่า 18 รูปแบบและ AutoMapper มาควบคุมการไหลของข้อมูล ป้องกันข้อมูลรั่วไหล และรองรับการทำ Unit Test",
+    "tools": [
+      "ASP.NET Core Web API",
+      "Repository Pattern",
+      "DTO & AutoMapper",
+      "Clean Architecture"
+    ],
+    "codeSnippet": {
+      "filename": "OrderService.cs (ASP.NET Core 9)",
+      "language": "C#",
+      "code": "using var transaction = await _db.Database.BeginTransactionAsync();\ntry {\n    var order = new OrderHeader { Total = cart.Items.Sum(i => i.TotalPrice) };\n    if (await _paymentService.VerifySlipAsync(dto.SlipFile)) {\n        _db.OrderHeaders.Add(order);\n    }\n    await _db.SaveChangesAsync();\n    await transaction.CommitAsync();\n\n    // แจ้งเตือนออเดอร์ใหม่ไปที่หน้าจอห้องครัวทันทีแบบ Real-time\n    await _hubContext.Clients.Group(\"Kitchen\").SendAsync(\"NewOrderReceived\", order);\n}\ncatch {\n    await transaction.RollbackAsync(); // ยกเลิกทั้งหมดหากมีขั้นตอนผิดพลาด\n}"
+    }
+  },
+  {
+    "id": "database-integrity",
+    "title": "ความถูกต้องของข้อมูล & การควบคุมการทำงานพร้อมกัน",
+    "subtitle": "ACID Transaction & Concurrency Safety",
+    "description": "ประยุกต์ใช้ Database Transaction เพื่อให้การบันทึกออเดอร์และการตัดสต็อกสำเร็จพร้อมกัน ควบคุมด้วย Pessimistic Locking ป้องกันการซื้อเกินสต็อก และตั้ง Filtered Unique Index ป้องกันการจองซ้ำ",
+    "tools": [
+      "SQL Server",
+      "ACID Transactions",
+      "Pessimistic Locking",
+      "Filtered Unique Index"
+    ],
+    "codeSnippet": {
+      "filename": "OrderCheckoutRepository.cs (EF Core)",
+      "language": "C#",
+      "code": "using var transaction = await _dbContext.Database.BeginTransactionAsync();\ntry {\n    // ล็อกแถวสินค้าด้วย Pessimistic Concurrency ป้องกันขายเกินสต็อก\n    var productStock = await _dbContext.Products.FirstOrDefaultAsync(p => p.Id == productId);\n    if (productStock.Quantity >= orderQuantity) {\n        productStock.Quantity -= orderQuantity; // ตัดยอดสต็อกทันที\n    }\n    await _dbContext.SaveChangesAsync();\n    await transaction.CommitAsync();\n}\ncatch {\n    await transaction.RollbackAsync();\n}"
+    }
+  },
+  {
+    "id": "resilience-automation",
+    "title": "บริการเบื้องหลังอัตโนมัติ & ระบบทนทานต่อข้อผิดพลาด",
+    "subtitle": "Automated Expiry & Fault Tolerance",
+    "description": "พัฒนาระบบ BackgroundService เพื่อตรวจสอบและยกเลิกคิวจองที่หมดอายุโดยอัตโนมัติ พร้อมคืนสถานะรถ พร้อมผสาน Polly Retry Policy เพื่อรับมือข้อผิดพลาดชั่วคราวอย่างราบรื่น",
+    "tools": [
+      "BackgroundService Worker",
+      "Polly Retry Policy",
+      "Atomic Status Update",
+      "EF Core Optimization"
+    ],
+    "codeSnippet": {
+      "filename": "ReservationExpiryWorker.cs (Background Service)",
+      "language": "C#",
+      "code": "// ระบบตรวจสอบคิวหมดอายุอัตโนมัติพร้อม Retry Policy ด้วย Polly\nvar expiredCount = await Policy.Handle<Exception>()\n    .WaitAndRetryAsync(3, attempt => TimeSpan.FromSeconds(10))\n    .ExecuteAsync(async () => {\n        var expiredReservations = _db.Reservations.Include(r => r.Car)\n            .Where(r => r.Status == \"Pending\" && r.ExpiryAt < DateTime.UtcNow)\n            .ToList();\n\n        foreach (var res in expiredReservations) {\n            res.Status = \"Expired\";\n            res.Car.Status = \"Available\"; // ปรับสถานะรถกลับเป็นพร้อมขาย\n        }\n        return await _db.SaveChangesAsync();\n    });"
+    }
+  },
+  {
+    "id": "realtime-security",
+    "title": "การซิงค์ข้อมูลเรียลไทม์ & การเชื่อมต่อระบบอย่างปลอดภัย",
+    "subtitle": "การแจ้งเตือนทันที & Webhook ป้องกันตัดเงินซ้ำ",
+    "description": "ส่งคำสั่งซื้อตรงเข้าห้องครัวแบบ Real-time ด้วย SignalR Hub พร้อมเชื่อมต่อ Payment Gateway ด้วย Stripe Webhook ที่มีระบบตรวจเช็ก Idempotency ป้องกันการตัดเงินและประมวลผลซ้ำ",
+    "tools": [
+      "SignalR Hub",
+      "Stripe Webhook",
+      "JWT / RBAC",
+      "IIS Server & Docker"
+    ],
+    "codeSnippet": {
+      "filename": "OrderHub.cs & StripeWebhook.cs",
+      "language": "C#",
+      "code": "[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]\npublic class OrderHub : Hub {\n    public async Task JoinKitchenGroup() =>\n        await Groups.AddToGroupAsync(Context.ConnectionId, \"Kitchen\");\n}\n\n// ตรวจสอบความถูกต้องและ Idempotency ป้องกันตัดเงินซ้ำ\nif (stripeEvent.Type == Events.PaymentIntentSucceeded) {\n    await _orderService.ConfirmOrderPaymentAsync(intent.Id);\n}"
+    }
+  }
+]

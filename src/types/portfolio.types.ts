@@ -11,6 +11,7 @@ export interface SiteConfig {
   summary: string;
   location: string;
   email: string;
+  phone?: string;
   avatarUrl: string;
   availabilityText: string;
   resumeUrl: string;
@@ -33,10 +34,58 @@ export interface DemoCredentials {
   password?: string;
 }
 
+export interface ProjectSpecs {
+  systemType: string;
+  role: string;
+  targetUsers: string;
+  highlight: string;
+}
+
+export interface ArchitectureNode {
+  id: string;
+  tier: 'client' | 'gateway' | 'service' | 'database' | 'realtime' | 'worker';
+  title: string;
+  tech: string;
+  description: string;
+  role: string;
+}
+
+export interface ArchitectureFlowStep {
+  stepNumber: number;
+  title: string;
+  description: string;
+  protocol?: string;
+  fromNodeId: string;
+  toNodeId: string;
+  codeHint?: string;
+}
+
+export interface SystemArchitectureDiagram {
+  title: string;
+  subtitle: string;
+  nodes: ArchitectureNode[];
+  flowSteps: ArchitectureFlowStep[];
+}
+
 export interface ProjectDeepDive {
   overview: string;
+  flowTitle?: string;
+  flowSteps?: string[];
+  systemDiagram?: SystemArchitectureDiagram;
+  codeSnippet?: CodeSnippet;
   databaseDesign: string[];
   securityPractices: string[];
+  engineeringPillars?: {
+    title: string;
+    description: string;
+  }[];
+}
+
+export interface ProjectMetric {
+  value: string;
+  label: string;
+  detail: string;
+  accent?: 'emerald' | 'cyan' | 'amber';
 }
 
 export interface ProjectItem {
@@ -45,14 +94,26 @@ export interface ProjectItem {
   category: string;
   featured: boolean;
   thumbnailUrl: string;
+  screenshots?: string[];
+  specs?: ProjectSpecs;
+  coreFeatures?: string[];
+  metrics?: ProjectMetric[];
   problemStatement: string;
   architectureHighlights: string[];
   businessImpact: string;
   techStack: string[];
   liveDemoUrl?: string;
   githubUrl: string;
+  githubFrontendUrl?: string;
+  githubBackendUrl?: string;
   demoCredentials?: DemoCredentials;
   deepDive: ProjectDeepDive;
+}
+
+export interface CodeSnippet {
+  filename: string;
+  language: string;
+  code: string;
 }
 
 export interface ArchitecturePillar {
@@ -61,6 +122,7 @@ export interface ArchitecturePillar {
   subtitle: string;
   description: string;
   tools: string[];
+  codeSnippet?: CodeSnippet;
 }
 
 export interface SkillCategory {
@@ -70,12 +132,20 @@ export interface SkillCategory {
   skills: string[];
 }
 
+export interface ExperienceMedia {
+  thumbnailUrl: string;
+  caption: string;
+  category?: string;
+}
+
 export interface ExperienceItem {
   id: string;
   period: string;
   role: string;
   organization: string;
-  type: 'work' | 'education';
+  type: 'work' | 'education' | 'award' | 'leadership';
+  badge?: string;
   highlights: string[];
   technologies: string[];
+  media?: ExperienceMedia[];
 }

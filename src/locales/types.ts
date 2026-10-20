@@ -61,7 +61,14 @@ export interface ProjectsSectionTranslations {
   problemLabel: string;
   architectureLabel: string;
   outcomeLabel: string;
+  metricsLabel?: string;
   credentialsLabel: string;
+  specsLabels?: {
+    systemType: string;
+    role: string;
+    targetUsers: string;
+    highlight: string;
+  };
   deepDiveLabels: ProjectDeepDiveLabels;
   items: ProjectItem[];
 }
@@ -70,6 +77,8 @@ export interface ArchitectureSectionTranslations {
   badge: string;
   title: string;
   subtitle: string;
+  viewCodeLabel?: string;
+  hideCodeLabel?: string;
   items: ArchitecturePillar[];
 }
 
@@ -84,6 +93,7 @@ export interface ExperienceSectionTranslations {
   badge: string;
   title: string;
   subtitle: string;
+  evidenceLabel?: string;
   items: ExperienceItem[];
 }
 

@@ -1,0 +1,114 @@
+[
+  {
+    "id": "award-network-competition",
+    "period": "Dec 2025 (2568)",
+    "role": "1st Place Winner - Academic Computer Network Management Competition",
+    "organization": "46th Ratchaphruek Games (P.J.N.K. Relations), Muban Chombueng Rajabhat University",
+    "type": "award",
+    "badge": "1st Place Winner",
+    "highlights": [
+      "Awarded First Place in Computer Network System Management and Administration skills competition across Western Thailand Rajabhat universities.",
+      "Demonstrated expertise in network topology configuration, network services administration, and server management under timed competitive conditions."
+    ],
+    "technologies": [
+      "Computer Networks",
+      "Network Administration",
+      "Linux / Ubuntu",
+      "Network Security",
+      "Troubleshooting"
+    ],
+    "media": [
+      {
+        "thumbnailUrl": "/images/certificates/certificate-network.svg",
+        "caption": "First Place Certificate - Computer Network Administration",
+        "category": "Official Award"
+      },
+      {
+        "thumbnailUrl": "/images/certificates/award-podium.svg",
+        "caption": "Gold Medal Award Ceremony & Podium Photo",
+        "category": "Award Ceremony"
+      }
+    ]
+  },
+  {
+    "id": "edu-bachelor-cs",
+    "period": "2023 - 2026 (2566 - 2569)",
+    "role": "B.Sc. in Computer Science (Undergraduate Candidate)",
+    "organization": "Kanchanaburi Rajabhat University",
+    "type": "education",
+    "badge": "GPAX 2.60",
+    "highlights": [
+      "Comprehensive study in Software Engineering, Relational Database Management Systems, Object-Oriented Programming, and Full-Stack Development.",
+      "Cumulative GPAX: 2.60. Completed senior academic production systems with ASP.NET Core, React, and SQL Server.",
+      "Open for Full-Stack / Backend Developer Internship: June 4 – September 30, 2026."
+    ],
+    "technologies": [
+      "C# .NET",
+      "React / Next.js",
+      "SQL Server",
+      "Software Engineering",
+      "System Analysis & Design"
+    ],
+    "media": [
+      {
+        "thumbnailUrl": "/images/education/transcript-kru.svg",
+        "caption": "Academic Transcript - B.Sc. Computer Science (108 Credits, GPAX 2.60)",
+        "category": "Official Transcript"
+      }
+    ]
+  },
+  {
+    "id": "edu-vocational-cert",
+    "period": "2020 - 2022 (2563 - 2565)",
+    "role": "Vocational Certificate (ปวช.)",
+    "organization": "Mae Nam Khwae Vocational College",
+    "type": "education",
+    "badge": "GPAX 3.45 (High Honors)",
+    "highlights": [
+      "Completed vocational diploma with High Academic Standing and a cumulative GPAX of 3.45.",
+      "Built a solid practical foundation in computer systems, basic programming logic, operating systems, and hardware diagnostics."
+    ],
+    "technologies": [
+      "Computer Systems",
+      "Programming Fundamentals",
+      "Operating Systems",
+      "Networking Basics"
+    ]
+  },
+  {
+    "id": "act-leadership-community",
+    "period": "2024 - 2025 (2567 - 2568)",
+    "role": "Student Council Officer & IT Leadership Activities",
+    "organization": "Kanchanaburi Rajabhat University & Willpower Institute",
+    "type": "leadership",
+    "badge": "Student Council & IT Lead",
+    "highlights": [
+      "Student Council Member (Academic Year 2024): Coordinated student activities and cross-department collaboration events.",
+      "IT Staff Mentor: Completed the 6-month Meditation Instructor Course (Class 52) at Willpower Institute, appointed as IT Mentor for Class 53.",
+      "Lead Tournament Organizer: Hosted and managed the RoV E-Sports Tournament organized by the Computer Science Department."
+    ],
+    "technologies": [
+      "Team Leadership",
+      "IT Support & Operations",
+      "Event Management",
+      "Public Speaking"
+    ],
+    "media": [
+      {
+        "thumbnailUrl": "/images/activities/activity-meditation.svg",
+        "caption": "Meditation Instructor Class 52 & IT Mentor Class 53",
+        "category": "Leadership & Discipline"
+      },
+      {
+        "thumbnailUrl": "/images/activities/activity-student-council.svg",
+        "caption": "Faculty of Science & Technology Student Council 2024",
+        "category": "Student Council"
+      },
+      {
+        "thumbnailUrl": "/images/activities/activity-rov-esports.svg",
+        "caption": "Departmental RoV E-Sports Tournament Coordinator",
+        "category": "Event Organizer"
+      }
+    ]
+  }
+]

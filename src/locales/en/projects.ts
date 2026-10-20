@@ -11,10 +11,17 @@ export const projectsEn: ProjectsSectionTranslations = {
   catalogTitle: 'All Engineering Projects & Case Studies',
   catalogSubtitle:
     'Complete breakdown of business problem statements, architectural decisions, and production metrics.',
-  problemLabel: '1. The Business Problem',
-  architectureLabel: '2. System Architecture & Implementation',
-  outcomeLabel: '3. Key Outcome & Engineering Impact',
+  problemLabel: 'The Business Problem & Challenges',
+  architectureLabel: 'System Architecture & Implementation',
+  outcomeLabel: 'Key Outcome & Business Impact',
+  metricsLabel: 'Key Engineering & Performance Metrics',
   credentialsLabel: 'Live Demo Credentials',
+  specsLabels: {
+    systemType: 'System Type',
+    role: 'Role',
+    targetUsers: 'Target Users',
+    highlight: 'Key Highlights',
+  },
   deepDiveLabels: {
     overviewTitle: 'System Overview & Business Context',
     architectureTitle: 'Core Architectural Decisions',

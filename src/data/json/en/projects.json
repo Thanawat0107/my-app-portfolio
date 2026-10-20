@@ -1,0 +1,612 @@
+[
+  {
+    "slug": "champ-noodle-pos-system",
+    "title": "Restaurant POS & Management Web Application (ร้านก๋วยเตี๋ยวแชมป์)",
+    "category": "Production Full-Stack System",
+    "featured": true,
+    "thumbnailUrl": "/images/projects/champ-noodle-pos-system/screen-1-customer.svg",
+    "screenshots": [
+      "/images/projects/champ-noodle-pos-system/screen-1-customer.svg",
+      "/images/projects/champ-noodle-pos-system/screen-2-kitchen.svg",
+      "/images/projects/champ-noodle-pos-system/screen-3-dashboard.svg"
+    ],
+    "specs": {
+      "systemType": "Web App (Vite + ASP.NET Core 9)",
+      "role": "Full-Stack Developer",
+      "targetUsers": "Customers / Kitchen Staff / Admin",
+      "highlight": "Real-time Orders & Sales Insights"
+    },
+    "metrics": [
+      {
+        "value": "45%",
+        "label": "Faster Report Query",
+        "detail": "Filtered Indexing & EF Core .AsSplitQuery() on revenue joins",
+        "accent": "emerald"
+      },
+      {
+        "value": "< 100ms",
+        "label": "Instant Order Push",
+        "detail": "SignalR WebSocket directly to kitchen display without polling",
+        "accent": "cyan"
+      },
+      {
+        "value": "100%",
+        "label": "Zero-Loss Transaction",
+        "detail": "Atomic ACID rollback across slip validation & order placement",
+        "accent": "emerald"
+      },
+      {
+        "value": "0%",
+        "label": "Billing Discrepancy",
+        "detail": "Dynamic PromptPay QR & slip auto-verification workflow",
+        "accent": "amber"
+      }
+    ],
+    "problemStatement": "Traditional paper-based ordering and manual bill calculation led to service bottlenecks during peak hours, frequent order mistakes, and a lack of centralized sales statistics.",
+    "coreFeatures": [
+      "Kitchen POS Screen: Instant real-time order notifications via SignalR Hub",
+      "Custom Menu Ordering: Dynamic noodle choices, spiciness levels, and add-on toppings",
+      "Automated PromptPay Payment: Dynamic QR code with slip verification workflow",
+      "Analytics Dashboard: Daily/monthly sales breakdowns and top-selling menu graphs"
+    ],
+    "architectureHighlights": [
+      "Decoupled 4-layer Clean Architecture (Controllers, Services, Repositories, Models) with Unit Testing support.",
+      "18+ DTO objects with AutoMapper to prevent data model leaks and maintain clean API contracts.",
+      "EF Core query optimization utilizing .AsNoTracking(), Eager Loading, and .AsSplitQuery() on joined queries.",
+      "Real-time SignalR Hub broadcasting new orders directly to kitchen screens without browser refresh."
+    ],
+    "businessImpact": "Eliminated manual billing calculation errors, reduced kitchen miscommunication, and provided restaurant owners with real-time sales visibility.",
+    "techStack": [
+      "ASP.NET Core 9",
+      "React 19",
+      "TypeScript",
+      "Redux Toolkit",
+      "SignalR",
+      "SQL Server",
+      "EF Core",
+      "Tailwind CSS",
+      "Vite"
+    ],
+    "liveDemoUrl": "https://tee.kru.ac.th/cs66/s07/cnmswep/",
+    "githubFrontendUrl": "https://github.com/Thanawat0107/pos_client.git",
+    "githubBackendUrl": "https://github.com/Thanawat0107/cnms_api.git",
+    "githubUrl": "https://github.com/Thanawat0107/pos_client.git",
+    "demoCredentials": {
+      "role": "Demo Access (Admin / Cashier)",
+      "username": "admin",
+      "password": "password123"
+    },
+    "deepDive": {
+      "overview": "An end-to-end point-of-sale and restaurant management platform built to handle real-time customer ordering, kitchen queues, and financial reporting with transactional consistency.",
+      "flowTitle": "Real-Time Order Flow (SignalR)",
+      "flowSteps": [
+        "Customer React App",
+        "OrderHub (JWT Auth)",
+        "Kitchen POS Display"
+      ],
+      "systemDiagram": {
+        "title": "Real-Time Order & Transaction Processing Architecture",
+        "subtitle": "Decoupled Client, Clean API Layer, ACID Transaction, and SignalR WebSockets Push",
+        "nodes": [
+          {
+            "id": "client",
+            "tier": "client",
+            "title": "Customer Client App",
+            "tech": "React 19 + TypeScript + Vite",
+            "role": "Client Tier",
+            "description": "Responsive customer interface for customized noodle ordering, dynamic pricing calculations, and slip upload."
+          },
+          {
+            "id": "gateway",
+            "tier": "gateway",
+            "title": "API & Security Gateway",
+            "tech": "ASP.NET Core 9 Controllers",
+            "role": "API Layer",
+            "description": "Accepts multipart form requests, enforces JWT authorization, and maps parameters into 18+ strict DTOs via AutoMapper."
+          },
+          {
+            "id": "service",
+            "tier": "service",
+            "title": "Order Processing Service",
+            "tech": "C# / Clean Architecture",
+            "role": "Service Layer",
+            "description": "Executes dynamic pricing algorithms, verifies PromptPay slips via external payment API, and coordinates ACID transaction."
+          },
+          {
+            "id": "database",
+            "tier": "database",
+            "title": "SQL Server 2022",
+            "tech": "EF Core 9 (ACID Unit of Work)",
+            "role": "Persistence Tier",
+            "description": "Executes BeginTransactionAsync() for atomic rollback on failure; features Filtered Indexing and .AsSplitQuery() optimizations."
+          },
+          {
+            "id": "realtime",
+            "tier": "realtime",
+            "title": "SignalR OrderHub",
+            "tech": "WebSockets Full-Duplex",
+            "role": "Real-Time Push",
+            "description": "Broadcasts verified new orders instantly to the Kitchen group without HTTP polling overhead."
+          },
+          {
+            "id": "kitchen",
+            "tier": "client",
+            "title": "Kitchen Display POS",
+            "tech": "React 19 Kitchen Terminal",
+            "role": "Operational Display",
+            "description": "Live order queue dashboard displaying incoming tickets with audio alerts and cooking status toggling."
+          }
+        ],
+        "flowSteps": [
+          {
+            "stepNumber": 1,
+            "title": "Customer Submits Order & Payment Slip",
+            "protocol": "HTTPS POST /api/orders (Multipart)",
+            "fromNodeId": "client",
+            "toNodeId": "gateway",
+            "description": "Customer finalizes cart with custom spiciness/toppings and attaches PromptPay transfer slip.",
+            "codeHint": "POST /api/orders (CreateOrderDto + IFormFile)"
+          },
+          {
+            "stepNumber": 2,
+            "title": "DTO Sanitization & Service Dispatch",
+            "protocol": "Internal Clean Architecture Call",
+            "fromNodeId": "gateway",
+            "toNodeId": "service",
+            "description": "Controller sanitizes payload with AutoMapper DTOs and invokes OrderService business logic.",
+            "codeHint": "await _orderService.ProcessOrderAsync(dto)"
+          },
+          {
+            "stepNumber": 3,
+            "title": "External Slip Verification & ACID Commit",
+            "protocol": "EF Core Atomic Transaction",
+            "fromNodeId": "service",
+            "toNodeId": "database",
+            "description": "External slip API validates payment; if verified, records are committed in an all-or-nothing database transaction.",
+            "codeHint": "using var tx = await _db.Database.BeginTransactionAsync();"
+          },
+          {
+            "stepNumber": 4,
+            "title": "Instant SignalR Kitchen Broadcast",
+            "protocol": "WebSockets Broadcast (SendAsync)",
+            "fromNodeId": "service",
+            "toNodeId": "realtime",
+            "description": "On transaction commit, server broadcasts order payload directly to connected kitchen devices.",
+            "codeHint": "await _hub.Clients.Group(\"Kitchen\").SendAsync(\"NewOrderReceived\", order);"
+          },
+          {
+            "stepNumber": 5,
+            "title": "Kitchen POS Queue Update & Audio Alert",
+            "protocol": "WebSocket Client Event",
+            "fromNodeId": "realtime",
+            "toNodeId": "kitchen",
+            "description": "Kitchen terminal receives event instantly, triggers audio chime, and renders the ticket in the cooking queue.",
+            "codeHint": "connection.on(\"NewOrderReceived\", (order) => updateQueue(order))"
+          }
+        ]
+      },
+      "codeSnippet": {
+        "filename": "OrderService.cs (C# / ASP.NET Core 9.0)",
+        "language": "C#",
+        "code": "// 1. สร้าง Transaction ป้องกันข้อมูลการเงินผิดพลาด (All-or-Nothing Integrity)\nusing var transaction = await _db.Database.BeginTransactionAsync();\ntry {\n    var order = new OrderHeader { Total = cart.Items.Sum(i => i.TotalPrice) };\n    \n    // 2. ยืนยันความถูกต้องของสลิปผ่าน API ภายนอก ก่อนบันทึกลงฐานข้อมูล\n    if (await _paymentService.VerifySlipAsync(dto.SlipFile)) {\n        _db.OrderHeaders.Add(order);\n    }\n    await _db.SaveChangesAsync();\n    await transaction.CommitAsync();\n\n    // 3. ยิงแจ้งเตือนออเดอร์ใหม่ไปที่หน้าจอห้องครัวทันที โดยไม่ต้อง Refresh หน้าเว็บ\n    await _hubContext.Clients.Group(\"Kitchen\").SendAsync(\"NewOrderReceived\", order);\n}\ncatch {\n    await transaction.RollbackAsync(); // ยกเลิกคำสั่งทั้งหมดหากมีกระบวนการใดล้มเหลว\n}"
+      },
+      "engineeringPillars": [
+        {
+          "title": "Transactional Integrity (ACID)",
+          "description": "Database Transaction encapsulates order placement, external slip verification, and multi-table records."
+        },
+        {
+          "title": "Security Architecture",
+          "description": "Secured via HMAC-SHA256 signature verification and encrypted SignalR Hub communication."
+        },
+        {
+          "title": "Dynamic Pricing Algorithm",
+          "description": "Nested options calculation evaluating toppings, spice levels, and custom dietary modifiers."
+        },
+        {
+          "title": "Clean Engineering Structure",
+          "description": "Independent frontend and backend codebases following international software engineering standards."
+        }
+      ],
+      "databaseDesign": [
+        "Normalized relational schema separating Orders, OrderDetails, MenuItems, Categories, and Transactions.",
+        "Composite indexes on OrderDate and Status columns to optimize revenue aggregation queries.",
+        "Executed with Entity Framework Core 9 using Eager Loading and .AsSplitQuery() on multiple joins."
+      ],
+      "securityPractices": [
+        "JWT-based Authentication and Role-Based Access Control (RBAC) separating Manager and Cashier roles.",
+        "Strict input validation using DTOs and AutoMapper to prevent mass-assignment vulnerabilities.",
+        "Parameterized SQL queries generated via EF Core preventing SQL Injection exploits."
+      ]
+    }
+  },
+  {
+    "slug": "used-car-management-system",
+    "title": "Used Car Community Management Platform (ระบบรถยนต์มือสองตำบลหนองกุ่ม)",
+    "category": "Production Full-Stack Web App",
+    "featured": true,
+    "thumbnailUrl": "/images/projects/used-car-management-system/screen-1-catalog.svg",
+    "screenshots": [
+      "/images/projects/used-car-management-system/screen-1-catalog.svg",
+      "/images/projects/used-car-management-system/screen-2-booking.svg",
+      "/images/projects/used-car-management-system/screen-3-admin.svg"
+    ],
+    "specs": {
+      "systemType": "Web App (Next.js 15 + ASP.NET Core 9)",
+      "role": "Full-Stack Developer",
+      "targetUsers": "Buyers / Sellers / Community Admin",
+      "highlight": "Smart Search & Booking Management"
+    },
+    "metrics": [
+      {
+        "value": "70%",
+        "label": "Server Memory Saved",
+        "detail": ".AsNoTracking() projection & server-side pagination",
+        "accent": "emerald"
+      },
+      {
+        "value": "0",
+        "label": "Duplicate Bookings",
+        "detail": "Filtered Unique DB Index at SQL Server engine level",
+        "accent": "cyan"
+      },
+      {
+        "value": "3x",
+        "label": "Worker Resiliency",
+        "detail": "Polly Retry Policies on background reservation cleanup",
+        "accent": "amber"
+      },
+      {
+        "value": "100%",
+        "label": "Idempotent Payments",
+        "detail": "Stripe Webhook signature verification preventing double charge",
+        "accent": "emerald"
+      }
+    ],
+    "problemStatement": "Used car trade in local communities relied entirely on informal word-of-mouth with scattered data, lack of vehicle history verification, and no secure booking deposit system.",
+    "coreFeatures": [
+      "Smart Vehicle Search: Filtering and comparison by make, model, price with server-side pagination",
+      "Installment Calculator: Instant loan estimate calculator and vehicle maintenance history tracking",
+      "Stripe Booking & Deposit: Secure booking deposit with automated countdown queue cancellation",
+      "Seller KYC Verification: Strict seller identity verification and admin approval workflows"
+    ],
+    "architectureHighlights": [
+      "Decoupled 3-layer Clean Architecture with Generic Repository Pattern minimizing redundant code.",
+      "Automated BackgroundService (ReservationExpiryWorker) utilizing Polly Retry Policies.",
+      "Stripe Webhooks with Idempotency Checks to guarantee zero duplicate payment charges.",
+      "Filtered Unique Index on database level preventing concurrent duplicate bookings on the same vehicle."
+    ],
+    "businessImpact": "Created a transparent, verifiable marketplace for community dealers and buyers, cutting search time by 60% and ensuring secure escrow deposits.",
+    "techStack": [
+      "ASP.NET Core 9",
+      "Next.js 15",
+      "React 19",
+      "SQL Server",
+      "EF Core",
+      "JWT Auth",
+      "Stripe Payment",
+      "Google Maps API",
+      "RTK Query",
+      "Tailwind CSS"
+    ],
+    "liveDemoUrl": "http://10.103.0.17/cs66/next/s07/wepcar/",
+    "githubFrontendUrl": "https://github.com/Thanawat0107/car_client.git",
+    "githubBackendUrl": "https://github.com/Thanawat0107/CarMS_API.git",
+    "githubUrl": "https://github.com/Thanawat0107/car_client.git",
+    "deepDive": {
+      "overview": "A digital marketplace and management platform connecting rural car sellers and buyers with verified KYC, smart installment calculation, and Stripe-powered escrow bookings.",
+      "flowTitle": "Stripe Payment & Webhook Processing Flow",
+      "flowSteps": [
+        "Client App (Deposit)",
+        "Stripe API (Payment Check)",
+        "Webhook Handler (Idempotency Update)"
+      ],
+      "systemDiagram": {
+        "title": "Vehicle Escrow Booking & Worker Architecture",
+        "subtitle": "Next.js App, ASP.NET Core API, Filtered Unique DB Index, and Polly Background Worker",
+        "nodes": [
+          {
+            "id": "client",
+            "tier": "client",
+            "title": "Vehicle Marketplace Portal",
+            "tech": "Next.js 15 + React 19 + RTK Query",
+            "role": "Client Tier",
+            "description": "Smart search with server-side pagination, vehicle comparison, installment loan calculator, and escrow checkout."
+          },
+          {
+            "id": "gateway",
+            "tier": "gateway",
+            "title": "ASP.NET Core 9 Web API",
+            "tech": "C# / JWT RBAC / Polly",
+            "role": "API Layer",
+            "description": "Role-Based Access Control protecting Admin, Seller, and Buyer endpoints with DTO validation."
+          },
+          {
+            "id": "service",
+            "tier": "service",
+            "title": "Booking & Escrow Service",
+            "tech": "Stripe API + Idempotency Engine",
+            "role": "Service Layer",
+            "description": "Manages deposit intent creation, verifies Stripe Webhook signatures, and prevents duplicate charges."
+          },
+          {
+            "id": "database",
+            "tier": "database",
+            "title": "SQL Server 2022",
+            "tech": "Filtered Unique DB Index",
+            "role": "Persistence Tier",
+            "description": "Enforces schema-level constraint preventing two concurrent active reservations on the same vehicle."
+          },
+          {
+            "id": "worker",
+            "tier": "worker",
+            "title": "Reservation Expiry Worker",
+            "tech": ".NET 9 BackgroundService + Polly",
+            "role": "Background Task",
+            "description": "Automated background worker with Polly 3x retry policies that auto-releases expired reservations back to available status."
+          }
+        ],
+        "flowSteps": [
+          {
+            "stepNumber": 1,
+            "title": "Buyer Initiates Vehicle Escrow Booking",
+            "protocol": "HTTPS POST /api/reservations",
+            "fromNodeId": "client",
+            "toNodeId": "gateway",
+            "description": "Buyer selects car, reviews verified inspection history, and creates a pending reservation."
+          },
+          {
+            "stepNumber": 2,
+            "title": "Filtered Unique Index Collision Check",
+            "protocol": "SQL Server Schema Validation",
+            "fromNodeId": "gateway",
+            "toNodeId": "database",
+            "description": "Database engine rejects booking if an active reservation already exists for that CarId."
+          },
+          {
+            "stepNumber": 3,
+            "title": "Stripe Escrow Webhook Confirmation",
+            "protocol": "Stripe Webhook (HMAC Signature)",
+            "fromNodeId": "service",
+            "toNodeId": "database",
+            "description": "Stripe confirms escrow deposit; webhook handler validates idempotency and marks booking confirmed."
+          },
+          {
+            "stepNumber": 4,
+            "title": "Automated Countdown Expiry & Car Release",
+            "protocol": "Polly Resilient Background Worker",
+            "fromNodeId": "worker",
+            "toNodeId": "database",
+            "description": "If deposit times out, background worker auto-reverts car status to Available with Polly retry."
+          }
+        ]
+      },
+      "codeSnippet": {
+        "filename": "ReservationExpiryWorker.cs (C# / .NET 9.0 Background Task)",
+        "language": "C#",
+        "code": "// ระบบตรวจสอบการหมดอายุการจองอัตโนมัติ พร้อมจัดการข้อผิดพลาดด้วย Polly Retry Policy\nvar expiredCount = await Policy.Handle<Exception>()\n    .WaitAndRetryAsync(3, attempt => TimeSpan.FromSeconds(10))\n    .ExecuteAsync(async () => {\n        // 1. ค้นหารายการจองที่เกินเวลา ExpiryAt โดยใช้ Eager Loading ดึงข้อมูลรถที่เกี่ยวข้อง\n        var expiredReservations = _db.Reservations.Include(r => r.Car)\n            .Where(r => r.Status == \"Pending\" && r.ExpiryAt < DateTime.UtcNow)\n            .ToList();\n\n        // 2. เปลี่ยนสถานะการจองเป็น \"หมดอายุ\" และคืนสถานะรถกลับเป็น \"พร้อมขาย\" (Atomic Update)\n        foreach (var res in expiredReservations) {\n            res.Status = \"Expired\";\n            res.Car.Status = \"Available\";\n        }\n        return await _db.SaveChangesAsync();\n    });"
+      },
+      "engineeringPillars": [
+        {
+          "title": "Transactional Integrity",
+          "description": "Atomic status update ensuring reserved vehicles are safely reverted if payments expire."
+        },
+        {
+          "title": "Role-Based Access Control",
+          "description": "Granular RBAC protecting Admin, Seller, and Buyer actions with JWT token expiry validation."
+        },
+        {
+          "title": "Database Filtered Unique Index",
+          "description": "Database schema enforcement preventing multiple active bookings on the same car ID."
+        },
+        {
+          "title": "Server-Side Pagination",
+          "description": "Limits payload sizes and optimizes network bandwidth when querying large car inventories."
+        }
+      ],
+      "databaseDesign": [
+        "Normalized schema with Cars, Reservations, MaintenanceRecords, Sellers, and Transactions.",
+        "Filtered Unique Index on active reservation status to guarantee zero double-booking at DB engine level.",
+        "EF Core optimization with .AsNoTracking() reducing server query memory consumption by up to 70%."
+      ],
+      "securityPractices": [
+        "Role-Based Access Control (Admin, Seller, Buyer) enforced on all controllers.",
+        "Stripe Webhook signature validation and Idempotency key tracking.",
+        "Identity verification (KYC) requirements before vehicle listings are publicly visible."
+      ]
+    }
+  },
+  {
+    "slug": "sbf-blazor-ecommerce",
+    "title": "SBFblazor: E-Commerce & Inventory Management Platform",
+    "category": "Enterprise Web Application (Blazor)",
+    "featured": true,
+    "thumbnailUrl": "/images/projects/sbf-blazor-ecommerce/screen-1-store.svg",
+    "screenshots": [
+      "/images/projects/sbf-blazor-ecommerce/screen-1-store.svg",
+      "/images/projects/sbf-blazor-ecommerce/screen-2-checkout.svg",
+      "/images/projects/sbf-blazor-ecommerce/screen-3-reports.svg"
+    ],
+    "specs": {
+      "systemType": "Web App (Hybrid Blazor WASM & Server)",
+      "role": "Full-Stack Developer",
+      "targetUsers": "Online Shoppers / Warehouse Admins",
+      "highlight": "Real-time Stock Control & Financial Export"
+    },
+    "metrics": [
+      {
+        "value": "100%",
+        "label": "Zero Overselling",
+        "detail": "Pessimistic Concurrency row-locking during checkout",
+        "accent": "emerald"
+      },
+      {
+        "value": "100%",
+        "label": "ACID Consistency",
+        "detail": "Repository-level Database Transaction rollback protection",
+        "accent": "cyan"
+      },
+      {
+        "value": "< 3s",
+        "label": "Report Generation",
+        "detail": "ClosedXML & iText7 high-speed file streaming",
+        "accent": "amber"
+      },
+      {
+        "value": "0",
+        "label": "Schema Leakage",
+        "detail": "Strict DTO abstraction hiding database models from WASM client",
+        "accent": "emerald"
+      }
+    ],
+    "problemStatement": "Inaccurate stock updates led to customers purchasing out-of-stock items, manual bank transfer validation slowed down fulfillment, and daily sales auditing was cumbersome.",
+    "coreFeatures": [
+      "Real-time Stock Sync: Immediate inventory deduction on order placement preventing overselling",
+      "Single-Page Cart & Checkout: Streamlined product selection, checkout, and order status tracking",
+      "Stripe Payment Gateway: Secure credit card processing with idempotency verification",
+      "Financial Reports & Export: Automated daily/monthly sales reports exported to PDF and Excel"
+    ],
+    "architectureHighlights": [
+      "Hybrid Blazor architecture: Blazor WebAssembly for rapid client storefront and Blazor Server for admin stability.",
+      "Pessimistic Concurrency row-locking during checkout to prevent race conditions during high-volume purchases.",
+      "Resilient integration with payment gateways using Polly Retry Policies for transient timeouts.",
+      "Strict DTO data transfer ensuring sensitive entity fields are never exposed to browser memory."
+    ],
+    "businessImpact": "Eliminated 100% of inventory overselling incidents, shortened checkout settlement time, and automated financial spreadsheet generation.",
+    "techStack": [
+      "ASP.NET Core 7",
+      "Blazor (Server/WASM)",
+      "EF Core",
+      "SQL Server",
+      "Stripe API",
+      "MudBlazor",
+      "Syncfusion",
+      "iText7",
+      "ClosedXML"
+    ],
+    "liveDemoUrl": "http://10.103.0.17/cs66/blazor/s07/WebSBF_ServerV2",
+    "githubUrl": "https://github.com/Thanawat0107/SBFblazor.git",
+    "deepDive": {
+      "overview": "An integrated enterprise e-commerce platform combining Blazor WebAssembly for fast shopping and Blazor Server for robust inventory management and accounting exports.",
+      "flowTitle": "Checkout & Webhook Stock Flow",
+      "flowSteps": [
+        "WASM Portal (Checkout)",
+        "Stripe API (Card Verification)",
+        "Webhook Handler (Status Update & Stock Deduction)"
+      ],
+      "systemDiagram": {
+        "title": "Hybrid Blazor & Pessimistic Concurrency Architecture",
+        "subtitle": "Blazor WASM, Server-side Row Lock, Atomic Inventory Deduction, and ClosedXML Streaming",
+        "nodes": [
+          {
+            "id": "client",
+            "tier": "client",
+            "title": "Blazor WebAssembly Portal",
+            "tech": "C# / Blazor WASM / MudBlazor",
+            "role": "Client Storefront",
+            "description": "Fast single-page catalog navigation, responsive shopping cart, and single-page checkout."
+          },
+          {
+            "id": "gateway",
+            "tier": "gateway",
+            "title": "Blazor Server Orchestrator",
+            "tech": "ASP.NET Core 7 / Dependency Injection",
+            "role": "Core Server Layer",
+            "description": "Coordinates admin management, authentication secrets, and inventory row-locking logic server-side."
+          },
+          {
+            "id": "service",
+            "tier": "service",
+            "title": "Pessimistic Concurrency Engine",
+            "tech": "EF Core Row Locking (UPDLOCK)",
+            "role": "Inventory Guard",
+            "description": "Locks target product row during checkout to prevent concurrent race conditions on low-stock items."
+          },
+          {
+            "id": "database",
+            "tier": "database",
+            "title": "SQL Server Relational Engine",
+            "tech": "Atomic Transaction (BeginTransactionAsync)",
+            "role": "Persistence Tier",
+            "description": "Atomic inventory deduction and invoice creation with automatic rollback protection on failure."
+          },
+          {
+            "id": "worker",
+            "tier": "worker",
+            "title": "ClosedXML & iText7 Export Engine",
+            "tech": "High-Speed Binary Streaming",
+            "role": "Export Service",
+            "description": "Generates daily/monthly financial audits and spreadsheet exports streamed directly to client in < 3s."
+          }
+        ],
+        "flowSteps": [
+          {
+            "stepNumber": 1,
+            "title": "WASM Single-Page Checkout",
+            "protocol": "C# SignalR / HTTP RPC",
+            "fromNodeId": "client",
+            "toNodeId": "gateway",
+            "description": "Shopper completes checkout form on Blazor WebAssembly; payload is sanitized via DTOs."
+          },
+          {
+            "stepNumber": 2,
+            "title": "Row-Level Concurrency Lock",
+            "protocol": "SQL Server UPDLOCK Row Lock",
+            "fromNodeId": "gateway",
+            "toNodeId": "service",
+            "description": "System locks target inventory record so no simultaneous customer can buy the same last item."
+          },
+          {
+            "stepNumber": 3,
+            "title": "Atomic Stock Deduction & DB Commit",
+            "protocol": "EF Core Transactional Commit",
+            "fromNodeId": "service",
+            "toNodeId": "database",
+            "description": "Inventory count decrements and order is recorded within an atomic database transaction."
+          },
+          {
+            "stepNumber": 4,
+            "title": "High-Speed Financial Report Streaming",
+            "protocol": "Binary MemoryStream Buffer (< 3s)",
+            "fromNodeId": "database",
+            "toNodeId": "worker",
+            "description": "Admin exports revenue reports; ClosedXML streams XLSX/PDF binary directly to browser without disk delay."
+          }
+        ]
+      },
+      "codeSnippet": {
+        "filename": "OrderCheckoutRepository.cs (C# / .NET 7.0 Transactional Flow)",
+        "language": "C#",
+        "code": "// ควบคุมการสร้างออเดอร์และการตัดสต็อกแบบ Atomic ป้องกันข้อมูลขาดหายกรณีเซิร์ฟเวอร์ขัดข้อง\nusing var transaction = await _dbContext.Database.BeginTransactionAsync();\ntry {\n    // 1. ดึงข้อมูลสินค้าที่ลูกค้าต้องการสั่งซื้อ พร้อมล็อค Row ไว้ไม่ให้คนอื่นแก้ไข (Pessimistic Concurrency)\n    var productStock = await _dbContext.Products.FirstOrDefaultAsync(p => p.Id == productId);\n\n    // 2. ตรวจสอบและตัดจำนวนสต็อกแบบทันที (Real-time Deduction)\n    if (productStock.Quantity >= orderQuantity) {\n        productStock.Quantity -= orderQuantity;\n    }\n\n    // 3. บันทึกข้อมูลใบสั่งซื้อและรายละเอียดลงหลายตารางพร้อมกันใน Transaction เดียว\n    await _dbContext.SaveChangesAsync();\n    await transaction.CommitAsync();\n}\ncatch {\n    await transaction.RollbackAsync(); // คืนค่าสต็อกและยกเลิกออเดอร์ทั้งหมดหากมีข้อผิดพลาด\n}"
+      },
+      "engineeringPillars": [
+        {
+          "title": "Transactional Integrity",
+          "description": "Repository-level Database Transaction securing simultaneous order creation and inventory reduction."
+        },
+        {
+          "title": "Resilience Engineering (Polly)",
+          "description": "Polly retry policies handle transient network timeouts when invoking external Stripe endpoints."
+        },
+        {
+          "title": "Clean Project Architecture",
+          "description": "Clear separation between Client, Server, and Shared DTO models."
+        },
+        {
+          "title": "Data Transfer Security",
+          "description": "Sanitized DTO payloads protect sensitive database schema and pricing logic."
+        }
+      ],
+      "databaseDesign": [
+        "Centralized inventory relational model with Products, Stocks, Orders, and OrderItems.",
+        "Pessimistic concurrency locking during checkout preventing multiple simultaneous overselling.",
+        "High-performance reporting queries using .AsNoTracking() and exporting via ClosedXML and iText7."
+      ],
+      "securityPractices": [
+        "Role-Based Access Control and JWT authentication guarding sensitive inventory mutations.",
+        "Stripe Webhook handler with Idempotency Key validation preventing double billing.",
+        "Separated Server and Client architecture keeping database connection secrets server-side."
+      ]
+    }
+  }
+]

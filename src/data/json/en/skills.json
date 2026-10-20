@@ -1,0 +1,61 @@
+[
+  {
+    "id": "backend",
+    "categoryName": "Backend Development",
+    "description": "Scalable APIs, layered architecture, business logic, and authentication workflows.",
+    "skills": [
+      "C#",
+      "ASP.NET Core Web API",
+      "ASP.NET MVC",
+      "Blazor (Server/WASM)",
+      "Entity Framework Core",
+      "Clean Architecture",
+      "JWT Authentication",
+      "SignalR"
+    ]
+  },
+  {
+    "id": "frontend",
+    "categoryName": "Frontend & Mobile Development",
+    "description": "Responsive web applications, cross-platform mobile apps, and reactive state management.",
+    "skills": [
+      "React",
+      "Next.js",
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "JavaScript",
+      "Redux Toolkit",
+      "RTK Query",
+      "Tailwind CSS",
+      "Formik + Yup"
+    ]
+  },
+  {
+    "id": "database",
+    "categoryName": "Database & Data Modeling",
+    "description": "Relational schema design, ACID transactions, and query performance optimization.",
+    "skills": [
+      "Microsoft SQL Server",
+      "Entity Framework Core (Code First)",
+      "Eager Loading / .AsNoTracking()",
+      "ACID Transactions",
+      "Filtered Unique Index",
+      "Database Normalization"
+    ]
+  },
+  {
+    "id": "devops-tools",
+    "categoryName": "Servers, Networks & DevOps",
+    "description": "Server provisioning, computer network management, containerization, and developer tooling.",
+    "skills": [
+      "IIS Server",
+      "Ubuntu / Linux",
+      "Docker",
+      "Computer Network Management",
+      "Git / GitHub",
+      "Postman",
+      "Visual Studio / VS Code"
+    ]
+  }
+]

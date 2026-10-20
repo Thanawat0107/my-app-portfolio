@@ -53,6 +53,22 @@ export const ProfileTerminalCard: React.FC = () => {
           </span>
           <span className="font-mono text-slate-500">{t.hero.framework}</span>
         </div>
+
+        {/* Developer & Internship Quick Specs */}
+        <div className="mt-3 pt-2.5 border-t border-slate-800/80 text-[11px] font-mono space-y-1 text-slate-400">
+          <div className="flex items-center justify-between">
+            <span className="text-slate-500">Target Role:</span>
+            <span className="text-slate-200 font-medium">Backend / Full-Stack</span>
+          </div>
+          <div className="flex items-center justify-between">
+            <span className="text-slate-500">Internship:</span>
+            <span className="text-emerald-400 font-medium">4 Jun – 30 Sep 2026</span>
+          </div>
+          <div className="flex items-center justify-between">
+            <span className="text-slate-500">Education:</span>
+            <span className="text-slate-200">CS @ KRU (GPAX 2.60)</span>
+          </div>
+        </div>
       </div>
     </div>
   );

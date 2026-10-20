@@ -6,5 +6,6 @@ export const experienceEn: ExperienceSectionTranslations = {
   title: 'Experience, Research & Education',
   subtitle:
     'Software engineering deliverables, academic research publication, and computer science foundation.',
+  evidenceLabel: 'Supporting Evidence / Official Certificates',
   items: experienceData,
 };

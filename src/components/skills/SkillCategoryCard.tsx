@@ -16,7 +16,7 @@ export const SkillCategoryCard: React.FC<SkillCategoryCardProps> = ({ category }
       </div>
       <div className="flex flex-wrap gap-2 pt-2">
         {category.skills.map((skill) => (
-          <Badge key={skill} variant="default">
+          <Badge key={skill} variant="default" showTechIcon={true}>
             {skill}
           </Badge>
         ))}

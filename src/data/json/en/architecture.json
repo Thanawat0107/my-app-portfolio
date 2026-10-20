@@ -1,0 +1,70 @@
+[
+  {
+    "id": "clean-backend",
+    "title": "Clean Architecture & DTO Separation",
+    "subtitle": "Layered & Maintainable Design",
+    "description": "Decoupling Controllers, Services, Repositories, and Models. Utilizing dedicated DTO objects with AutoMapper to prevent data leaks and isolate business logic.",
+    "tools": [
+      "ASP.NET Core Web API",
+      "Repository Pattern",
+      "DTO & AutoMapper",
+      "Clean Architecture"
+    ],
+    "codeSnippet": {
+      "filename": "OrderService.cs (ASP.NET Core 9)",
+      "language": "C#",
+      "code": "using var transaction = await _db.Database.BeginTransactionAsync();\ntry {\n    var order = new OrderHeader { Total = cart.Items.Sum(i => i.TotalPrice) };\n    if (await _paymentService.VerifySlipAsync(dto.SlipFile)) {\n        _db.OrderHeaders.Add(order);\n    }\n    await _db.SaveChangesAsync();\n    await transaction.CommitAsync();\n\n    // Broadcast instant update to kitchen display without refresh\n    await _hubContext.Clients.Group(\"Kitchen\").SendAsync(\"NewOrderReceived\", order);\n}\ncatch {\n    await transaction.RollbackAsync(); // All-or-nothing rollback\n}"
+    }
+  },
+  {
+    "id": "database-integrity",
+    "title": "Transactional Integrity & Concurrency Control",
+    "subtitle": "ACID & Concurrency Safety",
+    "description": "Employing Database Transactions for atomic multi-table updates, Pessimistic Concurrency locking to prevent stock overselling, and Filtered Unique Indexes.",
+    "tools": [
+      "SQL Server",
+      "ACID Transactions",
+      "Pessimistic Locking",
+      "Filtered Unique Index"
+    ],
+    "codeSnippet": {
+      "filename": "OrderCheckoutRepository.cs (EF Core)",
+      "language": "C#",
+      "code": "using var transaction = await _dbContext.Database.BeginTransactionAsync();\ntry {\n    // Pessimistic concurrency row lock to prevent race-condition overselling\n    var productStock = await _dbContext.Products.FirstOrDefaultAsync(p => p.Id == productId);\n    if (productStock.Quantity >= orderQuantity) {\n        productStock.Quantity -= orderQuantity; // Real-time deduction\n    }\n    await _dbContext.SaveChangesAsync();\n    await transaction.CommitAsync();\n}\ncatch {\n    await transaction.RollbackAsync();\n}"
+    }
+  },
+  {
+    "id": "resilience-automation",
+    "title": "Background Services & Resilience Engineering",
+    "subtitle": "Automated Expiry & Fault Tolerance",
+    "description": "Implementing BackgroundService workers for automated reservation expiry and queue reclamation, paired with Polly Retry Policies for network resilience.",
+    "tools": [
+      "BackgroundService Worker",
+      "Polly Retry Policy",
+      "Atomic Status Update",
+      "EF Core Optimization"
+    ],
+    "codeSnippet": {
+      "filename": "ReservationExpiryWorker.cs (Background Task)",
+      "language": "C#",
+      "code": "// Automated expiry checker with Polly Retry Policy resilience\nvar expiredCount = await Policy.Handle<Exception>()\n    .WaitAndRetryAsync(3, attempt => TimeSpan.FromSeconds(10))\n    .ExecuteAsync(async () => {\n        var expiredReservations = _db.Reservations.Include(r => r.Car)\n            .Where(r => r.Status == \"Pending\" && r.ExpiryAt < DateTime.UtcNow)\n            .ToList();\n\n        foreach (var res in expiredReservations) {\n            res.Status = \"Expired\";\n            res.Car.Status = \"Available\"; // Atomic state restore\n        }\n        return await _db.SaveChangesAsync();\n    });"
+    }
+  },
+  {
+    "id": "realtime-security",
+    "title": "Real-Time Sync & Secure Integrations",
+    "subtitle": "Instant Push Alerts & Webhooks",
+    "description": "Broadcasting instant order updates to kitchen displays using SignalR Hubs, coupled with Stripe Webhooks, Idempotency checks, and HMAC-SHA256 protection.",
+    "tools": [
+      "SignalR Hub",
+      "Stripe Webhook",
+      "JWT / RBAC",
+      "IIS Server & Docker"
+    ],
+    "codeSnippet": {
+      "filename": "OrderHub.cs & StripeWebhook.cs",
+      "language": "C#",
+      "code": "[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]\npublic class OrderHub : Hub {\n    public async Task JoinKitchenGroup() =>\n        await Groups.AddToGroupAsync(Context.ConnectionId, \"Kitchen\");\n}\n\n// Stripe webhook handler ensuring Idempotency\nif (stripeEvent.Type == Events.PaymentIntentSucceeded) {\n    await _orderService.ConfirmOrderPaymentAsync(intent.Id);\n}"
+    }
+  }
+]

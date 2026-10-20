@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { FileText, Github, Linkedin } from 'lucide-react';
+import { FileText, Github, Phone, Linkedin } from 'lucide-react';
 import { siteConfig } from '@/config/site.config';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -10,6 +10,13 @@ export const ContactQuickLinks: React.FC = () => {
 
   return (
     <div className="pt-6 border-t border-slate-800/80 flex flex-wrap items-center justify-center gap-6 text-xs font-mono text-slate-400">
+      <a
+        href={`tel:${siteConfig.phone || '0924527470'}`}
+        className="hover:text-emerald-400 flex items-center gap-1.5 text-slate-300 transition-colors"
+      >
+        <Phone className="w-4 h-4 text-emerald-400" />
+        <span>{siteConfig.phone || '092-452-7470'}</span>
+      </a>
       <a
         href={siteConfig.resumeUrl}
         target="_blank"
