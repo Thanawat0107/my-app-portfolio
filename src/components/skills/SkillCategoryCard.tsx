@@ -56,13 +56,13 @@ export const SkillCategoryCard: React.FC<SkillCategoryCardProps> = ({ category, 
 
   return (
     <div
-      className={`rounded-2xl border border-slate-800/90 bg-gradient-to-b from-slate-900/90 to-slate-950/90 backdrop-blur-xl p-6 sm:p-7 flex flex-col justify-between space-y-5 transition-all duration-300 shadow-xl ${hoverBorder}`}
+      className={`rounded-md border border-slate-800/90 bg-gradient-to-b from-slate-900/90 to-slate-950/90 backdrop-blur-xl p-6 sm:p-7 flex flex-col justify-between space-y-5 transition-all duration-300 shadow-xl ${hoverBorder}`}
     >
       <div className="space-y-3">
         {/* Header: Icon + Title + Count */}
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <div className={`p-2 rounded-xl border ${iconBg} shadow-sm`}>
+            <div className={`p-2 rounded-md border ${iconBg} shadow-sm`}>
               {icon}
             </div>
             <div>

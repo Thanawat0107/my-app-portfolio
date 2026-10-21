@@ -10,7 +10,7 @@ export const ContactSection: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-20 scroll-mt-16">
       <Card className="p-8 sm:p-12 text-center max-w-3xl mx-auto space-y-6 bg-gradient-to-b from-slate-900/90 to-slate-950">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono uppercase">
           {t.contact.badge}

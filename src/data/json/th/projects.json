@@ -11,7 +11,7 @@
       "/images/projects/champ-noodle-pos-system/right1.png"
     ],
     "specs": {
-      "systemType": "เว็บแอปพลิเคชัน (Web App)",
+      "systemType": "เว็บแอปพลิเคชัน",
       "role": "นักพัฒนา Full-Stack",
       "targetUsers": "ลูกค้า / พนักงานครัว / แอดมิน",
       "highlight": "จัดการออเดอร์ & วิเคราะห์ยอดขาย"
@@ -227,7 +227,7 @@
       "/images/projects/used-car-management-system/right2.png"
     ],
     "specs": {
-      "systemType": "เว็บแอปพลิเคชัน (Web App)",
+      "systemType": "เว็บแอปพลิเคชัน",
       "role": "นักพัฒนา Full-Stack",
       "targetUsers": "ผู้ซื้อ / ผู้ขาย / แอดมิน",
       "highlight": "ระบบค้นหา & จัดการการจอง"
@@ -414,7 +414,7 @@
   {
     "slug": "sbf-blazor-ecommerce",
     "title": "SBFblazor: แพลตฟอร์มร้านค้าออนไลน์และระบบจัดการสต็อก",
-    "category": "เว็บแอปพลิเคชันระดับองค์กร (Blazor)",
+    "category": "เว็บแอปพลิเคชันระดับองค์กร",
     "featured": true,
     "thumbnailUrl": "/images/projects/sbf-blazor-ecommerce/main3.png",
     "screenshots": [
@@ -423,7 +423,7 @@
       "/images/projects/sbf-blazor-ecommerce/right3.png"
     ],
     "specs": {
-      "systemType": "เว็บแอปพลิเคชัน (Blazor)",
+      "systemType": "เว็บแอปพลิเคชัน Blazor",
       "role": "นักพัฒนา Full-Stack",
       "targetUsers": "ลูกค้า / ผู้ดูแลระบบ",
       "highlight": "E-Commerce & Stock Control"

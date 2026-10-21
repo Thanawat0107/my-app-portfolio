@@ -28,10 +28,6 @@ export const HeroIntroText: React.FC = () => {
       <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
         {t.hero.tagline}
       </p>
-
-      <p className="text-slate-400 text-sm leading-relaxed max-w-2xl">
-        {t.hero.summary}
-      </p>
     </div>
   );
 };

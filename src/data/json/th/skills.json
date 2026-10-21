@@ -1,7 +1,7 @@
 [
   {
     "id": "backend",
-    "categoryName": "การพัฒนาส่วนหลังบ้าน (Backend)",
+    "categoryName": "การพัฒนาฝั่ง Backend",
     "description": "การสร้าง API ที่รองรับการขยายตัว, สถาปัตยกรรม Clean Architecture, Business Logic และระบบจัดการข้อมูลธุรกรรม",
     "skills": [
       "C#",
@@ -15,7 +15,7 @@
   },
   {
     "id": "frontend",
-    "categoryName": "การพัฒนาส่วนหน้าบ้านและโมบายล์ (Frontend & Mobile)",
+    "categoryName": "การพัฒนาฝั่ง Frontend & Mobile",
     "description": "การพัฒนาเว็บแอปพลิเคชันและโมบายล์แอปที่ทันสมัย ตอบสนองทุกอุปกรณ์ จัดการ State อย่างเป็นระบบ และ Type-Safe",
     "skills": [
       "React",
@@ -28,7 +28,7 @@
   },
   {
     "id": "database",
-    "categoryName": "ระบบฐานข้อมูล (Database)",
+    "categoryName": "ระบบจัดการฐานข้อมูล",
     "description": "การออกแบบสกีมาเชิงสัมพันธ์, เครื่องมือจัดการฐานข้อมูล และการควบคุมความถูกต้องสมบูรณ์ของธุรกรรม (ACID)",
     "skills": [
       "SQL Server",
@@ -39,7 +39,7 @@
   },
   {
     "id": "tools-env",
-    "categoryName": "เครื่องมือและสภาพแวดล้อม (Tools & Environment)",
+    "categoryName": "เครื่องมือและสภาพแวดล้อมการทำงาน",
     "description": "คอนเทนเนอร์, ระบบปฏิบัติการเซิร์ฟเวอร์, การทดสอบ API และการประยุกต์ใช้ AI ในการเร่งประสิทธิภาพการพัฒนา",
     "skills": [
       "Postman",

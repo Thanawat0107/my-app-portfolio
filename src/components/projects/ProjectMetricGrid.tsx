@@ -64,7 +64,7 @@ export const ProjectMetricGrid: React.FC<ProjectMetricGridProps> = ({
           return (
             <div
               key={idx}
-              className={`relative group/metric overflow-hidden rounded-xl bg-slate-950/70 p-3 sm:p-3.5 border border-slate-800/80 ${styles.borderHover} hover:bg-slate-900/50 transition-all duration-300 shadow-sm flex flex-col justify-between`}
+              className={`relative group/metric overflow-hidden rounded-md bg-slate-950/70 p-3 sm:p-3.5 border border-slate-800/80 ${styles.borderHover} hover:bg-slate-900/50 transition-all duration-300 shadow-sm flex flex-col justify-between`}
             >
               {/* Subtle top ambient glow */}
               <div

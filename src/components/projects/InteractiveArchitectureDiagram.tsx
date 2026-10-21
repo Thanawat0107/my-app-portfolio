@@ -49,7 +49,7 @@ export const InteractiveArchitectureDiagram: React.FC<InteractiveArchitectureDia
         <div className="flex flex-wrap items-center gap-2 pt-2">
           {fallbackFlowSteps.map((step, idx) => (
             <React.Fragment key={idx}>
-              <div className="px-3.5 py-2 rounded-xl bg-slate-950 border border-slate-800 text-xs font-mono text-slate-200 shadow-md">
+              <div className="px-3.5 py-2 rounded-md bg-slate-950 border border-slate-800 text-xs font-mono text-slate-200 shadow-md">
                 <span className="text-emerald-400 font-semibold mr-1.5">{idx + 1}.</span>
                 {step}
               </div>
@@ -142,7 +142,7 @@ export const InteractiveArchitectureDiagram: React.FC<InteractiveArchitectureDia
 
         {/* Step Indicator / Navigation */}
         {diagram.flowSteps && diagram.flowSteps.length > 0 && (
-          <div className="flex items-center gap-1.5 self-start md:self-center bg-slate-950 p-1.5 rounded-xl border border-slate-800">
+          <div className="flex items-center gap-1.5 self-start md:self-center bg-slate-950 p-1.5 rounded-md border border-slate-800">
             {diagram.flowSteps.map((step, idx) => (
               <button
                 key={step.stepNumber}
@@ -151,7 +151,7 @@ export const InteractiveArchitectureDiagram: React.FC<InteractiveArchitectureDia
                   setActiveStepIndex(idx);
                   setSelectedNodeId(null);
                 }}
-                className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-all duration-200 ${
+                className={`px-3 py-1.5 rounded-md text-xs font-mono transition-all duration-200 ${
                   activeStepIndex === idx
                     ? 'bg-emerald-500 text-slate-950 font-bold shadow-md shadow-emerald-500/20'
                     : 'text-slate-400 hover:text-slate-100 hover:bg-slate-900'
@@ -166,7 +166,7 @@ export const InteractiveArchitectureDiagram: React.FC<InteractiveArchitectureDia
 
       {/* Active Step Highlight Banner */}
       {activeStep && (
-        <div className="p-4 rounded-xl bg-slate-950/90 border border-emerald-500/30 shadow-lg relative overflow-hidden group">
+        <div className="p-4 rounded-md bg-slate-950/90 border border-emerald-500/30 shadow-lg relative overflow-hidden group">
           <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-emerald-500 via-cyan-400 to-teal-400" />
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div className="space-y-1">
@@ -224,7 +224,7 @@ export const InteractiveArchitectureDiagram: React.FC<InteractiveArchitectureDia
               <div
                 key={node.id}
                 onClick={() => setSelectedNodeId(isSelected ? null : node.id)}
-                className={`relative cursor-pointer rounded-xl p-4 transition-all duration-300 flex flex-col justify-between border ${
+                className={`relative cursor-pointer rounded-md p-4 transition-all duration-300 flex flex-col justify-between border ${
                   isSelected
                     ? 'bg-slate-900 border-cyan-500/80 ring-2 ring-cyan-500/30 shadow-xl'
                     : isActive
@@ -234,7 +234,7 @@ export const InteractiveArchitectureDiagram: React.FC<InteractiveArchitectureDia
               >
                 {/* Active Indicator Top Glow */}
                 {isActive && (
-                  <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-400 rounded-t-xl" />
+                  <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-400 rounded-t-md" />
                 )}
 
                 <div>
@@ -282,7 +282,7 @@ export const InteractiveArchitectureDiagram: React.FC<InteractiveArchitectureDia
 
       {/* Node Inspection Drawer */}
       {selectedNode && (
-        <div className="p-4 rounded-xl bg-slate-900/90 border border-cyan-500/40 text-xs space-y-1.5 animate-fadeIn">
+        <div className="p-4 rounded-md bg-slate-900/90 border border-cyan-500/40 text-xs space-y-1.5 animate-fadeIn">
           <div className="flex items-center justify-between text-cyan-300 font-mono font-semibold">
             <span className="flex items-center gap-1.5">
               <ChevronRight className="w-4 h-4 text-cyan-400" />

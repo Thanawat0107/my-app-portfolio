@@ -21,7 +21,7 @@ export function generateMetadata({ params }: ProjectDetailPageProps): Metadata {
   if (!project) return { title: 'Project Not Found' };
 
   return {
-    title: `${project.title} | Architecture Case Study`,
+    title: `${project.title} | TB`,
     description: project.problemStatement,
   };
 }

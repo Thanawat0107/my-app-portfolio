@@ -6,7 +6,7 @@ export const architecturePillarsDataTh: ArchitecturePillar[] = architectureThJso
 
 export const architectureTh: ArchitectureSectionTranslations = {
   badge: 'สถาปัตยกรรมและมาตรฐานวิศวกรรม',
-  title: 'สถาปัตยกรรมระบบและมาตรฐานการออกแบบโค้ด (System Architecture & Code Standards)',
+  title: 'สถาปัตยกรรมระบบและมาตรฐานการออกแบบโค้ด',
   subtitle:
     'หลักการออกแบบโครงสร้าง Clean Architecture 4 เลเยอร์, การควบคุมความถูกต้องของธุรกรรมฐานข้อมูล (ACID), และงานประมวลผลเบื้องหลังอัตโนมัติ',
   viewCodeLabel: 'ดูตัวอย่างโค้ด Production',

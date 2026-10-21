@@ -9,15 +9,25 @@ import { Container } from '@/components/ui/Container';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { MobileNavMenu } from './MobileNavMenu';
 
+import { useSectionNavigation } from '@/hooks/useSectionNavigation';
+
 export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { t } = useLanguage();
+  const { navigateToSection } = useSectionNavigation();
 
   return (
     <header className="sticky top-0 z-50 bg-slate-950/85 backdrop-blur-md border-b border-slate-800/80">
       <Container className="h-16 flex items-center justify-between">
         <Link
           href="/"
+          onClick={(e) => {
+            if (window.location.pathname === '/' || window.location.pathname === '') {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+              window.history.replaceState(null, '', '/');
+            }
+          }}
           className="font-mono text-lg font-bold tracking-tight text-slate-100 hover:text-emerald-400 transition-colors"
         >
           {siteConfig.brandLogo}
@@ -29,6 +39,7 @@ export const Navbar: React.FC = () => {
             <Link
               key={item.href}
               href={item.href}
+              onClick={(e) => navigateToSection(e, item.href)}
               className="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors"
             >
               {item.label}

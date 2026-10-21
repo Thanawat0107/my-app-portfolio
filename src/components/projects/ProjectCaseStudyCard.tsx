@@ -79,7 +79,7 @@ export const ProjectCaseStudyCard: React.FC<ProjectCaseStudyCardProps> = ({ proj
 
             {/* 4 Quick Specs from PDF */}
             {project.specs && (
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3.5 p-3 rounded-xl bg-slate-950/70 border border-slate-800/80 text-[11px] font-mono">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3.5 p-3 rounded-md bg-slate-950/70 border border-slate-800/80 text-[11px] font-mono">
                 <div>
                   <span className="text-slate-500 block">{t.projects.specsLabels?.systemType || 'รูปแบบระบบ'}</span>
                   <span className="text-slate-200 font-medium">{project.specs.systemType}</span>
@@ -132,7 +132,7 @@ export const ProjectCaseStudyCard: React.FC<ProjectCaseStudyCardProps> = ({ proj
               </div>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 pl-7">
                 {project.coreFeatures.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-2 text-xs text-slate-300 bg-slate-900/50 p-2.5 rounded-lg border border-slate-800/60">
+                  <li key={idx} className="flex items-start gap-2 text-xs text-slate-300 bg-slate-900/50 p-2.5 rounded-md border border-slate-800/60">
                     <CheckCircle className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>

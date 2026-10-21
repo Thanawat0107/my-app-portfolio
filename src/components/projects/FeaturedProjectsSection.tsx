@@ -12,7 +12,7 @@ export const FeaturedProjectsSection: React.FC = () => {
   const featured = t.projects.items.filter((p) => p.featured);
 
   return (
-    <section id="projects" className="py-20 border-b border-slate-900">
+    <section id="projects" className="py-20 border-b border-slate-900 scroll-mt-16">
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-4">
         <SectionHeader
           badgeText={t.projects.badge}

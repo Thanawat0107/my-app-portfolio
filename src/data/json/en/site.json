@@ -1,18 +1,17 @@
 {
   "fullName": "Thanawat Butseree",
   "brandLogo": "<Thanawat.B />",
-  "role": "Software Engineer / Full-Stack Developer",
+  "role": "Software Engineer / Full Stack Engineer",
   "tagline": "Building production-ready web applications with Clean Architecture, robust backend APIs, and responsive user interfaces.",
-  "summary": "Computer Science graduate from Kanchanaburi Rajabhat University specializing in C#, .NET Core, React, Next.js, and PostgreSQL. Experienced in enterprise software development and production server deployment.",
-  "location": "Kanchanaburi, Thailand",
-  "email": "qwwasszxx2345@gmail.com",
+  "location": "Bangkok, Thailand",
+  "email": "thanawat.bsr@gmail.com",
   "phone": "092-452-7470",
   "avatarUrl": "/images/profile/profilez.jpeg",
-  "availabilityText": "Available Immediately (Software Engineer / Full-Stack Developer)",
+  "availabilityText": "Available Immediately • Full-Time / Contract",
   "resumeUrl": "/portfolio.pdf",
   "socials": {
     "github": "https://github.com/Thanawat0107",
-    "linkedin": "https://github.com/Thanawat0107"
+    "linkedin": "https://linkedin.com/in/thanawat-butseree"
   },
   "coreStack": [
     "C#",

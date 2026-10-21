@@ -4,6 +4,8 @@ import { FileText } from 'lucide-react';
 import { siteConfig } from '@/config/site.config';
 import { useLanguage } from '@/context/LanguageContext';
 
+import { useSectionNavigation } from '@/hooks/useSectionNavigation';
+
 interface MobileNavMenuProps {
   isOpen: boolean;
   onClose: () => void;
@@ -11,6 +13,7 @@ interface MobileNavMenuProps {
 
 export const MobileNavMenu: React.FC<MobileNavMenuProps> = ({ isOpen, onClose }) => {
   const { t } = useLanguage();
+  const { navigateToSection } = useSectionNavigation();
 
   if (!isOpen) return null;
 
@@ -20,7 +23,7 @@ export const MobileNavMenu: React.FC<MobileNavMenuProps> = ({ isOpen, onClose })
         <Link
           key={item.href}
           href={item.href}
-          onClick={onClose}
+          onClick={(e) => navigateToSection(e, item.href, onClose)}
           className="block py-2 text-sm font-medium text-slate-200 hover:text-emerald-400"
         >
           {item.label}

@@ -9,7 +9,7 @@ export const ArchitectureSection: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="architecture" className="py-20 border-b border-slate-900">
+    <section id="architecture" className="py-20 border-b border-slate-900 scroll-mt-16">
       <SectionHeader
         badgeText={t.architecture.badge}
         title={t.architecture.title}

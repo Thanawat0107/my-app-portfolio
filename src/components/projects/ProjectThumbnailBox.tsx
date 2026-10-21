@@ -34,7 +34,7 @@ export const ProjectThumbnailBox: React.FC<ProjectThumbnailBoxProps> = ({
   };
 
   return (
-    <div className="group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 aspect-[16/10] shadow-xl">
+    <div className="group relative rounded-md overflow-hidden border border-slate-800 bg-slate-950 aspect-[16/10] shadow-xl">
       {/* Current Slide Image */}
       <div className="relative w-full h-full">
         <Image

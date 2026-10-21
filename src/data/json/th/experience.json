@@ -24,23 +24,28 @@
     ],
     "media": [
       {
-        "thumbnailUrl": "/images/work/supalai-tech-talent.svg",
-        "caption": "ระบบติดตามผลกระทบสิ่งแวดล้อม (EIA Phase 2) & IoT Telemetry Dashboard",
-        "category": "ผลงานพัฒนาระดับองค์กร"
+        "thumbnailUrl": "/images/work/supalai-intern-team.jpg",
+        "caption": "ภาพถ่ายร่วมโครงการ SUPALAI Tech Talent 2026 ณ สำนักงานใหญ่ บริษัท ศุภาลัย จำกัด (มหาชน)",
+        "category": "ภาพถ่ายการปฏิบัติงานจริง"
+      },
+      {
+        "thumbnailUrl": "/images/work/supalai-logo.jpg",
+        "caption": "บริษัท ศุภาลัย จำกัด (มหาชน) - สำนักงานใหญ่ (กรุงเทพมหานคร)",
+        "category": "องค์กรชั้นนำด้านอสังหาริมทรัพย์"
       }
     ]
   },
   {
     "id": "award-network-competition",
     "period": "ธันวาคม 2568",
-    "role": "รางวัลชนะเลิศ การแข่งขันทักษะวิชาการด้านการบริหารจัดการระบบเครือข่ายคอมพิวเตอร์",
-    "organization": "งาน พ.จ.น.ก.สัมพันธ์ “ราชพฤกษ์เกมส์ ครั้งที่ 46” ณ มหาวิทยาลัยราชภัฏหมู่บ้านจอมบึง",
+    "role": "รางวัลชนะเลิศการแข่งขันทักษะวิชาการด้านการบริหารจัดการระบบเครือข่ายคอมพิวเตอร์",
+    "organization": "งานราชพฤกษ์เกมส์ ครั้งที่ 46 ระดับภูมิภาคตะวันตก (กาญจนบุรี, ประเทศไทย)",
     "type": "award",
     "categoryGroup": "การแข่งขัน",
     "badge": "รางวัลชนะเลิศอันดับ 1 (เหรียญทอง)",
     "highlights": [
-      "ได้รับรางวัลชนะเลิศอันดับ 1 ในการแข่งขันทักษะวิชาการระดับภูมิภาคตะวันตก ด้านการออกแบบ คอนฟิก และบริหารจัดการระบบเครือข่ายคอมพิวเตอร์ระดับองค์กร",
-      "ออกแบบและคอนฟิก Enterprise Wi-Fi ผ่าน Cloud Controller (Fast Roaming, Load Balancing) พร้อมวางระบบจัดการแบนด์วิดท์ (QoS) เพื่อแก้ปัญหาความหนาแน่นของเครือข่ายได้อย่างสมบูรณ์แบบภายใต้เวลาที่กำหนด"
+      "ได้รับรางวัลชนะเลิศอันดับ 1 โดยคอนฟิก Enterprise Wi-Fi ผ่าน Cloud Controller (Roaming, Load Balancing) พร้อมออกแบบการจัดการแบนด์วิดท์ (QoS) เพื่อแก้ปัญหาความหนาแน่นของเครือข่ายได้อย่างสมบูรณ์แบบในเวลาที่กำหนด",
+      "แสดงทักษะการออกแบบและจัดการเครือข่ายระดับองค์กร แก้ไขปัญหาทราฟฟิกหนาแน่นภายใต้สถานการณ์จริงและเวลาที่กำหนด"
     ],
     "technologies": [
       "Enterprise Wi-Fi",
@@ -53,19 +58,19 @@
     ],
     "media": [
       {
-        "thumbnailUrl": "/images/certificates/certificate-network.svg",
+        "thumbnailUrl": "/images/certificates/certificate-network.jpg",
         "caption": "เกียรติบัตรรางวัลชนะเลิศ การบริหารเครือข่าย พ.จ.น.ก.สัมพันธ์ 46",
         "category": "เกียรติบัตรทางการ"
       },
       {
-        "thumbnailUrl": "/images/certificates/award-podium.svg",
-        "caption": "ภาพถ่ายพิธีมอบรางวัลชนะเลิศ & เหรียญทองบนเวที",
-        "category": "ภาพถ่ายพิธีมอบรางวัล"
+        "thumbnailUrl": "/images/certificates/award-podium.jpg",
+        "caption": "ผู้ได้รับรางวัลชนะเลิศ คล้องเหรียญทองและเกียรติบัตร",
+        "category": "ภาพถ่ายผู้ได้รับรางวัล"
       },
       {
-        "thumbnailUrl": "/images/certificates/competition-action.svg",
-        "caption": "ภาพบรรยากาศการแข่งขัน & การคอนฟิกหน้างาน",
-        "category": "บรรยากาศการแข่งขัน"
+        "thumbnailUrl": "/images/certificates/competition-action.jpg",
+        "caption": "พิธีมอบรางวัลชนะเลิศบนเวทีร่วมกับทีมและอาจารย์ที่ปรึกษา",
+        "category": "พิธีมอบรางวัลบนเวที"
       }
     ]
   },
@@ -73,19 +78,19 @@
     "id": "edu-bachelor-cs",
     "period": "2566 – 2569",
     "role": "ระดับปริญญาตรี (วท.บ. วิทยาการคอมพิวเตอร์) - สำเร็จการศึกษาแล้ว",
-    "organization": "มหาวิทยาลัยราชภัฏกาญจนบุรี",
+    "organization": "มหาวิทยาลัยราชภัฏกาญจนบุรี (กาญจนบุรี, ประเทศไทย)",
     "type": "education",
     "categoryGroup": "การศึกษา & ผลการเรียน",
     "badge": "เกรดเฉลี่ยสะสม : 2.60",
     "highlights": [
-      "เกรดเฉลี่ยสะสม : 2.60",
-      "สำเร็จปีการศึกษา : 2569 (พร้อมเริ่มงานประจำทันที)"
+      "วิทยาศาสตรบัณฑิต สาขาวิทยาการคอมพิวเตอร์ (GPAX : 2.60)",
+      "สำเร็จการศึกษา: พฤศจิกายน 2569 (พร้อมเริ่มงานประจำทันที)"
     ],
     "technologies": [],
     "media": [
       {
-        "thumbnailUrl": "/images/education/transcript-kru.svg",
-        "caption": "ใบแสดงผลการเรียน วท.บ. วิทยาการคอมพิวเตอร์ (108 หน่วยกิต, GPAX 2.60)",
+        "thumbnailUrl": "/images/education/transcript-kru.jpg",
+        "caption": "ใบรายงานผลการศึกษา วท.บ. วิทยาการคอมพิวเตอร์ (108 หน่วยกิต, GPAX 2.60)",
         "category": "ใบแสดงผลการเรียน"
       }
     ]
@@ -145,14 +150,19 @@
     "technologies": [],
     "media": [
       {
-        "thumbnailUrl": "/images/activities/activity-student-council-1.svg",
-        "caption": "คณะกรรมการสโมสรนักศึกษา คณะวิทยาศาสตร์และเทคโนโลยี ปีการศึกษา 2567",
+        "thumbnailUrl": "/images/activities/activity-student-council-1.jpg",
+        "caption": "ภาพประจำตัวกรรมการสโมสรนักศึกษา คณะวิทยาศาสตร์และเทคโนโลยี",
         "category": "กิจกรรมนักศึกษา"
       },
       {
-        "thumbnailUrl": "/images/activities/activity-student-council-2.svg",
-        "caption": "ภาพการประชุมและดำเนินโครงการกิจกรรมนักศึกษา",
+        "thumbnailUrl": "/images/activities/activity-student-council-2.jpg",
+        "caption": "การร่วมขบวนกิจกรรมและถือป้ายคณะวิทยาศาสตร์และเทคโนโลยี",
         "category": "การดำเนินงานสโมสร"
+      },
+      {
+        "thumbnailUrl": "/images/activities/activity-student-council-3.jpg",
+        "caption": "ทีมงานสโมสรนักศึกษาในชุดเสื้อกิจกรรมประจำคณะ",
+        "category": "กิจกรรมนักศึกษา"
       }
     ]
   },
@@ -171,13 +181,13 @@
     "technologies": [],
     "media": [
       {
-        "thumbnailUrl": "/images/activities/activity-rov-esports-1.svg",
-        "caption": "ทีมงานฝ่ายจัดการแข่งขัน RoV E-Sports Tournament สาขาวิชาฯ",
+        "thumbnailUrl": "/images/activities/activity-rov-esports-1.jpg",
+        "caption": "ทีมงานฝ่ายจัดการแข่งขันและควบคุมระบบถ่ายทอดสด RoV",
         "category": "การจัดกิจกรรม"
       },
       {
-        "thumbnailUrl": "/images/activities/activity-rov-esports-2.svg",
-        "caption": "บรรยากาศการแข่งขันและการควบคุมระบบถ่ายทอดสดบนเวที",
+        "thumbnailUrl": "/images/activities/activity-rov-esports-2.jpg",
+        "caption": "บรรยากาศการแข่งขัน RoV บนเวทีและจอฉายถ่ายทอดสด LED",
         "category": "บรรยากาศการแข่งขัน"
       }
     ]
@@ -185,32 +195,32 @@
   {
     "id": "act-it-mentor-meditation",
     "period": "2567 – 2568",
-    "role": "พี่เลี้ยงฝ่าย IT ประจำรุ่นที่ 53 และผู้สำเร็จหลักสูตรครูสมาธิ รุ่นที่ 52",
-    "organization": "สถาบันพลังจิตตานุภาพ หลวงพ่อวิริยังค์ สิรินธโร",
+    "role": "พี่เลี้ยงและผู้ผ่านหลักสูตรครูสมาธิ (พี่เลี้ยงฝ่าย IT รุ่นที่ 53)",
+    "organization": "สถาบันพลังจิตตานุภาพ (รุ่นที่ 52 สาขา 58) กาญจนบุรี, ประเทศไทย",
     "type": "leadership",
     "categoryGroup": "กิจกรรม อื่นๆ",
     "badge": "พี่เลี้ยงฝ่าย IT (รุ่น 53)",
     "highlights": [
-      "สำเร็จการศึกษาหลักสูตรครูสมาธิระยะเวลา 6 เดือน (รุ่นที่ 52) เสริมสร้างวินัย ความมุ่งมั่น อดทน และสมาธิในการทำงานร่วมกับผู้อื่น",
-      "ได้รับความไว้วางใจให้ปฏิบัติหน้าที่เป็นพี่เลี้ยงประจำรุ่นที่ 53 ฝ่าย IT ดูแลระบบโสตทัศนูปกรณ์ คอมพิวเตอร์ และระบบถ่ายทอดสดในการบรรยาย",
+      "สำเร็จหลักสูตร 1 ปี และได้รับมอบหมายให้เป็นพี่เลี้ยงดูแลผู้เข้าอบรมรุ่นถัดไป เพื่อพัฒนาทักษะความเป็นผู้นำและความรับผิดชอบ",
+      "ปฏิบัติหน้าที่เป็นพี่เลี้ยงประจำรุ่นที่ 53 ฝ่าย IT ดูแลระบบโสตทัศนูปกรณ์ คอมพิวเตอร์ และระบบถ่ายทอดสดในการบรรยาย",
       "สนับสนุนและแก้ไขปัญหาหน้างานด้านไอทีและระบบเสียง/ภาพให้กับผู้เข้าร่วมอบรมตลอดหลักสูตร"
     ],
     "technologies": [],
     "media": [
       {
-        "thumbnailUrl": "/images/activities/activity-meditation-cert.svg",
-        "caption": "ใบประกาศนียบัตรสำเร็จหลักสูตรครูสมาธิ รุ่นที่ 52",
-        "category": "ใบประกาศนียบัตร"
+        "thumbnailUrl": "/images/activities/activity-meditation-cert.jpg",
+        "caption": "การปฏิบัติหน้าที่พี่เลี้ยงและดำเนินกิจกรรม ณ โพเดียมสถาบันฯ",
+        "category": "พี่เลี้ยงและผู้บรรยาย"
       },
       {
-        "thumbnailUrl": "/images/activities/activity-meditation-ceremony.svg",
-        "caption": "ภาพถ่ายพิธีมอบประกาศนียบัตรและปัจฉิมนิเทศ รุ่น 52",
-        "category": "พิธีมอบประกาศนียบัตร"
+        "thumbnailUrl": "/images/activities/activity-meditation-ceremony.jpg",
+        "caption": "บรรยากาศการฝึกอบรมและปฏิบัติสมาธิร่วมกันในหลักสูตร",
+        "category": "การฝึกปฏิบัติสมาธิ"
       },
       {
-        "thumbnailUrl": "/images/activities/activity-it-mentor-av.svg",
-        "caption": "การปฏิบัติหน้าที่พี่เลี้ยงฝ่าย IT ควบคุมระบบโสตทัศนูปกรณ์และถ่ายทอดสด รุ่น 53",
-        "category": "พี่เลี้ยงฝ่าย IT"
+        "thumbnailUrl": "/images/activities/activity-it-mentor-av.jpg",
+        "caption": "ภาพถ่ายร่วมคณะพี่เลี้ยงและผู้สำเร็จหลักสูตรในหอประชุมพิธี",
+        "category": "คณะพี่เลี้ยงสถาบันฯ"
       }
     ]
   }

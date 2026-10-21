@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { ProjectsCatalogContent } from '@/components/projects/ProjectsCatalogContent';
 
 export const metadata: Metadata = {
-  title: 'Projects & Case Studies | Thanawat Butseree',
+  title: 'Projects | TB',
   description: 'Detailed software engineering case studies, system architecture, and production deliverables.',
 };
 

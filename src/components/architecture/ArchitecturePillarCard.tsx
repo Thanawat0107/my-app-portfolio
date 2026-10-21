@@ -96,13 +96,13 @@ export const ArchitecturePillarCard: React.FC<ArchitecturePillarCardProps> = ({ 
 
   return (
     <div
-      className={`rounded-2xl border border-slate-800/90 bg-gradient-to-b from-slate-900/90 to-slate-950/90 backdrop-blur-xl p-6 sm:p-7 flex flex-col justify-between space-y-5 transition-all duration-300 shadow-xl ${styles.glow}`}
+      className={`rounded-md border border-slate-800/90 bg-gradient-to-b from-slate-900/90 to-slate-950/90 backdrop-blur-xl p-6 sm:p-7 flex flex-col justify-between space-y-5 transition-all duration-300 shadow-xl ${styles.glow}`}
     >
       <div className="space-y-4">
         {/* Header row: Icon, Category Subtitle, and Source Project Tag */}
         <div className="flex items-start justify-between gap-3">
           <div className="flex items-center gap-3">
-            <div className={`p-2.5 rounded-xl border ${styles.iconBg} shadow-sm`}>
+            <div className={`p-2.5 rounded-md border ${styles.iconBg} shadow-sm`}>
               {getPillarIcon()}
             </div>
             <div>
@@ -118,7 +118,7 @@ export const ArchitecturePillarCard: React.FC<ArchitecturePillarCardProps> = ({ 
 
         {/* Implemented In Tag */}
         {pillar.implementedIn && (
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg text-xs font-mono text-slate-300 bg-slate-950/80 border border-slate-800/90">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md text-xs font-mono text-slate-300 bg-slate-950/80 border border-slate-800/90">
             <span className={`w-1.5 h-1.5 rounded-full ${styles.dot} animate-pulse`} />
             <span className="text-slate-400 font-sans">
               {locale === 'th' ? 'นำไปใช้งานจริงใน:' : 'Implemented in:'}
@@ -151,7 +151,7 @@ export const ArchitecturePillarCard: React.FC<ArchitecturePillarCardProps> = ({ 
           </button>
 
           {showCode && (
-            <div className="mt-3 rounded-xl bg-[#141822] border border-slate-800 shadow-2xl overflow-hidden animate-fadeIn">
+            <div className="mt-3 rounded-md bg-[#141822] border border-slate-800 shadow-2xl overflow-hidden animate-fadeIn">
               {/* VS Code Mac Window Header */}
               <div className="flex items-center justify-between px-3.5 py-2.5 bg-[#0f131a] border-b border-slate-800/80 text-[11px]">
                 <div className="flex items-center gap-2">

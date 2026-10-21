@@ -65,7 +65,7 @@ export const ExperienceTimelineCard: React.FC<ExperienceTimelineCardProps> = ({ 
       <Card className="p-6 sm:p-8 transition-all hover:border-slate-700/80">
         <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 pb-4 border-b border-slate-800/80">
           <div className="flex items-start gap-3.5">
-            <div className={`p-2.5 rounded-xl border mt-0.5 shrink-0 ${style.container}`}>
+            <div className={`p-2.5 rounded-md border mt-0.5 shrink-0 ${style.container}`}>
               {style.icon}
             </div>
             <div>
@@ -100,7 +100,7 @@ export const ExperienceTimelineCard: React.FC<ExperienceTimelineCardProps> = ({ 
               {item.highlights.map((fact, idx) => (
                 <div
                   key={idx}
-                  className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-slate-900/90 border border-cyan-500/20 text-xs font-mono text-cyan-200/90 shadow-sm"
+                  className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-slate-900/90 border border-cyan-500/20 text-xs font-mono text-cyan-200/90 shadow-sm"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
                   <span>{fact}</span>
@@ -135,7 +135,7 @@ export const ExperienceTimelineCard: React.FC<ExperienceTimelineCardProps> = ({ 
                   type="button"
                   key={mIdx}
                   onClick={() => setActiveMedia(media)}
-                  className="group relative text-left rounded-xl overflow-hidden border border-slate-800/90 bg-slate-950/70 hover:border-emerald-500/50 transition-all focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+                  className="group relative text-left rounded-md overflow-hidden border border-slate-800/90 bg-slate-950/70 hover:border-emerald-500/50 transition-all focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
                 >
                   <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-900">
                     <Image
@@ -188,7 +188,7 @@ export const ExperienceTimelineCard: React.FC<ExperienceTimelineCardProps> = ({ 
           onClick={() => setActiveMedia(null)}
         >
           <div
-            className="relative max-w-4xl w-full bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl"
+            className="relative max-w-4xl w-full bg-slate-900 border border-slate-800 rounded-md overflow-hidden shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
@@ -202,7 +202,7 @@ export const ExperienceTimelineCard: React.FC<ExperienceTimelineCardProps> = ({ 
               <button
                 type="button"
                 onClick={() => setActiveMedia(null)}
-                className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+                className="p-1.5 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
                 aria-label="Close"
               >
                 <X className="w-5 h-5" />

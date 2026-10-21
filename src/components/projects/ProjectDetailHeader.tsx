@@ -49,10 +49,25 @@ export const ProjectDetailHeader: React.FC<ProjectDetailHeaderProps> = ({ projec
             {t.common.openLiveDemo}
           </Button>
         )}
-        <Button href={project.githubUrl} variant="secondary" external>
-          <Github className="w-4 h-4" />
-          {t.common.viewGitHubRepo}
-        </Button>
+        {project.githubFrontendUrl ? (
+          <>
+            <Button href={project.githubFrontendUrl} variant="secondary" external>
+              <Github className="w-4 h-4" />
+              Frontend Code
+            </Button>
+            {project.githubBackendUrl && (
+              <Button href={project.githubBackendUrl} variant="secondary" external>
+                <Github className="w-4 h-4" />
+                Backend Code
+              </Button>
+            )}
+          </>
+        ) : (
+          <Button href={project.githubUrl} variant="secondary" external>
+            <Github className="w-4 h-4" />
+            {t.common.viewGitHubRepo}
+          </Button>
+        )}
       </div>
 
       {project.metrics && (

@@ -24,9 +24,14 @@
     ],
     "media": [
       {
-        "thumbnailUrl": "/images/work/supalai-tech-talent.svg",
-        "caption": "EIA Phase 2 Environmental Monitoring & IoT Telemetry Dashboard",
-        "category": "Enterprise Deliverable"
+        "thumbnailUrl": "/images/work/supalai-intern-team.jpg",
+        "caption": "SUPALAI Tech Talent Program 2026 Cohort & Mentors at Supalai Head Office",
+        "category": "On-Site Internship Photo"
+      },
+      {
+        "thumbnailUrl": "/images/work/supalai-logo.jpg",
+        "caption": "Supalai Public Company Limited - Head Office (Bangkok)",
+        "category": "Enterprise Organization"
       }
     ]
   },
@@ -34,13 +39,13 @@
     "id": "award-network-competition",
     "period": "December 2025",
     "role": "1st Place Winner, Computer Network Administration Competition",
-    "organization": "46th P.J.N.K. Academic Games at Muban Chombueng Rajabhat University",
+    "organization": "46th Ratchaphruek Games (Western Regional Games), Kanchanaburi, Thailand",
     "type": "award",
     "categoryGroup": "Competitions",
     "badge": "1st Place Gold Medal",
     "highlights": [
-      "Secured 1st Place in the Western Regional Academic Competition for enterprise network design, configuration, and management.",
-      "Configured Enterprise Wi-Fi via Cloud Controller (implementing Fast Roaming and Load Balancing) alongside QoS bandwidth management to resolve high-density traffic congestion under strict competition time constraints."
+      "Awarded 1st Place by configuring Enterprise Wi-Fi via Cloud Controller (Roaming, Load Balancing) and designing QoS bandwidth management to resolve network congestion within the competition time limit.",
+      "Demonstrated enterprise network engineering under real-world traffic scenarios and strict time constraints."
     ],
     "technologies": [
       "Enterprise Wi-Fi",
@@ -53,19 +58,19 @@
     ],
     "media": [
       {
-        "thumbnailUrl": "/images/certificates/certificate-network.svg",
+        "thumbnailUrl": "/images/certificates/certificate-network.jpg",
         "caption": "1st Place Certificate in Network Administration (46th P.J.N.K.)",
         "category": "Official Certificate"
       },
       {
-        "thumbnailUrl": "/images/certificates/award-podium.svg",
-        "caption": "Gold Medal & Certificate Award Ceremony on Stage",
-        "category": "Award Ceremony Photo"
+        "thumbnailUrl": "/images/certificates/award-podium.jpg",
+        "caption": "1st Place Winner Portrait with Gold Medal & Certificate",
+        "category": "Award Winner Portrait"
       },
       {
-        "thumbnailUrl": "/images/certificates/competition-action.svg",
-        "caption": "Live Competition & Network Configuration Setup",
-        "category": "Competition Arena"
+        "thumbnailUrl": "/images/certificates/competition-action.jpg",
+        "caption": "Award Ceremony on Stage with Team and Faculty Advisors",
+        "category": "Award Ceremony"
       }
     ]
   },
@@ -73,18 +78,18 @@
     "id": "edu-bachelor-cs",
     "period": "2023 – 2026",
     "role": "Bachelor of Science (B.Sc. in Computer Science) - Graduated",
-    "organization": "Kanchanaburi Rajabhat University",
+    "organization": "Kanchanaburi Rajabhat University (Kanchanaburi, Thailand)",
     "type": "education",
     "categoryGroup": "Education & Academics",
     "badge": "GPAX : 2.60",
     "highlights": [
-      "Cumulative GPAX : 2.60",
-      "Graduation Year : 2026 (Graduated & Ready for Full-Time Roles)"
+      "Bachelor of Science in Computer Science (GPAX : 2.60)",
+      "Graduation: November 2026 (Graduated & Full-Time Ready)"
     ],
     "technologies": [],
     "media": [
       {
-        "thumbnailUrl": "/images/education/transcript-kru.svg",
+        "thumbnailUrl": "/images/education/transcript-kru.jpg",
         "caption": "Official Academic Transcript B.Sc. Computer Science (108 Credits, GPAX 2.60)",
         "category": "Academic Transcript"
       }
@@ -93,7 +98,7 @@
   {
     "id": "edu-vocational-cert",
     "period": "2020 – 2022",
-    "role": "Vocational Certificate (ปวช.)",
+    "role": "Vocational Certificate",
     "organization": "River Khwae Vocational College",
     "type": "education",
     "categoryGroup": "Education & Academics",
@@ -145,14 +150,19 @@
     "technologies": [],
     "media": [
       {
-        "thumbnailUrl": "/images/activities/activity-student-council-1.svg",
-        "caption": "Student Council Committee, Faculty of Science & Technology",
+        "thumbnailUrl": "/images/activities/activity-student-council-1.jpg",
+        "caption": "Official Portrait as Student Council Committee Member",
         "category": "Student Activities"
       },
       {
-        "thumbnailUrl": "/images/activities/activity-student-council-2.svg",
-        "caption": "Student Affairs Planning & Operations Meeting",
-        "category": "Project Planning"
+        "thumbnailUrl": "/images/activities/activity-student-council-2.jpg",
+        "caption": "Leading the Faculty of Science & Technology Parade",
+        "category": "Student Activities"
+      },
+      {
+        "thumbnailUrl": "/images/activities/activity-student-council-3.jpg",
+        "caption": "Student Council Committee Members in Activity Uniform",
+        "category": "Student Activities"
       }
     ]
   },
@@ -171,13 +181,13 @@
     "technologies": [],
     "media": [
       {
-        "thumbnailUrl": "/images/activities/activity-rov-esports-1.svg",
-        "caption": "Tournament Management Team, RoV E-Sports Tournament",
-        "category": "Event Management"
+        "thumbnailUrl": "/images/activities/activity-rov-esports-1.jpg",
+        "caption": "Tournament Operations & Live Stream Broadcast Control Desk",
+        "category": "Event Operations"
       },
       {
-        "thumbnailUrl": "/images/activities/activity-rov-esports-2.svg",
-        "caption": "Live Match Broadcast & Stage Competition Atmosphere",
+        "thumbnailUrl": "/images/activities/activity-rov-esports-2.jpg",
+        "caption": "Auditorium Stage Competition with Live Match Broadcast on LED Display",
         "category": "Live Tournament"
       }
     ]
@@ -185,32 +195,32 @@
   {
     "id": "act-it-mentor-meditation",
     "period": "2024 – 2025",
-    "role": "IT Mentor (Class 53) & Meditation Course Graduate (Class 52)",
-    "organization": "Willpower Institute (Luang Phor Viriyang Sirintharo)",
+    "role": "Mentor & Meditation Teacher Course Graduate (IT Mentor, Class 53)",
+    "organization": "Willpower Institute (Class 52, Branch 58), Kanchanaburi, Thailand",
     "type": "leadership",
     "categoryGroup": "Other Activities",
     "badge": "IT Mentor (Class 53)",
     "highlights": [
-      "Successfully graduated from the rigorous 6-month Meditation Teacher Course (Class 52), developing mental discipline, endurance, and mindfulness.",
+      "Completed the 1-year course and appointed as mentor to guide the subsequent cohort, fostering leadership and accountability.",
       "Entrusted to serve as official IT Mentor for Class 53, managing audio-visual equipment, computer setups, and live broadcast streaming.",
       "Provided on-site technical support and hardware troubleshooting for lecturers and attendees throughout the course duration."
     ],
     "technologies": [],
     "media": [
       {
-        "thumbnailUrl": "/images/activities/activity-meditation-cert.svg",
-        "caption": "Meditation Teacher Course Graduation Certificate (Class 52)",
-        "category": "Official Certificate"
+        "thumbnailUrl": "/images/activities/activity-meditation-cert.jpg",
+        "caption": "Session Leader & Speaker at Willpower Institute Podium",
+        "category": "Mentor & Speaker"
       },
       {
-        "thumbnailUrl": "/images/activities/activity-meditation-ceremony.svg",
-        "caption": "Graduation Ceremony & Completion Assembly (Class 52)",
-        "category": "Ceremony Photo"
+        "thumbnailUrl": "/images/activities/activity-meditation-ceremony.jpg",
+        "caption": "Meditation Training & Practice Session with Cohort",
+        "category": "Meditation Practice"
       },
       {
-        "thumbnailUrl": "/images/activities/activity-it-mentor-av.svg",
-        "caption": "IT Mentor Role: Audio-Visual & Live Streaming Control (Class 53)",
-        "category": "IT Operations"
+        "thumbnailUrl": "/images/activities/activity-it-mentor-av.jpg",
+        "caption": "Cohort Mentors and Course Graduates in the Main Ceremony Hall",
+        "category": "Cohort Mentors"
       }
     ]
   }

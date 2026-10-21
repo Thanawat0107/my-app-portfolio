@@ -111,7 +111,7 @@ export const ProjectDeepDiveSections: React.FC<ProjectDeepDiveSectionsProps> = (
                   {project.deepDive.codeSnippet.language}
                 </span>
               </div>
-              <pre className="p-3.5 rounded-xl bg-slate-950 border border-slate-800/90 text-slate-200 font-mono text-xs leading-relaxed overflow-x-auto whitespace-pre-wrap">
+              <pre className="p-3.5 rounded-md bg-slate-950 border border-slate-800/90 text-slate-200 font-mono text-xs leading-relaxed overflow-x-auto whitespace-pre-wrap">
                 <code>{project.deepDive.codeSnippet.code}</code>
               </pre>
             </Card>
@@ -149,16 +149,41 @@ export const ProjectDeepDiveSections: React.FC<ProjectDeepDiveSectionsProps> = (
                   <span className="text-emerald-400">{labels.envReady}</span>
                 </div>
                 <div>
-                  <span className="text-slate-500 block">{labels.sourceCode}</span>
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-slate-200 underline hover:text-emerald-400 transition-colors"
-                  >
-                    <span>GitHub Repository</span>
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
+                  <span className="text-slate-500 block mb-1">{labels.sourceCode}</span>
+                  {project.githubFrontendUrl ? (
+                    <div className="flex flex-col gap-1.5">
+                      <a
+                        href={project.githubFrontendUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-slate-200 underline hover:text-emerald-400 transition-colors"
+                      >
+                        <span>Frontend Repo</span>
+                        <ExternalLink className="w-3 h-3" />
+                      </a>
+                      {project.githubBackendUrl && (
+                        <a
+                          href={project.githubBackendUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-slate-200 underline hover:text-emerald-400 transition-colors"
+                        >
+                          <span>Backend Repo</span>
+                          <ExternalLink className="w-3 h-3" />
+                        </a>
+                      )}
+                    </div>
+                  ) : (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-slate-200 underline hover:text-emerald-400 transition-colors"
+                    >
+                      <span>GitHub Repository</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  )}
                 </div>
               </div>
             </Card>

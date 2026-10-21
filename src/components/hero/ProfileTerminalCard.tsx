@@ -11,8 +11,8 @@ export const ProfileTerminalCard: React.FC = () => {
 
   return (
     <div className="relative group max-w-sm mx-auto lg:mx-0 lg:ml-auto">
-      <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-emerald-500/25 to-cyan-500/20 blur-xl opacity-75 group-hover:opacity-100 transition duration-500" />
-      <div className="relative bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-2xl">
+      <div className="absolute -inset-1 rounded-md bg-gradient-to-r from-emerald-500/25 to-cyan-500/20 blur-xl opacity-75 group-hover:opacity-100 transition duration-500" />
+      <div className="relative bg-slate-900 border border-slate-800 rounded-md p-4 shadow-2xl">
         {/* Top Terminal Bar */}
         <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-800">
           <div className="flex items-center gap-1.5">
@@ -27,7 +27,7 @@ export const ProfileTerminalCard: React.FC = () => {
         </div>
 
         {/* Portrait Image */}
-        <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-slate-800">
+        <div className="relative aspect-square w-full overflow-hidden rounded-md bg-slate-800">
           <Image
             src={siteConfig.avatarUrl}
             alt={t.hero.fullName}
@@ -61,12 +61,12 @@ export const ProfileTerminalCard: React.FC = () => {
             <span className="text-slate-200 font-medium">Software / Full-Stack Engineer</span>
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-slate-500">Status:</span>
-            <span className="text-emerald-400 font-medium">Graduated & Full-Time Ready</span>
+            <span className="text-slate-500">Employment:</span>
+            <span className="text-emerald-400 font-medium">Full-Time / Contract</span>
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-slate-500">Education:</span>
-            <span className="text-slate-200">B.Sc. CS @ KRU (GPAX 2.60)</span>
+            <span className="text-slate-500">Availability:</span>
+            <span className="text-slate-200">Immediate Start</span>
           </div>
         </div>
       </div>

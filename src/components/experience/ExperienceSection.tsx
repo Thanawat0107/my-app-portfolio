@@ -23,7 +23,7 @@ export const ExperienceSection: React.FC = () => {
     : t.experience.items.filter((item) => item.type === activeTab);
 
   return (
-    <section id="experience" className="py-20 border-b border-slate-900">
+    <section id="experience" className="py-20 border-b border-slate-900 scroll-mt-16">
       <SectionHeader
         badgeText={t.experience.badge}
         title={t.experience.title}
@@ -44,7 +44,7 @@ export const ExperienceSection: React.FC = () => {
               key={tab.id}
               type="button"
               onClick={() => setActiveTab(tab.id)}
-              className={`inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-xl text-xs font-mono transition-all duration-200 border ${isActive
+              className={`inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-md text-xs font-mono transition-all duration-200 border ${isActive
                 ? 'bg-emerald-500/15 text-emerald-300 border-emerald-500/40 shadow-lg shadow-emerald-950/30'
                 : 'bg-slate-900/70 text-slate-400 border-slate-800 hover:text-slate-200 hover:border-slate-700'
                 }`}

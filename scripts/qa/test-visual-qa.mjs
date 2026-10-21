@@ -32,15 +32,21 @@ async function run100PercentExhaustiveQA() {
     // 1.1 Home Page - Toggle to Full English Mode
     await page.goto('http://localhost:3000', { waitUntil: 'domcontentloaded', timeout: 60000 });
     await new Promise(r => setTimeout(r, 1200));
-    const enButton = await page.evaluateHandle(() => {
-      const buttons = Array.from(document.querySelectorAll('button'));
-      return buttons.find(b => b.textContent?.trim() === 'EN');
+    await page.evaluate(() => {
+      localStorage.setItem('portfolio_language', 'en');
     });
-    if (enButton && enButton.asElement()) {
-      await enButton.asElement().click();
+    await page.reload({ waitUntil: 'domcontentloaded' });
+    await new Promise(r => setTimeout(r, 1000));
+    await page.screenshot({ path: path.join(SCREENSHOT_DIR, '10_desktop_home_english.png') });
+    console.log('Saved: 10_desktop_home_english.png (Full English Mode)');
+
+    // 1.15 Featured Projects Section in English
+    const projSection = await page.$('#projects');
+    if (projSection) {
+      await projSection.scrollIntoView();
       await new Promise(r => setTimeout(r, 500));
-      await page.screenshot({ path: path.join(SCREENSHOT_DIR, '10_desktop_home_english.png') });
-      console.log('Saved: 10_desktop_home_english.png (Full English Mode)');
+      await page.screenshot({ path: path.join(SCREENSHOT_DIR, '02_desktop_projects.png') });
+      console.log('Saved: 02_desktop_projects.png (Featured Projects in English)');
     }
 
     // 1.2 System Architecture 4 Pillars Section

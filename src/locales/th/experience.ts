@@ -6,7 +6,7 @@ export const experienceDataTh: ExperienceItem[] = experienceThJson as Experience
 
 export const experienceTh: ExperienceSectionTranslations = {
   badge: 'ประวัติและผลงานวิชาการ',
-  title: 'ประวัติและประสบการณ์ (Experience & Milestones)',
+  title: 'ประวัติและประสบการณ์การทำงาน',
   subtitle:
     'ประวัติการศึกษาด้านวิทยาการคอมพิวเตอร์, รางวัลชนะเลิศการแข่งขันทักษะวิชาการ, โอกาสการร่วมงาน และกิจกรรมเสริมสร้างภาวะผู้นำ',
   evidenceLabel: 'ภาพประกอบหลักฐาน / เกียรติบัตร / เอกสาร',

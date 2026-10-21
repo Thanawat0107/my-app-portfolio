@@ -12,7 +12,7 @@ export const SkillsSection: React.FC = () => {
   const secondaryCategories = t.skills.items.slice(2);
 
   return (
-    <section id="skills" className="py-20 border-b border-slate-900">
+    <section id="skills" className="py-20 border-b border-slate-900 scroll-mt-16">
       <SectionHeader
         badgeText={t.skills.badge}
         title={t.skills.title}
